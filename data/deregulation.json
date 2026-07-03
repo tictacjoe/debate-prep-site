@@ -1,0 +1,1018 @@
+[
+  {
+    "id": "agency-sunset-rule-mandate-trump2",
+    "rule_name": "Agency Sunset Rule Mandate (Executive Order 14270, \"Zero-Based Regulatory Budgeting to Unleash American Energy\")",
+    "administration": "Trump II (2025-present)",
+    "agency": "White House / OMB (directs EPA, DOE, DOI, FERC, NRC, Army Corps of Engineers, BLM, BOEM)",
+    "domain": "cross-cutting (structural/process rule, energy/environmental focus)",
+    "status": "Fully Enacted (in effect; individual agency sunset rules being implemented through 2026)",
+    "date_of_action": "2025-04-09",
+    "original_rule_summary": "No prior rule -- this is a new process mandate targeting energy-related regulations under statutes including the Clean Air Act, Federal Power Act, Natural Gas Act, Atomic Energy Act, Endangered Species Act, and appliance efficiency standards.",
+    "what_changed": "Directs covered agencies (EPA, DOE, FERC, NRC, DOI bureaus, Army Corps, BLM, BOEM) to issue a 'sunset rule' by September 30, 2025 (later extended to September 30, 2026 for some agencies) inserting a 'Conditional Sunset Date' into covered existing regulations -- one year after the sunset rule's effective date, unless the agency affirmatively extends it (up to 5 more years at a time, following a public comment opportunity). All new energy-related regulations must include a sunset date no more than 5 years out. If an agency does not act to extend a regulation before its sunset date, the regulation automatically expires and is removed from the Code of Federal Regulations -- no additional agency action or public process is required for the expiration itself.",
+    "primary_proponent": {
+      "name": "Donald Trump",
+      "role": "President",
+      "note": "Signed EO 14270 personally on April 9, 2025, as one of three deregulatory orders issued that day (alongside the 'Directing the Repeal of Unlawful Regulations' memorandum, tracked separately in this database)."
+    },
+    "corporate_beneficiaries": [
+      "Energy producers and regulated industries broadly across the covered statutes -- a structural mandate rather than a single-sector rollback"
+    ],
+    "estimated_health_impact": {
+      "summary": "Severe systemic/structural risk: creates 'rolling regulatory vacuums' where protections automatically expire by default unless an agency proactively acts to renew them within the window -- inverting the normal presumption that a regulation stays in force until affirmatively repealed. Affected regulations may include power plant emissions standards, appliance efficiency standards, Endangered Species Act provisions, and oil/gas leasing rules.",
+      "figures": [],
+      "caveat": "No quantified health impact figure exists for the EO itself, since it is a process mechanism rather than a rule targeting a specific pollutant or practice -- and as of mid-2026, agencies are still in the process of identifying which specific regulations are 'covered' and issuing their individual sunset rules (e.g. NRC's Dec. 2025 proposal found most of its regulations could NOT be sunset because they're statutorily required for safety, and only sunset a small number of unused/obsolete rules). The real-world impact will depend heavily on which agencies let which specific regulations lapse -- track individual agency sunset-rule outcomes as they finalize."
+    },
+    "confidence_note": "Strong 'process is the harm' entry, similar to EO 14192 but energy-specific and more severe in mechanism -- automatic expiration by default, rather than requiring agencies to affirmatively act to repeal. Worth noting the NRC's early implementation actually sunset very few regulations (found most were statutorily protected), which is a useful nuance: the mechanism is structurally risky, but agency-by-agency outcomes so far are mixed, not uniformly severe.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Beveridge & Diamond — Tracking Update: Trump Administration's Latest Deregulatory Actions",
+        "url": "https://www.bdlaw.com/publications/tracking-update-trump-administrations-latest-deregulatory-actions-on-energy-environment-and-natural-resources/"
+      },
+      {
+        "name": "American Public Power Association — Trump Issues Executive Orders Tied to Energy, Environmental Regulations",
+        "url": "https://www.publicpower.org/periodical/article/trump-issues-executive-orders-tied-energy-environmental-regulations"
+      },
+      {
+        "name": "American Nuclear Society — NRC proposes rule changes in response to EO",
+        "url": "https://www.ans.org/news/article-7613/nrc-proposes-rule-changes-in-response-to-eo/"
+      }
+    ]
+  },
+  {
+    "id": "cfpb-payday-lending-rollback-trump1",
+    "rule_name": "CFPB Payday Lending Underwriting Rollback",
+    "administration": "Trump I (2017-2021)",
+    "agency": "CFPB",
+    "domain": "financial",
+    "status": "Fully Repealed (ability-to-repay provision)",
+    "date_of_action": "2019-02-06 (proposed); 2020-07 (finalized)",
+    "original_rule_summary": "2017 CFPB rule (under Director Richard Cordray) requiring payday and short-term title lenders to verify a borrower's actual ability to repay a loan before issuing it -- an underwriting requirement developed over 5 years of CFPB research, aimed at preventing debt-trap cycles from loans with APRs often exceeding 390%.",
+    "what_changed": "The Trump-era CFPB proposed and later finalized removal of the ability-to-repay ('underwriting') provision, while leaving in place separate provisions restricting how lenders can debit a borrower's bank account. CFPB's own senior officials stated the rescission stemmed from a view that there wasn't enough evidence the practice was 'unfair and abusive' -- despite the agency's own prior 5-year research record concluding the opposite.",
+    "primary_proponent": {
+      "name": "Mick Mulvaney",
+      "role": "Acting CFPB Director",
+      "note": "Initiated the delay and rollback process starting in 2018; publicly called the CFPB a 'sick, sad joke' and had proposed abolishing it as a congressman. Documented as having accepted campaign donations from payday lenders and dropping CFPB enforcement actions against installment lenders during his tenure. The rule was finalized under his successor, Kathy Kraninger, in 2020."
+    },
+    "corporate_beneficiaries": [
+      "Payday and short-term title lenders, including Select Management Resources, Advance America, and Check Into Cash, several of which donated to Trump's inaugural committee"
+    ],
+    "estimated_health_impact": {
+      "summary": "Indirect: debt-trap cycles correlate with acute psychological anxiety, depression, and stress-related physical ailments. CFPB's own estimate: the rescinded ability-to-repay provisions were projected to save consumers (and cost lenders) $7 billion per year -- a strong, agency-originated figure for debate use.",
+      "figures": [
+        {
+          "metric": "CFPB's own estimate of annual consumer savings from the rescinded provisions",
+          "value": "$7,000,000,000/year",
+          "source": "CFPB, cited by Banking Dive"
+        }
+      ],
+      "caveat": "The $7B figure is a financial-savings estimate, not a direct health/mortality figure -- the health linkage (debt-trap stress correlating with mental and physical health harm) is drawn from general research on financial stress, not a rule-specific health study."
+    },
+    "confidence_note": "Strong sourcing on the regulatory action, the proponent (Mulvaney, with documented conflicts of interest), and a real agency-originated dollar figure. The mental/physical health linkage should be framed as 'debt-trap stress is well-documented to correlate with anxiety and physical health harm' rather than implying a rule-specific quantified health study exists.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "NPR — Consumer Protection Bureau Aims To Roll Back Rule For Payday Lending",
+        "url": "https://www.npr.org/2019/02/06/691944789/consumer-protection-bureau-aims-to-roll-back-rules-for-payday-lending"
+      },
+      {
+        "name": "Banking Dive — CFPB rolls back 'ability-to-repay' portion of payday lending rule",
+        "url": "https://www.bankingdive.com/news/cfpb-ability-to-repay-payday-lending-rule/581237/"
+      },
+      {
+        "name": "Consumer Reports Advocacy — Actions Taken By Acting CFPB Director Mick Mulvaney",
+        "url": "https://advocacy.consumerreports.org/research/actions-taken-by-acting-cfpb-director-mick-mulvaney-that-undermine-the-cfpbs-ability-to-protect-consumers/"
+      }
+    ]
+  },
+  {
+    "id": "clean-power-plan-repeal-trump1",
+    "rule_name": "Clean Power Plan repeal and replacement with the Affordable Clean Energy (ACE) Rule",
+    "administration": "Trump I (2017-2021)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Fully Repealed and replaced",
+    "date_of_action": "2019-06",
+    "original_rule_summary": "2015 Obama-era EPA rule setting the first-ever national carbon dioxide emission limits for existing power plants, aimed at cutting power-sector greenhouse gas emissions roughly 32% below 2005 levels by 2030.",
+    "what_changed": "EPA repealed the Clean Power Plan outright and replaced it with the much weaker Affordable Clean Energy Rule, which set no binding numeric emissions targets and instead directed states to require only modest efficiency upgrades ('heat rate improvements') at individual coal plants, explicitly rejecting the prior rule's system-wide approach of shifting generation toward cleaner sources.",
+    "primary_proponent": {
+      "name": "Andrew Wheeler",
+      "role": "EPA Administrator (finalized the rule; the repeal process began under predecessor Scott Pruitt)",
+      "note": "Wheeler, a former coal lobbyist, signed the final ACE Rule; Pruitt had initiated the Clean Power Plan repeal process in 2017."
+    },
+    "corporate_beneficiaries": [
+      "Coal-fired power plant operators",
+      "Coal mining companies"
+    ],
+    "estimated_health_impact": {
+      "summary": "EPA's own impact analysis found the ACE Rule replacement would result in more air pollution and premature deaths than either the Clean Power Plan or a full do-nothing baseline in some scenarios, by allowing individual coal plants to run longer and more often even after efficiency upgrades ('the rebound effect').",
+      "figures": [
+        {
+          "metric": "EPA's own estimate of additional premature deaths per year by 2030 under ACE vs. stronger alternatives",
+          "value": "up to 1,400",
+          "source": "EPA Regulatory Impact Analysis for the ACE Rule (2019)"
+        }
+      ],
+      "caveat": "This is EPA's own regulatory impact analysis comparing ACE to alternative approaches, not an outside advocacy estimate -- a notably strong data point since the agency implementing the rollback produced the mortality estimate itself."
+    },
+    "confidence_note": "Very strong for debate: the mortality estimate came from EPA's own regulatory impact analysis, not an opposing advocacy group. This is close to an admission-against-interest and should be framed that way.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Brookings — The Trump administration's major environmental deregulations",
+        "url": "https://www.brookings.edu/articles/the-trump-administrations-major-environmental-deregulations/"
+      },
+      {
+        "name": "Wikipedia — Environmental policy of the first Donald Trump administration",
+        "url": "https://en.wikipedia.org/wiki/Environmental_policy_of_the_first_Donald_Trump_administration"
+      }
+    ]
+  },
+  {
+    "id": "coal-ash-disposal-rollback-trump2",
+    "rule_name": "Coal Combustion Residuals (Coal Ash) Disposal Rule Rollback",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Delayed/Paused (deadline extension finalized 2026-02-10) + Proposed Repeal (broader weakening proposed 2026-04-09, not yet finalized)",
+    "date_of_action": "2026-02-10 (deadline extension finalized); 2026-04-09 (broader weakening proposed)",
+    "original_rule_summary": "EPA's 2024 'Legacy CCR Rule' extended federal coal ash monitoring, cleanup, and closure requirements to hundreds of older, previously-unregulated coal ash disposal sites -- 'legacy' impoundments and 'CCR Management Units' (CCRMUs) -- covering roughly half of all coal ash waste ever generated in the US, following a 2015 rule that only covered active sites. EPA identified over 1,000 dumpsites across 42 states requiring monitoring, closure, or remediation.",
+    "what_changed": "In a Feb. 10, 2026 final rule, EPA extended deadlines for ~110 coal-fired generating units and 189 disposal sites: legacy-site evaluation/cleanup pushed from roughly 2029 to February 2032, and groundwater monitoring pushed from May 2028 to February 2031 -- a roughly 3-year delay. Separately, on April 9, 2026, EPA proposed a much broader rule that would exempt the majority of these dumpsites from federal oversight entirely, alter the definition of 'beneficial use,' and let permit authorities make site-specific determinations on groundwater monitoring points and cleanup levels.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Stated the changes reflect 'EPA's commitment to restoring American energy dominance.'"
+    },
+    "corporate_beneficiaries": [
+      "Owners of coal-fired power plants and disposal sites, who EPA's own final rule estimates will save $8.1-30 million per year from the deadline extension alone"
+    ],
+    "estimated_health_impact": {
+      "summary": "Coal ash contains mercury, cadmium, chromium, and arsenic. EPA's own final rule (Feb. 2026) states explicitly that delaying the compliance deadlines 'may increase health risks for children and other populations.' EPA's own 2024 rule justification found legacy impoundments, inactive landfills, and CCRMUs 'posed significant risks to human health and the environment' requiring federal oversight -- the April 2026 proposal would exempt the majority of these same sites from that oversight.",
+      "figures": [
+        {
+          "metric": "Coal-fired generating units affected by the February 2026 deadline extension",
+          "value": "110",
+          "source": "US EPA final rule, cited by Utility Dive"
+        },
+        {
+          "metric": "Coal ash disposal sites affected",
+          "value": "189",
+          "source": "US EPA final rule, cited by Utility Dive"
+        },
+        {
+          "metric": "Annual savings to landfill owners from the deadline delay",
+          "value": "$8,100,000-$30,000,000/year",
+          "source": "US EPA final rule, cited by Utility Dive"
+        }
+      ],
+      "caveat": "The February 2026 deadline-extension rule is finalized; the broader April 2026 proposal to exempt most sites from oversight entirely is still proposed, not finalized (comment period extended to June 29, 2026). Frame the two as separate but related actions -- one enacted, one pending."
+    },
+    "confidence_note": "Unusually strong entry: EPA's own final rule text contains a direct admission that the delay 'may increase health risks for children,' which is about as close to an admission-against-interest as this tracker contains. Excellent for debate use precisely because it's not an outside estimate.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Utility Dive — EPA extends coal ash landfill monitoring, cleanup deadlines",
+        "url": "https://www.utilitydive.com/news/epa-coal-ash-landfill-monitoring-cleanup-deadlines/811798/"
+      },
+      {
+        "name": "Utility Dive — EPA proposes weakening power plant coal ash protections",
+        "url": "https://www.utilitydive.com/news/epa-coal-ash-ccr-protections-proposed-rule/817171/"
+      },
+      {
+        "name": "Harvard EELP — Coal Ash Rule tracker",
+        "url": "https://eelp.law.harvard.edu/tracker/coal-ash-rule/"
+      },
+      {
+        "name": "Sen. Dick Durbin — Senators' letter opposing the EPA coal ash rollback",
+        "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-markey-booker-lead-letter-slamming-new-trump-epa-rule-that-deregulates-coal-ash-clean-up"
+      }
+    ]
+  },
+  {
+    "id": "deregulatory-fast-track-memo-trump2",
+    "rule_name": "Deregulatory Fast-Track Memo (\"Directing the Repeal of Unlawful Regulations\")",
+    "administration": "Trump II (2025-present)",
+    "agency": "White House / OMB (directs all executive departments and agencies)",
+    "domain": "cross-cutting (structural/process rule affecting all domains)",
+    "status": "Fully Enacted (in effect, ongoing)",
+    "date_of_action": "2025-04-09",
+    "original_rule_summary": "No prior rule -- builds on Executive Order 14219 ('Ensuring Lawful Governance...'), issued Feb. 19, 2025, which had directed agencies to identify 'unlawful and potentially unlawful' regulations within a 60-day review period.",
+    "what_changed": "This Presidential Memorandum instructs agencies to repeal regulations they determine are 'facially unlawful' without going through the normal notice-and-comment rulemaking process, by invoking the Administrative Procedure Act's 'good cause' exception (normally reserved for genuine emergencies). It targets regulations agencies believe conflict with 10 specific recent Supreme Court decisions, including Loper Bright Enterprises v. Raimondo (2024, overturning Chevron deference), West Virginia v. EPA (2022, establishing the 'major questions doctrine'), and Sackett v. EPA (2023, narrowing WOTUS). Within 30 days after the review period, agencies must submit a one-page summary to OMB's Office of Information and Regulatory Affairs (OIRA) for each regulation identified as unlawful, then move to repeal.",
+    "primary_proponent": {
+      "name": "Donald Trump",
+      "role": "President",
+      "note": "Issued the memorandum personally on April 9, 2025, the same day as EO 14270 (the sunset rule mandate, tracked separately) and an EO on showerhead water pressure standards."
+    },
+    "corporate_beneficiaries": [
+      "Regulated industries broadly across all sectors where agencies determine a rule is 'unlawful' under the cited Supreme Court decisions -- a cross-cutting structural mandate rather than a sector-specific rollback"
+    ],
+    "estimated_health_impact": {
+      "summary": "Severe systemic risk by design: bypassing notice-and-comment eliminates the primary formal mechanism by which public health advocates, toxicologists, affected communities, and other stakeholders can submit evidence or objections before a rule is repealed. This is a procedural harm distinct from any single rule's substantive content -- it changes how rules can be undone, not just which rules.",
+      "figures": [],
+      "caveat": "No quantified health impact figure exists for the memo itself, since it is a process mechanism enabling repeal of other rules, not a rule targeting a specific pollutant or practice. Its harm is best argued as procedural (loss of public input) rather than via a body-count claim. Downstream rules repealed under its authority may have their own quantified figures in other entries of this tracker."
+    },
+    "confidence_note": "Strong 'process is the harm' entry, similar in category to EO 14192 and the sunset rule mandate. The specific mechanism here -- invoking APA 'good cause' to skip notice-and-comment based on an agency's own legal judgment that a rule is 'unlawful' -- is a distinct and arguably more aggressive procedural shortcut than either of the other two structural entries, since it removes public input entirely rather than just accelerating repeal volume or adding expiration dates.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Beveridge & Diamond — Tracking Update: Trump Administration's Latest Deregulatory Actions",
+        "url": "https://www.bdlaw.com/publications/tracking-update-trump-administrations-latest-deregulatory-actions-on-energy-environment-and-natural-resources/"
+      },
+      {
+        "name": "Latham & Watkins — Trump Administration Pursues Deregulation in a Trio of Orders",
+        "url": "https://www.lathamreg.com/2025/04/trump-administration-pursues-deregulation-in-a-trio-of-orders/"
+      },
+      {
+        "name": "American Public Power Association — Trump Issues Executive Orders Tied to Energy, Environmental Regulations",
+        "url": "https://www.publicpower.org/periodical/article/trump-issues-executive-orders-tied-energy-environmental-regulations"
+      }
+    ]
+  },
+  {
+    "id": "dodd-frank-threshold-amendment-trump1",
+    "rule_name": "Dodd-Frank Asset Threshold Amendment (Economic Growth, Regulatory Relief, and Consumer Protection Act / S.2155)",
+    "administration": "Trump I (2017-2021)",
+    "agency": "Congress / Federal Reserve",
+    "domain": "financial",
+    "status": "Fully Repealed (legislative rollback of Dodd-Frank provisions)",
+    "date_of_action": "2018-05-24",
+    "original_rule_summary": "Post-2008 Dodd-Frank Act (2010) required banks with $50 billion or more in assets to undergo enhanced Federal Reserve oversight: company-run stress tests, enhanced liquidity requirements, resolution plans ('living wills'), and heightened supervision, on the theory that failures at this scale posed systemic risk.",
+    "what_changed": "S.2155 raised the asset threshold for enhanced prudential standards from $50 billion to $250 billion, exempting all but the largest US banks. Banks with $50-100B in assets were exempted immediately; banks with $100-250B were exempted after 18 months (with Federal Reserve discretion to re-impose standards). This was the most significant legislative rollback of Dodd-Frank since its passage.",
+    "primary_proponent": {
+      "name": "Donald Trump",
+      "role": "President (signed the bill into law)",
+      "note": "Primary Senate sponsor and drafter was Sen. Mike Crapo (R-ID), Senate Banking Committee Chair. Passed Senate 67-31 (bipartisan) and House 258-159."
+    },
+    "corporate_beneficiaries": [
+      "Regional and super-regional banks with $50-250B in assets, including Comerica, Zions, BB&T, SunTrust, Fifth Third, and Silicon Valley Bank"
+    ],
+    "estimated_health_impact": {
+      "summary": "Indirect/systemic: increases financial system volatility risk, which correlates with mental health and economic-stability harms during downturns rather than a direct physical health pathway. This is not purely theoretical -- the Roosevelt Institute directly traces mechanisms of the 2023 Silicon Valley Bank collapse to the stress-test and liquidity exemptions this law created for banks in the $50-250B range.",
+      "figures": [],
+      "caveat": "No formal quantified mortality/illness estimate exists for this rollback, as is typical for financial (rather than environmental/health) regulation -- the strength of this entry is the documented causal chain to an actual bank failure (SVB, 2023), not a modeled health figure."
+    },
+    "confidence_note": "This is legislation, not a unilateral executive rollback -- note the mechanism is different from most other entries in this tracker. Strongest framing: cite the direct causal chain to the Silicon Valley Bank collapse as a real-world materialized harm, rather than an abstract 'increases risk' claim.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Wikipedia — Economic Growth, Regulatory Relief, and Consumer Protection Act",
+        "url": "https://en.wikipedia.org/wiki/Economic_Growth,_Regulatory_Relief,_and_Consumer_Protection_Act"
+      },
+      {
+        "name": "Yale Journal on Regulation — Significant Rollback of Dodd-Frank Signed Into Law",
+        "url": "https://www.yalejreg.com/nc/significant-rollback-of-dodd-frank-signed-into-law/"
+      },
+      {
+        "name": "Roosevelt Institute — How 2018 Regulatory Rollbacks Set the Stage for the Silicon Valley Bank Collapse",
+        "url": "https://rooseveltinstitute.org/blog/how-2018-regulatory-rollbacks-set-the-stage-for-the-silicon-valley-bank-collapse-and-how-to-change-course/"
+      }
+    ]
+  },
+  {
+    "id": "endangerment-finding-rescission-trump2",
+    "rule_name": "2009 Endangerment Finding rescission",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Proposed Repeal (foundational finding, not a standalone standard)",
+    "date_of_action": "2025",
+    "original_rule_summary": "2009 EPA scientific and legal finding, based on peer-reviewed climate research, that greenhouse gases endanger public health and welfare -- this finding is the legal foundation obligating EPA to regulate greenhouse gas emissions from vehicles and stationary sources under the Clean Air Act.",
+    "what_changed": "EPA Administrator Lee Zeldin announced plans to rescind the endangerment finding itself, which -- if finalized -- would remove the legal basis EPA has relied on since 2009 to regulate any greenhouse gas emissions under the Clean Air Act, potentially unwinding vehicle and power-plant carbon standards simultaneously rather than one rule at a time.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Publicly identified the endangerment finding as one of 31 targeted actions and has described it as the central legal vulnerability underpinning EPA's climate regulatory authority."
+    },
+    "corporate_beneficiaries": [
+      "Fossil fuel producers and fossil-fuel-dependent power generators broadly, as the finding underlies multiple downstream emissions rules"
+    ],
+    "estimated_health_impact": {
+      "summary": "Because the endangerment finding is the legal foundation for multiple downstream rules rather than a standalone emissions standard, its health impact is best understood as unlocking the rollback of everything built on top of it (vehicle GHG standards, power plant standards, etc.) rather than having an independent quantified impact of its own.",
+      "figures": [],
+      "caveat": "The Institute for Policy Integrity tracker does not assign a standalone dollar/mortality figure to the endangerment finding rescission itself, since its harm is structural/legal (removing EPA's authority) rather than a direct emissions change -- point instead to the combined downstream rules it would enable rolling back."
+    },
+    "confidence_note": "Use this entry for the legal/structural argument (removes the foundation of 40+ years of Clean Air Act climate authority), and pair it with the vehicle-standards and power-plant-standards entries for the quantified health argument -- don't claim a standalone body count for the finding rescission itself.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Climate Action Campaign — Trump's Climate and Clean Energy Rollback Tracker",
+        "url": "https://www.actonclimate.com/trumptracker/"
+      },
+      {
+        "name": "Harvard T.H. Chan School of Public Health — Trump administration plans to roll back EPA regulations could harm health",
+        "url": "https://hsph.harvard.edu/news/trump-administration-plans-to-roll-back-epa-regulations-could-harm-health/"
+      }
+    ]
+  },
+  {
+    "id": "eo-14192-ten-for-one-trump2",
+    "rule_name": "10-for-1 Regulatory Repeal Mandate (Executive Order 14192, \"Unleashing Prosperity Through Deregulation\")",
+    "administration": "Trump II (2025-present)",
+    "agency": "White House / OMB (governs all federal agencies)",
+    "domain": "cross-cutting (structural/process rule affecting all domains)",
+    "status": "Fully Enacted (in effect, ongoing)",
+    "date_of_action": "2025-01-31",
+    "original_rule_summary": "No prior rule -- this is a new process mandate. It supersedes the first Trump administration's 2017 EO 13771, which required a 2-for-1 repeal ratio.",
+    "what_changed": "Requires every federal agency to identify at least 10 existing regulations (broadly defined to include guidance documents, memoranda, and policy statements, not just formal APA rules) to repeal for every 1 new regulation proposed. Also requires that the total incremental cost of all new regulations in FY2025 be 'significantly less than zero,' effectively mandating net deregulation by volume and cost simultaneously. Exempts military, national security, homeland security, foreign affairs, and immigration-related regulations.",
+    "primary_proponent": {
+      "name": "Donald Trump",
+      "role": "President",
+      "note": "Signed personally on January 31, 2025, his first full month in office in the second term; explicitly builds on and escalates his own first-term EO 13771 (2-for-1)."
+    },
+    "corporate_beneficiaries": [
+      "Regulated industries broadly across all sectors -- this is a cross-cutting structural mandate rather than a sector-specific rollback"
+    ],
+    "estimated_health_impact": {
+      "summary": "Severe systemic/structural risk: by design, this EO prioritizes repeal volume and aggregate cost reduction over case-by-case risk assessment of which specific protections get cut, creating pressure to eliminate rules based on their cost to industry rather than their public health or safety value.",
+      "figures": [],
+      "caveat": "No quantified health impact figure exists for the EO itself, since it is a process mandate rather than a rule targeting a specific pollutant, product, or practice -- its harm is best argued structurally (the mechanism itself deprioritizes public-health benefit analysis) rather than with a body-count claim. Downstream rules repealed under its authority may have their own quantified figures (see other entries in this tracker)."
+    },
+    "confidence_note": "This is one of the strongest 'process is the harm' entries in the tracker -- the EO's text itself, not a critic's characterization, establishes that repeal volume/cost savings are the stated goal, independent of the safety value of any given rule. Good for framing a systemic argument distinct from any single rollback.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Federal Register — Unleashing Prosperity Through Deregulation (EO 14192)",
+        "url": "https://www.federalregister.gov/documents/2025/02/06/2025-02345/unleashing-prosperity-through-deregulation"
+      },
+      {
+        "name": "US EPA — Executive Order 14192",
+        "url": "https://www.epa.gov/laws-regulations/executive-order-14192-unleashing-prosperity-through-deregulation"
+      },
+      {
+        "name": "Sabin Center for Climate Change Law, Columbia University — Trump Administration Institutes \"10-to-1\" Deregulation Rule",
+        "url": "https://climate.law.columbia.edu/content/trump-administration-institutes-10-1-deregulation-rule"
+      }
+    ]
+  },
+  {
+    "id": "fcc-net-neutrality-repeal-trump1",
+    "rule_name": "FCC Net Neutrality Repeal (\"Restoring Internet Freedom Order\")",
+    "administration": "Trump I (2017-2021)",
+    "agency": "FCC",
+    "domain": "consumer_safety",
+    "status": "Fully Repealed",
+    "date_of_action": "2017-12-14",
+    "original_rule_summary": "2015 FCC Open Internet Order reclassified broadband internet access as a Title II common-carrier telecommunications service, banning internet service providers from blocking, throttling, or paid-prioritizing web traffic based on source, destination, or content.",
+    "what_changed": "The FCC voted 3-2 along party lines to reclassify broadband back to a lightly-regulated Title I 'information service,' eliminating the common-carrier blocking/throttling/prioritization bans. ISPs remain subject only to a transparency (disclosure) requirement.",
+    "primary_proponent": {
+      "name": "Ajit Pai",
+      "role": "FCC Chairman",
+      "note": "Led the repeal vote; had dissented against the original 2015 rules and argued net neutrality regulation was solving a problem that didn't exist ('the Internet wasn't broken in 2015')."
+    },
+    "corporate_beneficiaries": [
+      "Major broadband/telecom providers (cable and telecom ISPs) gaining ability to prioritize, throttle, or charge for tiered access to web traffic"
+    ],
+    "estimated_health_impact": {
+      "summary": "No direct physical health impact in most cases. The most-cited health-adjacent concern is that ISPs could theoretically throttle or deprioritize telehealth traffic (video visits, remote monitoring data) the same way they could any other non-priority data, though this has not been the primary documented real-world harm since the repeal.",
+      "figures": [],
+      "caveat": "This is fundamentally a digital-access/market-structure issue, not a health rollback in the sense of the environmental or labor entries in this tracker -- use the telehealth-throttling angle cautiously as a theoretical risk, not a documented realized harm."
+    },
+    "confidence_note": "Very well-documented, uncontroversial factually (clear vote, clear date, clear named proponent). Weakest entry in the tracker for a health-impact argument specifically -- best used for a consumer/market-access argument, not paired with the health-focused entries.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "NPR — Net Neutrality Rules: FCC Votes To Repeal Restrictions On Internet Providers",
+        "url": "https://www.npr.org/sections/thetwo-way/2017/12/14/570526390/fcc-repeals-net-neutrality-rules-for-internet-providers"
+      },
+      {
+        "name": "FCC — Remarks of Chairman Ajit Pai on Restoring Internet Freedom",
+        "url": "https://docs.fcc.gov/public/attachments/DOC-347980A1.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ftc-click-to-cancel-repeal-trump2",
+    "rule_name": "FTC \"Click to Cancel\" / Negative Option Rule Repeal",
+    "administration": "Trump II (2025-present)",
+    "agency": "FTC",
+    "domain": "consumer_safety",
+    "status": "Fully Repealed (reverted to pre-2024 text)",
+    "date_of_action": "2026-02-12",
+    "original_rule_summary": "2024 FTC amendment to the Negative Option Rule requiring that canceling a subscription be as simple as signing up for one ('click to cancel'), targeting dark patterns and deceptive billing practices used by subscription-based businesses.",
+    "what_changed": "Following a federal court vacatur, the FTC formally revised the Negative Option Rule to recodify it back to its pre-2024 text, eliminating the simplified-cancellation requirement. This was done in the same Federal Register action that also withdrew the FTC's CARS Rule (auto retail scams) and removed the Non-Compete Rule.",
+    "primary_proponent": {
+      "name": "Andrew Ferguson",
+      "role": "FTC Chairman",
+      "note": "Same FTC leadership and general deregulatory posture as the noncompete rollback; specific individual statements on this particular rule were not found this session."
+    },
+    "corporate_beneficiaries": [
+      "Subscription-based businesses (streaming, media, retail, gyms) that benefit from friction in the cancellation process"
+    ],
+    "estimated_health_impact": {
+      "summary": "No direct physical health impact. The harm is financial/consumer-protection: increased billing friction, deceptive-cancellation vulnerability, and financial stress from difficulty canceling unwanted recurring charges.",
+      "figures": [],
+      "caveat": "This entry is a financial/consumer-protection harm, not a health harm in the sense used elsewhere in this tracker -- keep framing accordingly and don't overstate it as a health rollback."
+    },
+    "confidence_note": "Solid on the facts (Federal Register citation, clear timeline), but this is the weakest entry in the tracker for a health-impact argument specifically, since there is no health angle at all -- use it for a financial/consumer-harm argument, not alongside the environmental/labor entries in a 'health impact' framing.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Federal Register — Revision of the Negative Option Rule, Withdrawal of the CARS Rule, Removal of the Non-Compete Rule",
+        "url": "https://www.federalregister.gov/documents/2026/02/12/2026-02866/revision-of-the-negative-option-rule-withdrawal-of-the-cars-rule-removal-of-the-non-compete-rule-to"
+      }
+    ]
+  },
+  {
+    "id": "ftc-noncompete-ban-reversal-trump2",
+    "rule_name": "FTC Noncompete Clause Ban Reversal",
+    "administration": "Trump II (2025-present)",
+    "agency": "FTC",
+    "domain": "labor",
+    "status": "Fully Repealed (via withdrawal of appeal, formal rule removal 2026-02-12)",
+    "date_of_action": "2025-09-05",
+    "original_rule_summary": "April 2024 FTC rule (under Chair Lina Khan) banning nearly all post-employment noncompete agreements nationwide, requiring employers to rescind existing clauses and notify workers, with narrow exceptions (e.g. business-sale agreements). Developed over years with 26,000 public comments, 25,000 of which supported the categorical ban.",
+    "what_changed": "After district courts in Texas and Florida vacated the rule as exceeding FTC authority, the FTC voted 3-1 to withdraw its appeals and formally accede to the vacatur, abandoning the nationwide ban in favor of case-by-case enforcement against specific anticompetitive noncompete agreements. The rule was formally removed from the Code of Federal Regulations effective 2026-02-12.",
+    "primary_proponent": {
+      "name": "Andrew Ferguson",
+      "role": "FTC Chairman",
+      "note": "Led the 3-1 vote to withdraw the appeals; had dissented against the original 2024 rule as a Commissioner, calling it unlawful."
+    },
+    "corporate_beneficiaries": [
+      "Employers broadly, particularly in industries with heavy noncompete use (healthcare, skilled trades) seeking to retain workforce restrictions"
+    ],
+    "estimated_health_impact": {
+      "summary": "Indirect: reduced job mobility correlates with wage stagnation and, per some economic literature, worse healthcare access when workers are locked into jobs. No direct physical health pathway or quantified figure exists.",
+      "figures": [],
+      "caveat": "This is a labor-mobility/economic harm claim, not a health claim in the environmental-rollback sense -- keep the framing accordingly. Commissioner Rebecca Slaughter's dissent is a useful sourced counter-voice noting the scale of public support for the original rule (25,000 of 26,000 comments)."
+    },
+    "confidence_note": "Strong on the facts of the action itself (well-documented, named proponent, clear timeline). The health/wellbeing impact argument is necessarily indirect -- don't overstate it as a physical-health rollback comparable to the environmental entries in this tracker.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Federal Trade Commission — Files to Accede to Vacatur of Non-Compete Clause Rule",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/federal-trade-commission-files-accede-vacatur-non-compete-clause-rule"
+      },
+      {
+        "name": "Squire Patton Boggs — Rule Abandoned, Crackdown Continues",
+        "url": "https://www.squirepattonboggs.com/insights/publications/rule-abandoned-crackdown-continues-the-federal-trade-commissions-new-non-compete-strategy/"
+      },
+      {
+        "name": "Steptoe — FTC Abandons National Noncompete Rule",
+        "url": "https://www.steptoe.com/en/news-publications/stepahead-antitrust-and-competition-insights/ftc-abandons-national-noncompete-rule-but-employer-compliance-risks-remain.html"
+      }
+    ]
+  },
+  {
+    "id": "gipsa-fair-practices-withdrawal-trump1",
+    "rule_name": "GIPSA Farmer Fair Practices Rules Withdrawal",
+    "administration": "Trump I (2017-2021)",
+    "agency": "USDA (Grain Inspection, Packers and Stockyards Administration)",
+    "domain": "financial",
+    "status": "Fully Repealed (withdrawn shortly after finalization)",
+    "date_of_action": "2017",
+    "original_rule_summary": "December 2016 USDA/GIPSA rules (an interim final rule plus two proposed rules) developed under Agriculture Secretary Tom Vilsack, based on over 60,000 public comments, that would have made it easier for farmers -- particularly contract poultry growers -- to prove Packers and Stockyards Act violations without having to demonstrate market-wide harm, only individualized harm to themselves. Aimed at curbing retaliatory practices by meatpackers/processors against farmers who organized or complained.",
+    "what_changed": "The Trump-era USDA withdrew the Farmer Fair Practices Rules shortly after they were finalized, before the interim final rule's protections took effect. USDA was subsequently sued by advocacy groups alleging the withdrawal violated the Administrative Procedure Act's requirement that agency decisions be based on 'reasoned consideration.'",
+    "primary_proponent": {
+      "name": "USDA leadership under the first Trump administration",
+      "role": "USDA / GIPSA",
+      "note": "A single named individual most responsible for the specific withdrawal decision was not clearly identified in sourcing found this session -- flag as lower-confidence on individual attribution; USDA Secretary at the time was Sonny Perdue, though his personal role in this specific decision was not confirmed."
+    },
+    "corporate_beneficiaries": [
+      "Large meatpacking and poultry processing companies (the 'Big Four' controlling roughly half the broiler and turkey markets per USDA's own 2016 figures)"
+    ],
+    "estimated_health_impact": {
+      "summary": "The claim in earlier drafts of this tracker linking this withdrawal to elevated rural agricultural suicide rates is NOT supported by any source found during verification -- do not use that claim. What is sourced: the withdrawal removed protections against retaliatory practices (e.g. processors providing bad feed or high-mortality-rate birds to growers who organize or complain), which plausibly affects farm income and negotiating leverage for independent contract growers, but no epidemiological or economic study connecting this specific withdrawal to a quantified health or mortality outcome was found.",
+      "figures": [],
+      "caveat": "This entry originally included an unsourced rural-suicide-rate claim, which has been removed after verification found no supporting source. Use only the sourced economic/negotiating-leverage framing; do not reintroduce a health-mortality claim without a real epidemiological citation."
+    },
+    "confidence_note": "The regulatory action itself is well-sourced. Two things need caution: (1) the primary proponent is not a clearly identified individual -- verify further before naming one in debate; (2) the original health-impact framing (rural suicide rates) is unsupported and should not be used.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "National Agricultural Law Center — USDA sued for pulling GIPSA Farmer Fair Practices Rules",
+        "url": "https://nationalaglawcenter.org/usda-sued-pulling-gipsa-farmer-fair-practices-rules/"
+      },
+      {
+        "name": "USDA — Announces Farmer Fair Practices Rules (original 2016 rule announcement, for baseline context)",
+        "url": "https://www.usda.gov/about-usda/news/press-releases/2016/12/14/usda-announces-farmer-fair-practices-rules-clarifications-industry-protections-farmers"
+      }
+    ]
+  },
+  {
+    "id": "joint-employer-standard-narrowing-trump2",
+    "rule_name": "Joint-Employer Standard Narrowing (NLRB)",
+    "administration": "Trump II (2025-present) -- corrected from an earlier draft that misdated this as a First Term action",
+    "agency": "NLRB",
+    "domain": "labor",
+    "status": "Fully Repealed (2023 rule withdrawn; 2020 standard reinstated)",
+    "date_of_action": "2026-02-25 (final rule); effective 2026-02-27",
+    "original_rule_summary": "The NLRB's joint-employer standard determines when two companies (e.g. a franchisor and franchisee, or a company and its staffing agency) can both be held liable for labor law violations and both required to bargain collectively with the same workers. A 2023 Biden-era rule broadened the standard to include 'indirect' or 'reserved' (even unexercised) control over terms like wages, work rules, or health and safety -- making it easier to hold parent companies/franchisors jointly liable.",
+    "what_changed": "The 2023 rule was vacated by a federal court in March 2024 as 'arbitrary and capricious.' The NLRB (with its quorum restored) formally withdrew the 2023 rule and reinstated the narrower 2020 first-Trump-term standard: an entity is now a joint employer only if it 'possesses and exercises substantial direct and immediate control' over essential terms of employment (wages, benefits, hours, hiring, discharge, discipline, supervision, direction). Indirect or unexercised control no longer counts.",
+    "primary_proponent": {
+      "name": "National Labor Relations Board (agency-level action)",
+      "role": "NLRB",
+      "note": "No single named Board member or Chairman was clearly identified as the primary individual driver in sourcing found this session -- the NLRB characterized the rulemaking as 'ministerial,' implementing the court's vacatur rather than a new policy choice by named leadership. Flag attribution as agency-level, not individual, until further verified."
+    },
+    "corporate_beneficiaries": [
+      "Franchisors, staffing agencies, and businesses using subcontractors -- explicitly named as beneficiaries in legal analysis of the rule"
+    ],
+    "estimated_health_impact": {
+      "summary": "Minimal direct physical health impact. The harm is corporate accountability: narrowing joint-employer liability limits the ability to hold parent companies/franchisors responsible for labor violations (including workplace safety violations) occurring at a franchisee's or contractor's site, since the parent company is less likely to be considered a joint employer absent direct, exercised control.",
+      "figures": [],
+      "caveat": "No quantified health/safety figure exists for this rule -- it is a liability-allocation rule, not a safety standard itself. The health-relevant argument is indirect: reduced accountability for the entity best positioned to enforce safety standards across a franchise/contractor network."
+    },
+    "confidence_note": "Solid on the facts and timeline (Federal Register citation, clear before/after standard). Two things to flag: (1) this is a Trump II action from Feb. 2026, not Trump I as an earlier version of this tracker listed -- the 2020 rule referenced here was Trump I, but the specific rollback being tracked (reversing the 2023 expansion) happened this year; (2) no individual proponent is clearly named in sourcing, unlike most other entries in this tracker.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Federal Register — Withdrawal of 2023 Standard for Determining Joint Employer Status",
+        "url": "https://www.federalregister.gov/documents/2026/02/27/2026-03955/withdrawal-of-2023-standard-for-determining-joint-employer-status"
+      },
+      {
+        "name": "Sullivan & Cromwell LLP — NLRB Reinstates Narrower Joint-Employer Standard",
+        "url": "https://www.sullcrom.com/insights/blogs/2026/March/NLRB-Reinstates-Narrower-Joint-Employer-Standard-First-Implemented-During-President-Trump-First-Term"
+      },
+      {
+        "name": "Jackson Lewis — NLRB Goes Back to the Employer-Friendly Future",
+        "url": "https://www.jacksonlewis.com/insights/nlrb-goes-back-employer-friendly-future-it-reinstates-strict-joint-employer-rule"
+      }
+    ]
+  },
+  {
+    "id": "ldmv-ghg-standards-repeal-trump2",
+    "rule_name": "Light- and Medium-Duty Vehicle Greenhouse Gas Standards (Model Year 2027+)",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Fully Repealed",
+    "date_of_action": "2025 (cites Executive Order 14,154, 'Unleashing American Energy')",
+    "original_rule_summary": "EPA tailpipe emissions standards for new light- and medium-duty vehicles beginning model year 2027, designed to cut vehicle greenhouse gas emissions and accelerate the market shift toward more efficient and electric vehicles; also produced fuel-cost savings for individual drivers.",
+    "what_changed": "EPA fully repealed the standards, citing Executive Order 14,154. The repeal removes both the emissions limits and the associated fuel-economy-driven consumer savings that came with them.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Announced the broader deregulatory package (31 actions including this one) as, in EPA's own words, the 'biggest deregulatory action in U.S. history.'"
+    },
+    "corporate_beneficiaries": [
+      "Automakers seeking to delay electrification investment",
+      "Oil and gas producers/refiners"
+    ],
+    "estimated_health_impact": {
+      "summary": "This is the single largest rollback by dollar value in the Institute for Policy Integrity's tracker of 2025-2026 Trump-era energy/environmental rollbacks, combining lost consumer fuel savings, lost health benefits from air pollution reduction, and lost climate benefits.",
+      "figures": [
+        {
+          "metric": "Annual Net Benefits at Risk",
+          "value": "$101,857,000,000",
+          "source": "Institute for Policy Integrity, NYU School of Law (Regulatory Rollback Tracker, updated 2026-04-20)"
+        },
+        {
+          "metric": "Annual Net Consumer Savings at Risk",
+          "value": "$11,410,000,000",
+          "source": "Institute for Policy Integrity, NYU School of Law"
+        },
+        {
+          "metric": "Annual Monetized Health Benefits at Risk",
+          "value": "$10,929,000,000",
+          "source": "Institute for Policy Integrity, NYU School of Law"
+        },
+        {
+          "metric": "Annual Premature Mortalities at Risk",
+          "value": "2,577",
+          "source": "Institute for Policy Integrity, NYU School of Law"
+        }
+      ],
+      "caveat": "Institute for Policy Integrity is an NYU academic policy center, not a neutral government source, but its methodology is built from the agencies' own prior regulatory impact analyses of the rules being repealed -- cite it as 'built from EPA's own prior cost-benefit analysis of the standard being repealed' rather than as an independent outside estimate."
+    },
+    "confidence_note": "Strong, quantified, and traceable to agency-originated modeling (the underlying numbers trace back to EPA's own RIA for the rule before repeal). Good headline figure for debate use: 2,577 estimated annual premature mortalities at risk is the largest single figure in the entire current-term tracker.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Institute for Policy Integrity, NYU School of Law — Tracking the Damages of Regulatory Rollbacks",
+        "url": "https://policyintegrity.org/tracking-regulatory-rollbacks"
+      }
+    ]
+  },
+  {
+    "id": "mats-2026-reset-trump2",
+    "rule_name": "Mercury and Air Toxics Standards (MATS) — 2026 Repeal of 2024 Amendments",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Fully Repealed",
+    "date_of_action": "2026-02-19 (final rule); effective 2026-04-27",
+    "original_rule_summary": "2024 Biden-era EPA strengthening of the original 2012 MATS rule, which tightened the mercury emissions limit for lignite-fired power plant units from 4.0 lb/TBtu to 1.2 lb/TBtu and added continuous particulate matter monitoring requirements.",
+    "what_changed": "EPA finalized a full repeal of the 2024 strengthening, reverting the lignite-unit mercury limit back to the original 2012 baseline of 4.0 lb/TBtu and eliminating the continuous PM monitoring requirement added in 2024. This is a distinct, more recent action from the 2020 MATS cost-benefit finding reversal (see separate entry mats-cost-benefit-rollback-trump1), which addressed the rule's legal justification rather than its numeric limits.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Signed the final repeal rule."
+    },
+    "corporate_beneficiaries": [
+      "Coal-fired power plant operators, particularly lignite-fired units"
+    ],
+    "estimated_health_impact": {
+      "summary": "The original 2012 MATS rule was credited with a roughly 90% cut in power-plant mercury emissions and up to 11,000 lives saved annually. This repeal reverses the 2024 strengthening and allows lignite-fired units to emit more than double the mercury permitted under the 2024 standard. EPA's own 2024 Regulatory Impact Analysis for the standards now being repealed estimated $300 million/year in health benefits and $130 million/year in climate benefits, against $860 million in total compliance costs to industry between 2028-2037. Notably, EPA's 2026 RIA for the repeal itself declines to monetize the health benefits being given up.",
+      "figures": [
+        {
+          "metric": "EPA's own 2024 estimate of annual health benefits from the now-repealed standards",
+          "value": "$300,000,000/year",
+          "source": "EPA 2024 Regulatory Impact Analysis, cited by Inside Climate News"
+        },
+        {
+          "metric": "EPA's own 2024 estimate of annual climate benefits from the now-repealed standards",
+          "value": "$130,000,000/year",
+          "source": "EPA 2024 Regulatory Impact Analysis, cited by Inside Climate News"
+        },
+        {
+          "metric": "Total industry compliance cost estimate, 2028-2037",
+          "value": "$860,000,000",
+          "source": "EPA 2024 Regulatory Impact Analysis, cited by Inside Climate News"
+        }
+      ],
+      "caveat": "These figures come from EPA's own 2024 analysis of the standards being repealed, not an outside advocacy estimate -- strong for debate use. EPA's own 2026 RIA for the repeal itself notably declines to monetize the health benefits being forfeited, which is itself a useful procedural point (an agency choosing not to quantify what it's giving up)."
+    },
+    "confidence_note": "Strong on the facts of the rule change itself (EPA.gov primary source, clear before/after numeric limits) and now strong on health impact too, with EPA's own prior cost-benefit figures. The 'EPA's new RIA declines to monetize health benefits' point remains a good secondary procedural argument.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "US EPA — Mercury and Air Toxics Standards (MATS) rule page",
+        "url": "https://www.epa.gov/mats"
+      },
+      {
+        "name": "Earthjustice — EPA Dismantles Protections for Mercury and Air Toxics From Power Plants",
+        "url": "https://earthjustice.org/press/2026/epa-dismantles-protections-for-mercury-and-air-toxics-from-power-plants"
+      },
+      {
+        "name": "Inside Climate News — Without Weighing Costs to Public Health, EPA Rolls Back Air Pollution Standards for Coal Plants",
+        "url": "https://insideclimatenews.org/news/28022026/epa-rolls-back-coal-pollution-standards/"
+      },
+      {
+        "name": "Harvard EELP — Mercury and Air Toxics Standards tracker",
+        "url": "https://eelp.law.harvard.edu/tracker/mercury-and-air-toxics-standards/"
+      }
+    ]
+  },
+  {
+    "id": "mats-cost-benefit-rollback-trump1",
+    "rule_name": "Mercury and Air Toxics Standards (MATS) — cost-benefit finding reversal",
+    "administration": "Trump I (2017-2021)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Weakened (legal underpinning removed, standards technically left in place)",
+    "date_of_action": "2020-04",
+    "original_rule_summary": "2012 Obama-era EPA rule requiring coal- and oil-fired power plants to limit emissions of mercury and other toxic air pollutants; credited with reducing mercury pollution from coal plants by over 80%.",
+    "what_changed": "EPA finalized a reversal of the 'appropriate and necessary' cost-benefit finding underlying MATS, arguing the rule's compliance costs ($9.6 billion/year) outweighed its directly monetized benefits ($4-6 million/year in mercury-specific benefits), while excluding the much larger 'co-benefits' from reduced particulate matter exposure from that calculation. The numeric emissions standards were left technically in place, but the legal foundation was weakened, exposing the rule to future rollback or non-enforcement.",
+    "primary_proponent": {
+      "name": "Andrew Wheeler",
+      "role": "EPA Administrator",
+      "note": "Signed and announced the 2020 finding reversal; a former coal industry lobbyist (Murray Energy) prior to joining EPA."
+    },
+    "corporate_beneficiaries": [
+      "Coal-fired power plant operators",
+      "Murray Energy and other coal producers"
+    ],
+    "estimated_health_impact": {
+      "summary": "By excluding co-benefits from particulate matter reduction, the reversal undercut the primary public-health justification for the rule -- particulate matter co-benefits accounted for the large majority of MATS's total estimated $37-90 billion in annual benefits versus roughly $9.6 billion in annual compliance costs.",
+      "figures": [
+        {
+          "metric": "EPA's original monetized total annual benefits (incl. co-benefits)",
+          "value": "$37,000,000,000-$90,000,000,000",
+          "source": "2011 EPA Regulatory Impact Analysis for MATS"
+        },
+        {
+          "metric": "EPA's original monetized annual compliance costs",
+          "value": "$9,600,000,000",
+          "source": "2011 EPA Regulatory Impact Analysis for MATS"
+        }
+      ],
+      "caveat": "The 2020 finding reversal did not itself change emissions in the short term since numeric standards stayed in place; the health risk is prospective -- it removed the legal basis that makes the standards defensible against future non-enforcement or repeal."
+    },
+    "confidence_note": "Strong, agency's-own-numbers framing: the cost-benefit dispute is about whether to count co-benefits the EPA itself originally calculated, not a competing outside estimate. Good for a standards-based debate framing -- ask why co-benefits were excluded only for this rule.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Brookings — The Trump administration's major environmental deregulations",
+        "url": "https://www.brookings.edu/articles/the-trump-administrations-major-environmental-deregulations/"
+      },
+      {
+        "name": "NRDC — How EPA Rollbacks Will Cost Us",
+        "url": "https://www.nrdc.org/stories/how-epa-rollbacks-will-cost-us-dollars-and-lives"
+      }
+    ]
+  },
+  {
+    "id": "msha-silica-niosh-rollback-trump2",
+    "rule_name": "MSHA silica exposure rule pause and NIOSH functional elimination",
+    "administration": "Trump II (2025-present)",
+    "agency": "Mine Safety and Health Administration (MSHA) / National Institute for Occupational Safety and Health (NIOSH), Dept. of Labor and HHS respectively",
+    "domain": "labor",
+    "status": "Delayed/Paused (silica rule); Weakened to point of functional elimination (NIOSH)",
+    "date_of_action": "2025",
+    "original_rule_summary": "A new MSHA silica exposure rule (finalized under the Biden administration) would have halved the allowable exposure limit to respirable crystalline silica dust for coal miners, targeting silicosis and black lung disease. Separately, NIOSH is the federal agency that conducts the injury/fatality research underlying OSHA and MSHA rulemaking.",
+    "what_changed": "MSHA announced it would pause enforcement of the new, stricter silica rule. Separately, the administration's restructuring effectively eliminated NIOSH's research capacity and closed 11 OSHA field offices in states with the highest workplace fatality rates, plus 34 MSHA offices.",
+    "primary_proponent": {
+      "name": "Department of Labor leadership under the Trump II administration",
+      "role": "MSHA and OSHA are both housed under DOL",
+      "note": "Reporting on the specific individual driving the NIOSH cuts ties them to the administration's broader federal workforce restructuring effort (DOGE-linked); a single named proponent for this specific action was not clearly identified in available sourcing -- flag as lower-confidence on attribution and verify before using in debate."
+    },
+    "corporate_beneficiaries": [
+      "Coal mining operators subject to the paused stricter silica exposure limit"
+    ],
+    "estimated_health_impact": {
+      "summary": "The Department of Labor's own prior estimate for the silica rule (before the pause) projected substantial prevented deaths and illness -- pausing enforcement puts those prevented cases at risk.",
+      "figures": [
+        {
+          "metric": "DOL's own estimate of deaths prevented by the (now-paused) silica rule",
+          "value": "nearly 1,100 fewer deaths",
+          "source": "Department of Labor rule estimate, cited by Economic Policy Institute"
+        },
+        {
+          "metric": "DOL's own estimate of silica-related illness cases prevented",
+          "value": "3,750 fewer cases",
+          "source": "Department of Labor rule estimate, cited by Economic Policy Institute"
+        }
+      ],
+      "caveat": "These figures are the Department of Labor's own original estimate for the benefit of the rule now being paused (agency's own numbers, strong for debate), as reported secondhand via EPI -- worth verifying against the original DOL rule text directly before using as a primary citation."
+    },
+    "confidence_note": "Primary proponent attribution is the weak point here -- flag it and don't name a specific individual with high confidence until verified. The health impact figures are agency-originated and strong. Treat this as two linked but separate claims: (1) the silica rule pause, well-sourced with agency's own numbers; (2) the NIOSH/office closures, well-sourced as fact but with a structural rather than single-proponent story.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Economic Policy Institute — Too many workers die on the job every year. Trump's attacks on OSHA will kill more.",
+        "url": "https://www.epi.org/blog/too-many-workers-die-on-the-job-every-year-trumps-attacks-on-osha-will-kill-more/"
+      }
+    ]
+  },
+  {
+    "id": "osha-injury-reporting-rollback-trump1",
+    "rule_name": "OSHA 'Improve Tracking of Workplace Injuries and Illnesses' rule — electronic reporting rollback",
+    "administration": "Trump I (2017-2021)",
+    "agency": "OSHA / Department of Labor",
+    "domain": "labor",
+    "status": "Weakened (partially repealed)",
+    "date_of_action": "2019-01-25",
+    "original_rule_summary": "2016 Obama-era OSHA rule requiring employers with 250+ workers at an establishment to electronically submit detailed, itemized workplace injury and illness data (Forms 300, 301, 300A) to OSHA annually, making injury patterns easier for regulators, researchers, and the public to identify.",
+    "what_changed": "OSHA finalized a rule eliminating the requirement to submit the detailed itemized logs (Forms 300 and 301), leaving only the aggregated summary form (300A). The final rule was published during the 2018-2019 government shutdown. Anti-retaliation protections for injury reporting were left in place.",
+    "primary_proponent": {
+      "name": "Alexander Acosta",
+      "role": "Secretary of Labor",
+      "note": "Department of Labor under Acosta finalized and published the rule; OSHA is a sub-agency of DOL."
+    },
+    "corporate_beneficiaries": [
+      "Large employers (250+ workers) previously subject to detailed injury-log disclosure, particularly in construction and manufacturing"
+    ],
+    "estimated_health_impact": {
+      "summary": "Labor advocates and unions argued the rollback makes it significantly harder for OSHA, researchers, and the public to detect workplace-injury patterns and target enforcement, since only aggregate (not itemized, establishment-level) data remains available -- an effect on detection and prevention capacity rather than a directly modeled mortality/injury count.",
+      "figures": [
+        {
+          "metric": "U.S. workplace deaths per year (context figure, not rollback-specific)",
+          "value": "over 5,000 (2016 baseline)",
+          "source": "Economic Policy Institute, citing BLS data"
+        }
+      ],
+      "caveat": "No agency or independent body has published a quantified estimate of additional deaths/injuries directly attributable to this specific reporting rollback -- the harm argument is about degraded detection/prevention capacity, not a modeled body count. Present it that way rather than implying a specific casualty figure."
+    },
+    "confidence_note": "Frame as a transparency/detection-capacity rollback, not a body-count claim -- this is the more defensible, harder-to-rebut version of the argument. Unions (IBEW) and NELP are the sourced critics; note them as advocacy voices, not neutral analysts.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "National Employment Law Project — Trump Administration Rolls Back Workplace Injury Reporting Rule",
+        "url": "https://www.nelp.org/trump-administration-rolls-back-workplace-injury-reporting-rule/"
+      },
+      {
+        "name": "UCOMM Blog — Trump Repeals OSHA Safety Standards",
+        "url": "https://ucommblog.com/section/safety/trump-repeals-osha-safety-standards"
+      },
+      {
+        "name": "The Hill — OSHA to reduce Obama-era injury report requirements for large companies",
+        "url": "https://thehill.com/regulation/labor/399323-osha-reduces-obama-era-injury-report-requirements-for-large-companies/"
+      }
+    ]
+  },
+  {
+    "id": "pfas-drinking-water-rollback-trump2",
+    "rule_name": "PFAS Drinking Water Rule Rollback (Compliance Extension + Partial Rescission)",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Proposed Repeal (two linked proposed rules, comment period closed 2026-07-20, public hearing 2026-07-07, not yet finalized)",
+    "date_of_action": "2026-05-18 (proposed); intent announced 2025-05-14",
+    "original_rule_summary": "April 2024 EPA National Primary Drinking Water Regulation -- the first-ever federal limits on PFAS ('forever chemicals') in drinking water -- set legally enforceable Maximum Contaminant Levels (MCLs) for six PFAS (PFOA, PFOS, PFHxS, PFNA, HFPO-DA/GenX, and Hazard Index mixtures), with compliance required by 2029. EPA's own analysis projected the rule would prevent PFAS exposure for approximately 100 million people and prevent thousands of deaths and tens of thousands of serious illnesses over time.",
+    "what_changed": "EPA proposed two linked rules: (1) rescinding enforceable limits entirely for four of the six regulated PFAS (PFHxS, PFNA, HFPO-DA/GenX, and the Hazard Index mixture), while keeping the PFOA/PFOS limits (4 ppt) technically in place; and (2) extending the PFOA/PFOS compliance deadline by two years, from 2029 to 2031, via a federal exemption framework. Net effect: of the six PFAS regulated in 2024, only two retain enforceable limits, and even those get a longer compliance runway.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Personally announced the plan in April/May 2025; EPA frames the rescission as correcting a procedural 'failure to follow the clear statutory requirements' of the Safe Drinking Water Act rather than a substantive health disagreement, and states it is 'not seeking comment on... any information about health risks associated with PFAS.'"
+    },
+    "corporate_beneficiaries": [
+      "Water utilities facing compliance costs",
+      "PFAS manufacturers and industrial users of the four PFAS losing enforceable limits"
+    ],
+    "estimated_health_impact": {
+      "summary": "EPA's own original 2024 rule projected the full six-PFAS rule would prevent PFAS exposure for ~100 million people and prevent thousands of deaths and tens of thousands of serious illnesses over time -- this is the benefit now partially being unwound by removing 4 of 6 chemicals from enforceable limits and delaying compliance on the remaining 2 by two years. PFAS exposure is linked by CDC/ATSDR research to certain cancers, thyroid disruption, immune effects in children, reproductive difficulties, and elevated cholesterol.",
+      "figures": [
+        {
+          "metric": "People EPA's 2024 rule was projected to protect from PFAS exposure",
+          "value": "~100,000,000",
+          "source": "US EPA, 2024 NPDWR announcement"
+        },
+        {
+          "metric": "PFAS compounds losing enforceable federal limits under the 2026 proposal",
+          "value": "4 of 6 (PFHxS, PFNA, HFPO-DA, Hazard Index mixture)",
+          "source": "US EPA, May 2026 proposed rules"
+        }
+      ],
+      "caveat": "As of this entry, both actions are proposed, not finalized -- comment period closed July 20, 2026. EPA states explicitly it is not accepting comment on the underlying health-risk science, only on the legal/procedural basis for rescission -- worth noting this framing choice in debate, since it forecloses public health argument at the comment stage."
+    },
+    "confidence_note": "Strong, EPA's-own-numbers framing available (the ~100 million people figure comes from EPA's own 2024 rule justification, not an outside estimate). Note carefully that this is still proposed, not finalized, and litigation is expected regardless of outcome per legal analysts.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "US EPA — Proposed PFOA and PFOS Compliance Extension Rule",
+        "url": "https://www.epa.gov/sdwa/proposed-pfoa-and-pfos-compliance-extension-rule"
+      },
+      {
+        "name": "US EPA — Proposed PFAS Rescission Rule",
+        "url": "https://www.epa.gov/sdwa/proposed-pfas-rescission-rule"
+      },
+      {
+        "name": "US EPA — Per- and Polyfluoroalkyl Substances (PFAS)",
+        "url": "https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas"
+      },
+      {
+        "name": "Harvard EELP — PFAS in Drinking Water tracker",
+        "url": "https://eelp.law.harvard.edu/tracker/pfas-in-drinking-water/"
+      }
+    ]
+  },
+  {
+    "id": "power-plant-ghg-standards-repeal-trump2",
+    "rule_name": "Power Plant Greenhouse Gas Standards (Clean Air Act Section 111 EGU Standards)",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Proposed Repeal",
+    "date_of_action": "2025 (cites Executive Order 14,154, 'Unleashing American Energy')",
+    "original_rule_summary": "EPA carbon dioxide emissions standards for fossil-fuel-fired power plants (coal and new gas), issued under Clean Air Act Section 111, requiring plants to install carbon capture or otherwise limit CO2 output.",
+    "what_changed": "EPA proposed repealing the standards entirely, citing Executive Order 14,154. As of the tracker's last update this remains a proposed (not finalized) repeal.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Part of the same 31-action deregulatory package targeting power plant pollution rules and the endangerment finding."
+    },
+    "corporate_beneficiaries": [
+      "Coal-fired power plant operators",
+      "Fossil-gas-fired power plant developers"
+    ],
+    "estimated_health_impact": {
+      "summary": "Second-largest single rollback in the current-term tracker by dollar value, with the majority of monetized benefits coming from avoided climate damages, but with a substantial monetized public-health component from reduced particulate and other co-pollutant exposure near power plants.",
+      "figures": [
+        {
+          "metric": "Annual Net Benefits at Risk",
+          "value": "$23,570,000,000",
+          "source": "Institute for Policy Integrity, NYU School of Law (updated 2026-04-20)"
+        },
+        {
+          "metric": "Annual Monetized Health Benefits at Risk",
+          "value": "$7,567,000,000",
+          "source": "Institute for Policy Integrity, NYU School of Law"
+        },
+        {
+          "metric": "Annual Premature Mortalities at Risk",
+          "value": "555",
+          "source": "Institute for Policy Integrity, NYU School of Law"
+        }
+      ],
+      "caveat": "Still a proposed, not finalized, repeal as of the tracker's last update -- frame accordingly ('EPA has proposed,' not 'EPA has repealed'). Figures represent modeled annualized risk if the proposal is finalized as written."
+    },
+    "confidence_note": "Note the status carefully in debate use -- this one is not finalized yet, unlike the vehicle standards repeal. Otherwise same sourcing strength as the vehicle-standards entry.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Institute for Policy Integrity, NYU School of Law — Tracking the Damages of Regulatory Rollbacks",
+        "url": "https://policyintegrity.org/tracking-regulatory-rollbacks"
+      }
+    ]
+  },
+  {
+    "id": "stream-protection-rule-repeal-trump1",
+    "rule_name": "Stream Protection Rule repeal (Congressional Review Act)",
+    "administration": "Trump I (2017-2021)",
+    "agency": "Department of the Interior / Congress",
+    "domain": "environmental",
+    "status": "Fully Repealed",
+    "date_of_action": "2017-02",
+    "original_rule_summary": "2016 Obama-era Interior Department rule restricting coal companies from dumping mining waste (overburden) directly into nearby streams and waterways, and requiring restoration of streams damaged by surface mining.",
+    "what_changed": "Congress used the Congressional Review Act to overturn the rule within its first 30 legislative days in effect -- one of the fastest reversals of Trump's first term -- permanently barring any 'substantially similar' rule from being reissued without new legislation.",
+    "primary_proponent": {
+      "name": "Donald Trump",
+      "role": "President",
+      "note": "Signed the CRA joint resolution on 2017-02-16, publicly framing it as saving 'thousands of US mining jobs.'"
+    },
+    "corporate_beneficiaries": [
+      "Surface/mountaintop-removal coal mining companies operating in Appalachia"
+    ],
+    "estimated_health_impact": {
+      "summary": "Stream and groundwater contamination from mining waste has been linked in peer-reviewed research to elevated rates of birth defects, cardiovascular disease, and certain cancers in Appalachian mining communities, though the CRA repeal itself has not been the subject of a dedicated agency cost-benefit re-analysis quantifying rollback-specific health effects.",
+      "figures": [],
+      "caveat": "No agency-produced quantified mortality/illness estimate exists specifically for this repeal (unlike MATS or the ACE Rule); health linkage is drawn from separate academic literature on mountaintop-removal mining exposure generally, not a rule-specific impact study."
+    },
+    "confidence_note": "Use with a general-harm framing, not a specific body-count figure -- be explicit that the health literature concerns mountaintop-removal mining exposure broadly, and connect it to the repealed rule's purpose rather than citing a specific number of cases caused by the repeal itself.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "Wikipedia — Environmental policy of the first Donald Trump administration",
+        "url": "https://en.wikipedia.org/wiki/Environmental_policy_of_the_first_Donald_Trump_administration"
+      },
+      {
+        "name": "Sierra Club — The Trump Administration is Reversing 100 Environmental Rules",
+        "url": "https://www.sierracluboahu.org/blog/the-trump-administration-is-reversing-100-environmental-rules"
+      }
+    ]
+  },
+  {
+    "id": "swine-poultry-line-speed-deregulation-trump1-trump2",
+    "rule_name": "Swine and Poultry Inspection Line Speed Deregulation",
+    "administration": "Trump I (2017-2021), revived and expanded Trump II (2025-present)",
+    "agency": "USDA / FSIS",
+    "domain": "consumer_safety",
+    "status": "Fully Repealed (First Term rule vacated by courts in 2021, then reinstated and expanded Second Term)",
+    "date_of_action": "2019-10-01 (First Term final rule); 2025-03 through 2026 (Second Term revival and expansion)",
+    "original_rule_summary": "Federal meat inspection regulations previously capped processing line speeds (e.g. 1,106 head/hour for swine, 140 birds/minute for young chicken) and required federal FSIS inspectors -- not company employees -- to perform carcass-by-carcass safety inspection, on the theory that faster lines and non-federal inspection increase contamination and worker injury risk.",
+    "what_changed": "The 2019 New Swine Slaughter Inspection System (NSIS) rule eliminated the swine line speed cap entirely and shifted carcass-sorting duties to company employees; it was vacated by a federal judge in 2021 after a UFCW union lawsuit found the agency failed to properly consider public comments. Under the second Trump administration, Agriculture Secretary Brooke Rollins announced in March 2025 plans to make faster line speeds a permanent federal standard for both pork and poultry, proposed raising poultry speeds up to 175 birds/minute (chicken) and 60/minute (turkey), and ended ongoing worker-safety data collection at modernized plants, calling it 'redundant.'",
+    "primary_proponent": {
+      "name": "Brooke Rollins",
+      "role": "Secretary of Agriculture (Second Term action)",
+      "note": "Personally announced the 2025 plan to make faster line speeds permanent, four weeks after taking office. The original 2019 rule was a USDA/FSIS action without one clearly identified individual driver."
+    },
+    "corporate_beneficiaries": [
+      "Pork and poultry processing companies, including major plants like Triumph Foods"
+    ],
+    "estimated_health_impact": {
+      "summary": "Two government-commissioned studies published January 2026 found 81% of poultry workers and 46% of swine workers at evaluated facilities were at high risk of musculoskeletal disorders (MSD) such as carpal tunnel syndrome. A federal consumer safety inspector's sworn 2020 court declaration described roughly 2 seconds per pig for inspection at a modernized plant, with diseased carcasses and defects (toenails, hair, abscesses) routinely passing inspection due to time constraints.",
+      "figures": [
+        {
+          "metric": "Poultry workers at evaluated facilities found at high MSD risk",
+          "value": "81%",
+          "source": "Government-commissioned study, cited by Civil Eats/Investigate Midwest, Jan. 2026"
+        },
+        {
+          "metric": "Swine workers at evaluated facilities found at high MSD risk",
+          "value": "46%",
+          "source": "Government-commissioned study, cited by Civil Eats/Investigate Midwest, Jan. 2026"
+        }
+      ],
+      "caveat": "USDA has disputed the interpretation of this same underlying data, with a spokesperson citing the same studies to conclude 'no direct link between line speeds and workplace injuries' -- the National Chicken Council makes a similar counter-claim for poultry specifically. Note this contested interpretation when using the figures; the raw MSD risk percentages are not disputed, but their causal link to line speed specifically is contested by industry and USDA."
+    },
+    "confidence_note": "Strong current-term entry with a named proponent (Rollins) and government-originated worker-safety data, but flag the industry/USDA counter-interpretation explicitly -- this is a case where the underlying data is solid but the causal narrative is actively disputed, which is exactly the kind of nuance a debate opponent would raise.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "USDA FSIS — Maximum Line Speed Under the New Swine Slaughter Inspection System",
+        "url": "https://www.fsis.usda.gov/policy/federal-register-rulemaking/federal-register-rules/maximum-line-speed-under-new-swine"
+      },
+      {
+        "name": "Civil Eats — Faster Lines, Less Oversight at Pork and Poultry Plants",
+        "url": "https://civileats.com/2025/08/25/faster-lines-less-oversight-at-pork-and-poultry-plants/"
+      },
+      {
+        "name": "Investigate Midwest — Faster lines, less federal oversight and rising risks at US pork and poultry plants",
+        "url": "https://investigatemidwest.org/2025/08/13/faster-lines-less-federal-oversight-and-rising-risks-at-us-pork-and-poultry-plants/"
+      },
+      {
+        "name": "Agri-Pulse — USDA proposes rules to allow faster pork, poultry processing line speeds",
+        "url": "https://www.agri-pulse.com/articles/24235-usda-proposes-updates-to-pork-poultry-processing-line-speed-regulations"
+      }
+    ]
+  },
+  {
+    "id": "wotus-narrowing-trump2",
+    "rule_name": "Waters of the United States (WOTUS) Narrowing — Post-Sackett Redefinition",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA / Army Corps of Engineers",
+    "domain": "environmental",
+    "status": "Proposed Repeal (comment period closed 2026-01-05, not yet finalized)",
+    "date_of_action": "2025-11-17 (proposed)",
+    "original_rule_summary": "The 'waters of the United States' (WOTUS) definition determines which streams, wetlands, and other water bodies are protected under the Clean Water Act. Following the Supreme Court's 2023 Sackett v. EPA decision, the Biden administration issued a 2023 rule conforming WOTUS to Sackett's narrower 'relatively permanent' and 'continuous surface connection' standards.",
+    "what_changed": "EPA and the Army Corps proposed a further narrowing of the 2023 rule -- the sixth WOTUS redefinition in a decade -- including removing 'interstate waters' from the definition entirely and tightening the definitions of 'continuous surface connection' and 'relatively permanent waters.' The stated aim is to end a split implementation (the 2023 rule is currently enjoined in 26 states) and further reduce federal permitting jurisdiction.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "EPA and the Army jointly proposed the rule; Zeldin is the named agency head across the broader 2025-2026 EPA deregulatory push."
+    },
+    "corporate_beneficiaries": [
+      "Developers, agricultural operations, and industries seeking reduced Clean Water Act Section 404/402 permitting obligations"
+    ],
+    "estimated_health_impact": {
+      "summary": "Narrower federal jurisdiction over wetlands and intermittent streams reduces natural filtration of agricultural and industrial runoff before it reaches drinking water sources -- a structural/general risk rather than a quantified rule-specific mortality or illness figure.",
+      "figures": [],
+      "caveat": "No agency-produced quantified health impact figure was found for this specific proposal as of this entry's creation. The rule is also not yet finalized -- frame as proposed, not enacted."
+    },
+    "confidence_note": "Use a structural/general-risk framing (reduced filtration, increased runoff exposure) rather than citing a specific casualty figure, since none exists yet for this action. Note explicitly that it is a proposed rule, not finalized.",
+    "last_verified": "2026-07-03",
+    "sources": [
+      {
+        "name": "US EPA — Waters of the United States",
+        "url": "https://www.epa.gov/wotus"
+      },
+      {
+        "name": "Greenberg Traurig — The Never-Ending Rule",
+        "url": "https://www.gtlaw.com/en/insights/2025/11/the-never-ending-rule-epa-and-army-corps-of-engineers-propose-narrowing-the-post-sackett-definition-of-waters-of-the-united-states"
+      },
+      {
+        "name": "Alston & Bird — EPA, Army Corps Proposal on Revised WOTUS Definition",
+        "url": "https://www.alston.com/en/insights/publications/2025/12/epa-army-corps-engineers-revised-wotus-definition"
+      }
+    ]
+  }
+]

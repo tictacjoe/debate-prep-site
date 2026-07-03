@@ -1,0 +1,18 @@
+# publish_exclude.txt
+#
+# Entry IDs listed here are excluded when publish.py runs, regardless
+# of what's in the working repo. One ID per line. Lines starting with
+# '#' are comments and ignored.
+#
+# This is the actual control point for "nothing goes public until I
+# say so" -- add an ID here to hold it back, remove it once you're
+# ready to publish that entry.
+
+# Flagged LOW confidence, needs primary-source verification at
+# usun.usmission.gov before public use (see systems report, Section 6)
+# Fill in the actual filename (without .json) -- find it with:
+#   ls ~/gjoe/debate-prep/prosecution/cabinet-level/ | grep -i waltz
+# waltz-FILL-IN-ACTUAL-FILENAME
+
+# Add more IDs below as needed, e.g.:
+waltz-un-iran-infrastructure-statement-2026-04
