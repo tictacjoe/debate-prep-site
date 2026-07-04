@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debate Prep — a falsifiable-claims docket</title>
+<style>
+  :root {
+    --paper: #EDEFE7;
+    --paper-card: #F7F8F2;
+    --ink: #1D2220;
+    --ink-soft: #52564F;
+    --ink-faint: #8A8D82;
+    --rule: #C7CABB;
+    --rule-strong: #A9AC9A;
+    --verified: #2F5233;
+    --verified-bg: #E3EBDF;
+    --flag: #8B3A2B;
+    --flag-bg: #F3E4DF;
+    --brass: #96762C;
+    --brass-light: #EFE7D2;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    line-height: 1.55;
+  }
+
+  .mono {
+    font-family: ui-monospace, 'SF Mono', 'Courier New', Courier, monospace;
+  }
+
+  /* ================= MASTHEAD ================= */
+  header.masthead {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
+    border-bottom: 3px double var(--rule-strong);
+  }
+  header.masthead h1 {
+    margin: 0;
+    font-size: 2.6rem;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  header.masthead .tagline {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    color: var(--brass);
+    font-style: italic;
+  }
+  header.masthead .subhead {
+    margin: 1rem auto 0;
+    max-width: 560px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  /* ================= GLOBAL SEARCH ================= */
+  .global-search-box {
+    max-width: 640px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--paper-card);
+    border: 1px solid var(--brass);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+  }
+  .global-search-box input[type="text"] {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--ink);
+    outline: none;
+  }
+  .global-search-box input[type="text"]::placeholder { color: var(--ink-faint); }
+  .regex-toggle {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--brass);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .regex-toggle input { cursor: pointer; }
+  .regex-error {
+    max-width: 640px;
+    margin: 0.5rem auto 0;
+    font-family: ui-monospace, monospace;
+    font-size: 0.75rem;
+    color: var(--flag);
+    text-align: center;
+  }
+  .source-tag {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--brass-light);
+    color: var(--brass);
+    margin-right: 0.5rem;
+  }
+
+  /* ================= ONE-LINER ROWS ================= */
+  .oneliner-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    font-size: 0.92rem;
+  }
+  .oneliner-row:hover { background: var(--brass-light); }
+  .oneliner-row:last-child { border-bottom: none; }
+  .oneliner-caret {
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    color: var(--brass);
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+  .oneliner-row.open .oneliner-caret { transform: rotate(90deg); }
+  .oneliner-text { flex: 1; }
+  .oneliner-detail {
+    display: none;
+    padding: 0 1.25rem 1rem 2.4rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .oneliner-row.open + .oneliner-detail { display: block; }
+  .oneliner-list {
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  /* ================= TABS ================= */
+  nav.tabs {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    gap: 4px;
+    margin-top: -1px;
+  }
+  nav.tabs button {
+    font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--rule);
+    color: var(--ink-soft);
+    border: none;
+    padding: 0.6rem 1.1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    top: 1px;
+  }
+  nav.tabs button.active {
+    background: var(--paper-card);
+    color: var(--ink);
+    font-weight: bold;
+  }
+  nav.tabs button:hover:not(.active) {
+    background: var(--rule-strong);
+  }
+
+  /* ================= MAIN ================= */
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper-card);
+    padding: 1.75rem 1.5rem 3rem;
+    min-height: 400px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .controls input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 3px;
+  }
+  .controls select {
+    font-family: ui-monospace, monospace;
+    font-size: 0.8rem;
+    padding: 0.55rem 0.6rem;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 3px;
+  }
+
+  .result-count {
+    font-family: ui-monospace, monospace;
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* ================= ENTRY CARD ================= */
+  .entry {
+    position: relative;
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: var(--paper);
+    overflow: hidden;
+  }
+  .entry-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.9rem 3.6rem 0.9rem 1rem;
+    cursor: pointer;
+  }
+  .entry-head:hover { background: var(--brass-light); }
+
+  .docket-no {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    padding-top: 0.2rem;
+    min-width: 3.2rem;
+  }
+  .entry-title-block { flex: 1; }
+  .entry-title {
+    margin: 0 0 0.25rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+  }
+  .entry-meta {
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .domain-tag {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---- signature element: rotated ink stamp ---- */
+  .stamp {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.9rem;
+    transform: rotate(-7deg);
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    font-family: ui-monospace, monospace;
+    font-size: 0.62rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.88;
+  }
+  .stamp.verified { color: var(--verified); border-color: var(--verified); }
+  .stamp.flag { color: var(--flag); border-color: var(--flag); }
+
+  .entry-detail {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    border-top: 1px dashed var(--rule-strong);
+  }
+  .entry.open .entry-detail { display: block; }
+  .entry.open .entry-head { background: var(--brass-light); }
+
+  .field-label {
+    font-family: ui-monospace, monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--brass);
+    margin: 1rem 0 0.3rem;
+  }
+  .field-label:first-child { margin-top: 1rem; }
+  .field-value { font-size: 0.92rem; }
+
+  .exhibit-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+  .exhibit-list li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .exhibit-list li:last-child { border-bottom: none; }
+  .exhibit-list a { color: var(--brass); text-decoration: none; }
+  .exhibit-list a:hover { text-decoration: underline; }
+
+  .confidence-box {
+    background: var(--brass-light);
+    border-left: 3px solid var(--brass);
+    border-radius: 0 3px 3px 0;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  footer {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 600px) {
+    header.masthead h1 { font-size: 1.9rem; }
+    .entry-head { flex-direction: column; gap: 0.3rem; padding-right: 1rem; }
+    .stamp { position: static; transform: rotate(-3deg); display: inline-block; margin-top: 0.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <h1>Debate Prep</h1>
+  <p class="tagline">Know the claim. Know the cause. Know the comeback.</p>
+  <p class="subhead">A falsifiable-claims docket tracking regulatory rollbacks and official conduct — every entry sourced, every confidence level stated, nothing asserted without a citation.</p>
+  <div class="global-search-box">
+    <input type="text" id="global-search" placeholder="Search across all three databases (supports regex)...">
+    <label class="regex-toggle"><input type="checkbox" id="global-oneliner" checked> 1-liners</label>
+    <label class="regex-toggle"><input type="checkbox" id="global-regex"> regex</label>
+  </div>
+  <div class="regex-error" id="regex-error"></div>
+</header>
+
+<nav class="tabs" id="tabs"></nav>
+
+<main>
+  <div class="controls" id="tab-controls">
+    <input type="text" id="search" placeholder="Search entries...">
+    <select id="filter"></select>
+  </div>
+  <div class="result-count" id="count"></div>
+  <div id="entries"></div>
+</main>
+
+<footer>
+  All entries loaded live from this site's own published data.
+  <a href="https://github.com/tictacjoe/debate-prep-site" target="_blank" rel="noopener">View the raw source data on GitHub</a> — every claim here should be independently checkable.
+</footer>
+
+<script>
+/* ====================================================================
+   REAL DATA LOADING
+   Fetches the three published JSON files (same-origin relative paths,
+   so this works once deployed via GitHub Pages -- see loadAllData()
+   near the bottom of this script). Each tracker starts empty and is
+   populated asynchronously.
+==================================================================== */
+
+const TRACKERS = {
+  deregulation: {
+    label: "Deregulation",
+    data: [],
+    titleField: "rule_name",
+    idField: "id",
+    dateField: "date_of_action",
+    filterField: "domain",
+    filterLabel: "domain",
+    statusField: "status",
+    kind: "deregulation",
+  },
+  prosecution: {
+    label: "Prosecution",
+    data: [],
+    titleField: "official",
+    idField: "official",
+    dateField: "last_updated",
+    filterField: "offense_category",
+    filterLabel: "category",
+    statusField: "status",
+    kind: "prosecution",
+  },
+  tracker: {
+    label: "News",
+    data: [],
+    titleField: "what_happened",
+    idField: null,
+    dateField: "date",
+    filterField: "category",
+    filterLabel: "category",
+    statusField: null,
+    kind: "tracker",
+  }
+};
+
+/* Converts raw scraped posts (one JSON object per Substack post, each
+   containing multiple dated entries) into a flat list of individually
+   searchable pseudo-entries -- one per event, not one per post. */
+function flattenTrackerPosts(posts) {
+  const flat = [];
+  (posts || []).forEach(post => {
+    (post.entries || []).forEach(entry => {
+      flat.push({
+        date: entry.date || post.date,
+        category: entry.category || post.category || "Uncategorized",
+        what_happened: entry.what_happened || "",
+        why_it_matters: entry.why_it_matters || "",
+        source_name: entry.source_name || null,
+        source_url: entry.source_url || null,
+        post_title: post.title || "",
+      });
+    });
+  });
+  return flat;
+}
+
+let activeTracker = "deregulation";
+let searchTerm = "";
+let filterValue = "";
+
+function stampClass(entry, cfg) {
+  if (cfg.kind === "deregulation") {
+    const s = (entry.status || "").toLowerCase();
+    if (s.includes("proposed") || s.includes("delayed") || s.includes("paused")) return "flag";
+    return "verified";
+  }
+  if (cfg.kind === "tracker") {
+    return entry.source_name ? "verified" : "flag";
+  }
+  return entry.contested ? "flag" : "verified";
+}
+
+function stampLabel(entry, cfg) {
+  if (cfg.kind === "deregulation") {
+    const s = (entry.status || "");
+    if (s.toLowerCase().includes("proposed")) return "Proposed";
+    if (s.toLowerCase().includes("delayed") || s.toLowerCase().includes("paused")) return "Paused";
+    return "Verified";
+  }
+  if (cfg.kind === "tracker") {
+    return entry.source_name ? "Sourced" : "Uncited";
+  }
+  return entry.contested ? "Contested" : "Documented";
+}
+
+function domainColor(domain) {
+  const map = {
+    environmental: "#4B6B4F", labor: "#3E5C76", financial: "#8B6F3E",
+    consumer_safety: "#7A4B3E", "cross-cutting": "#5C5A52"
+  };
+  return map[domain] || "#5C5A52";
+}
+
+function truncate(str, n) {
+  if (!str) return "";
+  return str.length > n ? str.slice(0, n).trim() + "…" : str;
+}
+
+/* One-liner generation is deliberately template-based rather than
+   free-text, so it stays deterministic and traceable back to the
+   same structured fields as the full card -- no separate "summary"
+   field to keep in sync, no LLM call needed client-side. */
+function oneLinerFor(entry, cfg) {
+  if (cfg.kind === "deregulation") {
+    const s = (entry.status || "").toLowerCase();
+    let verb = "acted on";
+    if (s.includes("fully repealed")) verb = "repealed";
+    else if (s.includes("proposed")) verb = "proposed repealing";
+    else if (s.includes("delayed") || s.includes("paused")) verb = "paused enforcement of";
+    const proponent = entry.primary_proponent?.name || entry.agency || "An agency";
+    let line = proponent + " (" + (entry.agency || "") + ") " + verb + " \u201c" + entry.rule_name + "\u201d";
+    const figs = entry.estimated_health_impact?.figures;
+    if (figs && figs.length) {
+      line += " \u2014 " + figs[0].metric + ": " + figs[0].value + ".";
+    } else {
+      line += " (" + (entry.date_of_action || entry.administration || "") + ").";
+    }
+    return line;
+  }
+  if (cfg.kind === "prosecution") {
+    const tag = entry.contested ? " [CONTESTED]" : "";
+    return entry.official + " \u2014 " + entry.offense_category + ": " + truncate(entry.status, 150) + tag;
+  }
+  if (cfg.kind === "tracker") {
+    return (entry.date || "") + " [" + entry.category + "] " + truncate(entry.what_happened, 150);
+  }
+  return JSON.stringify(entry).slice(0, 150);
+}
+
+/* Matches a search term against a haystack string. Supports plain
+   substring (case-insensitive) or regex mode. On invalid regex,
+   returns null so the caller can show an error rather than silently
+   falling back to a different match behavior. */
+function matchesTerm(haystack, term, useRegex) {
+  if (!term) return true;
+  if (useRegex) {
+    try {
+      const re = new RegExp(term, "i");
+      return re.test(haystack);
+    } catch (err) {
+      return null; // signals invalid regex to the caller
+    }
+  }
+  return haystack.toLowerCase().includes(term.toLowerCase());
+}
+
+/* Shared detail-html builder -- used both by the full docket card
+   (tabbed/global card view) and by the one-liner expand-on-click,
+   so there's exactly one place that knows how to render each
+   tracker kind's fields, not two drifting copies. */
+function buildDetailHtml(entry, cfg) {
+  if (cfg.kind === "deregulation") {
+    return '<div class="field-label">What changed</div><div class="field-value">' + (entry.what_changed || "") + '</div>' +
+      '<div class="field-label">Primary proponent</div><div class="field-value"><strong>' + (entry.primary_proponent?.name || "") + '</strong> — ' + (entry.primary_proponent?.role || "") + (entry.primary_proponent?.note ? '<br><em>' + entry.primary_proponent.note + '</em>' : '') + '</div>' +
+      '<div class="field-label">Estimated impact</div><div class="field-value">' + (entry.estimated_health_impact?.summary || "") + '</div>' +
+      (entry.estimated_health_impact?.figures?.length ? '<ul class="exhibit-list">' + entry.estimated_health_impact.figures.map(f => '<li>' + f.metric + ': <strong>' + f.value + '</strong> (' + f.source + ')</li>').join("") + '</ul>' : '') +
+      '<div class="field-label">Confidence note</div><div class="confidence-box">' + (entry.confidence_note || "") + '</div>' +
+      '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + s.url + '" target="_blank" rel="noopener">' + s.name + '</a></li>').join("") + '</ul>';
+  }
+  if (cfg.kind === "tracker") {
+    return '<div class="field-label">What happened</div><div class="field-value">' + (entry.what_happened || "") + '</div>' +
+      '<div class="field-label">Why it matters</div><div class="field-value">' + (entry.why_it_matters || "") + '</div>' +
+      (entry.source_name ? '<div class="field-label">Source</div><ul class="exhibit-list"><li><a href="' + entry.source_url + '" target="_blank" rel="noopener">' + entry.source_name + '</a></li></ul>' : '<div class="field-label">Source</div><div class="field-value" style="color:var(--ink-faint);font-style:italic;">not cited in original post</div>');
+  }
+  // prosecution (default)
+  return '<div class="field-label">Incident summary</div><div class="field-value">' + (entry.incident_summary || "") + '</div>' +
+    '<div class="field-label">Status</div><div class="field-value">' + (entry.status || "") + '</div>' +
+    '<div class="field-label">Confidence note</div><div class="confidence-box">' + (entry.confidence_note || "") + '</div>';
+}
+
+/* Shared card builder used by both the per-tracker tabbed view and
+   the cross-database global search view, so the two stay visually
+   and behaviorally consistent rather than drifting apart. */
+function buildEntryCard(entry, cfg, docketLabel, sourceLabel) {
+  const div = document.createElement("div");
+  div.className = "entry";
+  const title = entry[cfg.titleField] || "Untitled";
+  const sClass = stampClass(entry, cfg);
+  const sLabel = stampLabel(entry, cfg);
+
+  let metaHtml = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
+  if (cfg.kind === "deregulation") {
+    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + entry.domain + '</span>' +
+               '<span>' + (entry.agency || "") + '</span><span>' + (entry.date_of_action || "") + '</span>';
+  } else if (cfg.kind === "tracker") {
+    metaHtml += '<span>' + (entry.category || "") + '</span><span>' + (entry.date || "") + '</span>';
+  } else {
+    metaHtml += '<span>' + (entry.offense_category || "") + '</span><span>updated ' + (entry.last_updated || "") + '</span>';
+  }
+
+  div.innerHTML =
+    '<div class="stamp ' + sClass + '">' + sLabel + '</div>' +
+    '<div class="entry-head">' +
+      '<div class="docket-no mono">' + docketLabel + '</div>' +
+      '<div class="entry-title-block">' +
+        '<p class="entry-title">' + title + '</p>' +
+        '<div class="entry-meta">' + metaHtml + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="entry-detail">' + buildDetailHtml(entry, cfg) + '</div>';
+
+  div.querySelector(".entry-head").addEventListener("click", () => div.classList.toggle("open"));
+  return div;
+}
+
+function renderTabs() {
+  const nav = document.getElementById("tabs");
+  nav.innerHTML = "";
+  Object.keys(TRACKERS).forEach(key => {
+    const btn = document.createElement("button");
+    btn.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
+    btn.className = key === activeTracker ? "active" : "";
+    btn.onclick = () => { activeTracker = key; filterValue = ""; searchTerm = ""; document.getElementById("search").value = ""; renderDispatch(); };
+    nav.appendChild(btn);
+  });
+}
+
+function renderFilterOptions(cfg) {
+  const sel = document.getElementById("filter");
+  if (!cfg.filterField) { sel.style.display = "none"; return; }
+  sel.style.display = "";
+  const values = [...new Set(cfg.data.map(e => e[cfg.filterField]).filter(Boolean))].sort();
+  sel.innerHTML = '<option value="">all ' + cfg.filterLabel + 's</option>' +
+    values.map(v => '<option value="' + v + '">' + v + '</option>').join("");
+  sel.value = filterValue;
+}
+
+function renderEntries() {
+  const cfg = TRACKERS[activeTracker];
+  const container = document.getElementById("entries");
+  const countEl = document.getElementById("count");
+
+  if (activeTracker === "tracker" && cfg.data.length > 200) {
+    container.innerHTML = '<div class="empty-state">This dataset (' + cfg.data.length + ' entries) is large for unpaginated display.<br>Use the search box above, or the global cross-database search, to narrow it down.</div>';
+    countEl.textContent = "";
+    return;
+  }
+
+  const filtered = cfg.data.filter(e => {
+    const matchesSearch = matchesTerm(JSON.stringify(e).toLowerCase(), searchTerm, false);
+    const matchesFilter = !filterValue || e[cfg.filterField] === filterValue;
+    return matchesSearch && matchesFilter;
+  });
+
+  countEl.textContent = filtered.length + " of " + cfg.data.length + " entries shown";
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty-state">No entries match. Try a different search or filter.</div>';
+    return;
+  }
+
+  container.innerHTML = "";
+  filtered.forEach((entry, i) => {
+    container.appendChild(buildEntryCard(entry, cfg, "NO. " + String(i + 1).padStart(2, "0"), null));
+  });
+}
+
+/* Cross-database search: iterates every tracker's data (News is
+   flattened per-event, not per-post, once real data is wired in --
+   see flattenTrackerPosts()), applies plain or regex matching, and
+   renders either full docket cards or a condensed one-liner list
+   depending on the "1-liners" toggle. */
+function renderGlobalResults(term, useRegex, useOneLiners) {
+  const container = document.getElementById("entries");
+  const countEl = document.getElementById("count");
+  const errorEl = document.getElementById("regex-error");
+  errorEl.textContent = "";
+
+  let allMatches = [];
+  let hadRegexError = false;
+
+  Object.keys(TRACKERS).forEach(key => {
+    const cfg = TRACKERS[key];
+    cfg.data.forEach(entry => {
+      const haystack = JSON.stringify(entry);
+      const result = matchesTerm(haystack, term, useRegex);
+      if (result === null) { hadRegexError = true; return; }
+      if (result) allMatches.push({ entry, cfg, sourceLabel: cfg.label });
+    });
+  });
+
+  if (hadRegexError) {
+    errorEl.textContent = "Invalid regular expression — showing no results until the pattern is fixed.";
+    container.innerHTML = "";
+    countEl.textContent = "";
+    return;
+  }
+
+  countEl.textContent = allMatches.length + " result(s) across all databases for \"" + term + "\"" +
+    (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
+
+  if (allMatches.length === 0) {
+    container.innerHTML = '<div class="empty-state">No matches found across any database.</div>';
+    return;
+  }
+
+  container.innerHTML = "";
+
+  if (!useOneLiners) {
+    allMatches.forEach((m, i) => {
+      container.appendChild(buildEntryCard(m.entry, m.cfg, "NO. " + String(i + 1).padStart(2, "0"), m.sourceLabel));
+    });
+    return;
+  }
+
+  // --- one-liner list mode ---
+  const list = document.createElement("div");
+  list.className = "oneliner-list";
+  allMatches.forEach((m, i) => {
+    const row = document.createElement("div");
+    row.className = "oneliner-row";
+    row.innerHTML =
+      '<span class="oneliner-caret">▸</span>' +
+      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' + oneLinerFor(m.entry, m.cfg) + '</span>';
+
+    const detail = document.createElement("div");
+    detail.className = "oneliner-detail";
+    detail.innerHTML = buildDetailHtml(m.entry, m.cfg);
+
+    row.addEventListener("click", () => {
+      row.classList.toggle("open");
+      detail.style.display = row.classList.contains("open") ? "block" : "none";
+    });
+
+    list.appendChild(row);
+    list.appendChild(detail);
+  });
+  container.appendChild(list);
+}
+
+/* Top-level dispatcher: global search (if non-empty) takes over the
+   whole results area and hides the per-tracker tabs/controls, since
+   showing both search modes active at once would be confusing about
+   which one is actually filtering what's on screen. */
+function renderDispatch() {
+  const term = document.getElementById("global-search").value.trim();
+  const useRegex = document.getElementById("global-regex").checked;
+  const useOneLiners = document.getElementById("global-oneliner").checked;
+  const tabsEl = document.getElementById("tabs");
+  const controlsEl = document.getElementById("tab-controls");
+
+  if (term) {
+    tabsEl.style.display = "none";
+    controlsEl.style.display = "none";
+    renderGlobalResults(term, useRegex, useOneLiners);
+  } else {
+    tabsEl.style.display = "";
+    controlsEl.style.display = "";
+    document.getElementById("regex-error").textContent = "";
+    renderTabs();
+    renderFilterOptions(TRACKERS[activeTracker]);
+    renderEntries();
+  }
+}
+
+document.getElementById("search").addEventListener("input", (e) => {
+  searchTerm = e.target.value;
+  renderEntries();
+});
+document.getElementById("filter").addEventListener("change", (e) => {
+  filterValue = e.target.value;
+  renderEntries();
+});
+document.getElementById("global-search").addEventListener("input", renderDispatch);
+document.getElementById("global-regex").addEventListener("change", renderDispatch);
+document.getElementById("global-oneliner").addEventListener("change", renderDispatch);
+
+/* Loads the three published JSON files. Uses Promise.allSettled
+   (not Promise.all) so that a failure on one file -- missing,
+   malformed, not yet published -- doesn't prevent the other two
+   databases from working. Tracker data is flattened from raw posts
+   into individually searchable events immediately after loading. */
+async function loadAllData() {
+  document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
+
+  const [prosecutionResult, deregulationResult, trackerResult] = await Promise.allSettled([
+    fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+  ]);
+
+  const loadErrors = [];
+
+  if (prosecutionResult.status === "fulfilled") {
+    TRACKERS.prosecution.data = prosecutionResult.value;
+  } else {
+    loadErrors.push("prosecution.json (" + prosecutionResult.reason.message + ")");
+  }
+
+  if (deregulationResult.status === "fulfilled") {
+    TRACKERS.deregulation.data = deregulationResult.value;
+  } else {
+    loadErrors.push("deregulation.json (" + deregulationResult.reason.message + ")");
+  }
+
+  if (trackerResult.status === "fulfilled") {
+    TRACKERS.tracker.data = flattenTrackerPosts(trackerResult.value);
+  } else {
+    loadErrors.push("tracker.json (" + trackerResult.reason.message + ")");
+  }
+
+  renderDispatch();
+
+  if (loadErrors.length) {
+    const banner = document.createElement("div");
+    banner.className = "regex-error";
+    banner.style.margin = "0 auto 1rem";
+    banner.style.maxWidth = "880px";
+    banner.style.textAlign = "left";
+    banner.textContent = "Could not load: " + loadErrors.join(", ") + ". Other databases are unaffected.";
+    document.querySelector("main").prepend(banner);
+    console.warn("Data load errors:", loadErrors);
+  }
+}
+
+loadAllData();
+</script>
+</body>
+</html>
