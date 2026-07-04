@@ -19,6 +19,7 @@
     --flag-bg: #F3E4DF;
     --brass: #96762C;
     --brass-light: #EFE7D2;
+    --highlight: #F2D98D;
   }
 
   * { box-sizing: border-box; }
@@ -150,6 +151,13 @@
     border-radius: 4px;
     background: var(--paper);
     overflow: hidden;
+  }
+  mark.hl {
+    background: var(--highlight);
+    color: var(--ink);
+    font-weight: bold;
+    padding: 0 0.15em;
+    border-radius: 2px;
   }
 
   /* ================= TABS ================= */
@@ -501,6 +509,34 @@ function truncate(str, n) {
   return str.length > n ? str.slice(0, n).trim() + "…" : str;
 }
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/* Escapes the text first (so entry data can never inject stray HTML),
+   then wraps matches of the search term in <mark>. In plain-text mode
+   the term itself is regex-escaped so special characters like "?" or
+   "(" are matched literally, not as regex syntax -- only in regex
+   mode does the term act as an actual pattern. */
+function highlightMatches(text, term, useRegex) {
+  const escaped = escapeHtml(text);
+  if (!term) return escaped;
+  try {
+    const pattern = useRegex ? term : escapeRegExp(term);
+    const re = new RegExp(pattern, "gi");
+    return escaped.replace(re, (match) => "<mark class=\"hl\">" + match + "</mark>");
+  } catch (err) {
+    return escaped; // invalid regex -- matchesTerm() upstream already surfaces the error banner
+  }
+}
+
 /* One-liner generation is deliberately template-based rather than
    free-text, so it stays deterministic and traceable back to the
    same structured fields as the full card -- no separate "summary"
@@ -716,7 +752,7 @@ function renderGlobalResults(term, useRegex, useOneLiners) {
     row.className = "oneliner-row";
     row.innerHTML =
       '<span class="oneliner-caret">▸</span>' +
-      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' + oneLinerFor(m.entry, m.cfg) + '</span>';
+      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' + highlightMatches(oneLinerFor(m.entry, m.cfg), term, useRegex) + '</span>';
 
     const detail = document.createElement("div");
     detail.className = "oneliner-detail";
