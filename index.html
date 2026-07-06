@@ -509,6 +509,74 @@ function truncate(str, n) {
   return str.length > n ? str.slice(0, n).trim() + "…" : str;
 }
 
+/* Canonical category set for the News/tracker database. The real
+   scraped data has format drift across ~500 days of posts (e.g.
+   "Imperial" / "Imperial and Geopolitical" / "Imperial Watch and
+   Geopolitical" are the same underlying category at different points
+   in time) plus two known scraper bugs -- stray internal link markers
+   leaking into the category field, and a small number of entries
+   where an article headline got stored as the category instead of a
+   real one. This map absorbs all of that so the filter dropdown stays
+   a small, curated, meaningful list rather than dozens of near-
+   duplicate or junk one-off values. */
+const CATEGORY_CANONICAL_MAP = {
+  "corruption": "Corruption",
+  "power consolidation": "Power Consolidation",
+  "weaponization of institutions": "Weaponization of Institutions",
+  "media suppression and authoritarian tactics": "Media Suppression",
+  "media suppression": "Media Suppression",
+  "human and civil rights abuses": "Human & Civil Rights",
+  "human and civil rights": "Human & Civil Rights",
+  "government services disruption and collapse": "Government Services Disruption",
+  "government collapse": "Government Services Disruption",
+  "government services disruption": "Government Services Disruption",
+  "imperial": "Imperial & Geopolitical",
+  "imperial watch and geopolitical": "Imperial & Geopolitical",
+  "imperial and geopolitical": "Imperial & Geopolitical",
+  "geopolitical chaos": "Imperial & Geopolitical",
+  "far-right & russian influence": "Far-Right & Russian Influence",
+  "far-right and russian influence": "Far-Right & Russian Influence",
+  "trump economic downturn": "Economic Downturn",
+  "resistance": "Resistance",
+  "resilience and resistance": "Resistance",
+  "propaganda": "Propaganda",
+  "disinformation": "Disinformation",
+  "supreme court": "Supreme Court",
+  "white supremacist": "White Supremacist",
+  "announcement": "Announcement",
+  "other": "Other",
+  "other alarming": "Other",
+  "other things to keep an eye on": "Other",
+};
+
+const CANONICAL_CATEGORY_ORDER = [
+  "Corruption", "Power Consolidation", "Weaponization of Institutions",
+  "Media Suppression", "Human & Civil Rights", "Government Services Disruption",
+  "Imperial & Geopolitical", "Far-Right & Russian Influence", "Economic Downturn",
+  "Resistance", "Propaganda", "Disinformation", "Supreme Court",
+  "White Supremacist", "Announcement", "Other", "Uncategorized"
+];
+
+/* Normalizes one raw scraped category value. Handles known scraper
+   bugs defensively (in addition to being fixed at the source in
+   parse_post.py):
+   1. Stray "\x00LINK:...\x00 In <category>" marker leakage -- the
+      real category is recovered from the text after "In ".
+   2. Anything that doesn't match a known category (most commonly an
+      article headline mistakenly stored as the category) falls to
+      "Uncategorized" rather than polluting the filter with one-off
+      junk values. */
+function normalizeCategory(raw) {
+  if (!raw) return "Uncategorized";
+  let cleaned = raw;
+
+  const linkLeakMatch = cleaned.match(/\u0000LINK:[^\u0000]*\u0000\s*(?:In\s+)?(.+)$/i);
+  if (linkLeakMatch) cleaned = linkLeakMatch[1];
+
+  const key = cleaned.trim().toLowerCase();
+  return CATEGORY_CANONICAL_MAP[key] || "Uncategorized";
+}
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -656,12 +724,28 @@ function renderTabs() {
   });
 }
 
+function pluralize(word) {
+  if (word.endsWith("y") && !/[aeiou]y$/i.test(word)) {
+    return word.slice(0, -1) + "ies";
+  }
+  return word + "s";
+}
+
 function renderFilterOptions(cfg) {
   const sel = document.getElementById("filter");
   if (!cfg.filterField) { sel.style.display = "none"; return; }
   sel.style.display = "";
-  const values = [...new Set(cfg.data.map(e => e[cfg.filterField]).filter(Boolean))].sort();
-  sel.innerHTML = '<option value="">all ' + cfg.filterLabel + 's</option>' +
+  let values;
+  if (cfg.kind === "tracker") {
+    // Curated, fixed order -- not derived from raw data, since raw
+    // category values have format drift and occasional scraper bugs.
+    // Only show categories that actually have at least one entry.
+    const present = new Set(cfg.data.map(e => e[cfg.filterField]).filter(Boolean));
+    values = CANONICAL_CATEGORY_ORDER.filter(c => present.has(c));
+  } else {
+    values = [...new Set(cfg.data.map(e => e[cfg.filterField]).filter(Boolean))].sort();
+  }
+  sel.innerHTML = '<option value="">all ' + pluralize(cfg.filterLabel) + '</option>' +
     values.map(v => '<option value="' + v + '">' + v + '</option>').join("");
   sel.value = filterValue;
 }
@@ -835,7 +919,9 @@ async function loadAllData() {
   }
 
   if (trackerResult.status === "fulfilled") {
-    TRACKERS.tracker.data = flattenTrackerPosts(trackerResult.value);
+    const flattened = flattenTrackerPosts(trackerResult.value);
+    flattened.forEach(e => { e.category = normalizeCategory(e.category); });
+    TRACKERS.tracker.data = flattened;
   } else {
     loadErrors.push("tracker.json (" + trackerResult.reason.message + ")");
   }
