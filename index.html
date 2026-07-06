@@ -755,8 +755,13 @@ function renderEntries() {
   const container = document.getElementById("entries");
   const countEl = document.getElementById("count");
 
-  if (activeTracker === "tracker" && cfg.data.length > 200) {
-    container.innerHTML = '<div class="empty-state">This dataset (' + cfg.data.length + ' entries) is large for unpaginated display.<br>Use the search box above, or the global cross-database search, to narrow it down.</div>';
+  const hasActiveFilter = !!(searchTerm || filterValue);
+
+  // Only show the size-warning placeholder when nothing is actively
+  // narrowing the results yet -- a search term or category filter
+  // should always be allowed to run, regardless of total dataset size.
+  if (activeTracker === "tracker" && cfg.data.length > 200 && !hasActiveFilter) {
+    container.innerHTML = '<div class="empty-state">This dataset (' + cfg.data.length + ' entries) is large for unpaginated display.<br>Type a search term above, or pick a category, to narrow it down.</div>';
     countEl.textContent = "";
     return;
   }
@@ -767,7 +772,16 @@ function renderEntries() {
     return matchesSearch && matchesFilter;
   });
 
-  countEl.textContent = filtered.length + " of " + cfg.data.length + " entries shown";
+  // Safety valve: even a successful search can still match thousands
+  // of entries (e.g. a common word against 12,000+ News entries) --
+  // cap what's actually rendered so the page doesn't choke, and be
+  // explicit that there are more matches than are shown.
+  const RENDER_CAP = 300;
+  const toRender = filtered.slice(0, RENDER_CAP);
+
+  countEl.textContent = filtered.length > RENDER_CAP
+    ? toRender.length + " shown of " + filtered.length + " matches — refine your search to narrow further"
+    : filtered.length + " of " + cfg.data.length + " entries shown";
 
   if (filtered.length === 0) {
     container.innerHTML = '<div class="empty-state">No entries match. Try a different search or filter.</div>';
@@ -775,7 +789,7 @@ function renderEntries() {
   }
 
   container.innerHTML = "";
-  filtered.forEach((entry, i) => {
+  toRender.forEach((entry, i) => {
     container.appendChild(buildEntryCard(entry, cfg, "NO. " + String(i + 1).padStart(2, "0"), null));
   });
 }
@@ -819,10 +833,20 @@ function renderGlobalResults(term, useRegex, useOneLiners) {
     return;
   }
 
+  // Safety valve: a broad term (especially a short regex) could match
+  // thousands of News entries -- cap rendering so the page stays
+  // responsive, and say so explicitly rather than silently truncating.
+  const RENDER_CAP = 300;
+  const overCap = allMatches.length > RENDER_CAP;
+  const toRender = allMatches.slice(0, RENDER_CAP);
+  if (overCap) {
+    countEl.textContent = toRender.length + " shown of " + allMatches.length + " results — refine your search to narrow further";
+  }
+
   container.innerHTML = "";
 
   if (!useOneLiners) {
-    allMatches.forEach((m, i) => {
+    toRender.forEach((m, i) => {
       container.appendChild(buildEntryCard(m.entry, m.cfg, "NO. " + String(i + 1).padStart(2, "0"), m.sourceLabel));
     });
     return;
@@ -831,7 +855,7 @@ function renderGlobalResults(term, useRegex, useOneLiners) {
   // --- one-liner list mode ---
   const list = document.createElement("div");
   list.className = "oneliner-list";
-  allMatches.forEach((m, i) => {
+  toRender.forEach((m, i) => {
     const row = document.createElement("div");
     row.className = "oneliner-row";
     row.innerHTML =
