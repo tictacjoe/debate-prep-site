@@ -780,8 +780,6 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel) {
   const div = document.createElement("div");
   div.className = "entry";
   const title = entry[cfg.titleField] || "Untitled";
-  const sClass = stampClass(entry, cfg);
-  const sLabel = stampLabel(entry, cfg);
 
   let metaHtml = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
   if (cfg.kind === "deregulation") {
@@ -794,9 +792,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel) {
   }
 
   div.innerHTML =
-    '<div class="stamp ' + sClass + '">' + sLabel + '</div>' +
     '<div class="entry-head">' +
-      '<div class="docket-no mono">' + docketLabel + '</div>' +
       '<div class="entry-title-block">' +
         '<p class="entry-title">' + title + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
