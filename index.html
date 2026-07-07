@@ -103,6 +103,75 @@
     text-transform: uppercase;
     color: var(--ink-faint);
   }
+
+  /* ================= MODE TOGGLE ================= */
+  .mode-toggle {
+    max-width: 700px;
+    margin: 1.75rem auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .mode-btn {
+    font-family: ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--rule);
+    color: var(--ink-soft);
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .mode-btn.active {
+    background: var(--brass);
+    color: var(--paper-card);
+    font-weight: bold;
+  }
+  .mode-btn:hover:not(.active) { background: var(--rule-strong); }
+
+  /* ================= CLAIM CHECK MODE ================= */
+  .claim-mode-box {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .claim-mode-box textarea {
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper-card);
+    border: 2px solid var(--brass);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    min-height: 4.5rem;
+    resize: vertical;
+    box-shadow: 0 2px 10px rgba(29, 34, 32, 0.08);
+  }
+  .claim-mode-box button {
+    align-self: flex-start;
+    font-family: ui-monospace, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background: var(--brass);
+    color: var(--paper-card);
+    border: none;
+    padding: 0.55rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .claim-mode-box button:hover { opacity: 0.9; }
+  .claim-disclaimer {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+  }
   .regex-toggle {
     font-family: ui-monospace, monospace;
     font-size: 0.72rem;
@@ -393,12 +462,24 @@
   <h1>Debate Prep</h1>
   <p class="tagline">Know the claim. Know the cause. Know the comeback.</p>
   <p class="subhead">A falsifiable-claims docket tracking regulatory rollbacks and official conduct — every entry sourced, every confidence level stated, nothing asserted without a citation.</p>
-  <div class="global-search-box">
+  <div class="mode-toggle">
+    <button id="mode-search-btn" class="mode-btn active">Search</button>
+    <button id="mode-claim-btn" class="mode-btn">Check a Claim</button>
+  </div>
+
+  <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
     <input type="text" id="global-search" placeholder="Search everything — try &quot;OSHA&quot;, &quot;Supreme Court&quot;, or a name...">
     <label class="regex-toggle"><input type="checkbox" id="global-oneliner"> 1-liners</label>
     <label class="regex-toggle"><input type="checkbox" id="global-regex"> regex</label>
   </div>
+
+  <div class="claim-mode-box" id="claim-mode-box" style="display:none;">
+    <textarea id="claim-input" placeholder="Type a claim to check against the record — e.g. &quot;OSHA hasn't done anything about worker deaths&quot; or &quot;the EPA repealed mercury protections&quot;..."></textarea>
+    <button id="claim-check-btn">Check This Claim</button>
+    <p class="claim-disclaimer">This surfaces sourced entries that share terms with your claim — it does not determine whether the claim is true or false. Review each source and judge for yourself.</p>
+  </div>
+
   <div class="regex-error" id="regex-error"></div>
 </header>
 
@@ -813,6 +894,44 @@ function oneLinerFor(entry, cfg) {
    substring (case-insensitive) or regex mode. On invalid regex,
    returns null so the caller can show an error rather than silently
    falling back to a different match behavior. */
+/* Common English words that carry no distinguishing meaning for
+   matching a claim against database entries -- stripped before
+   scoring so a claim isn't dominated by "the," "and," "has," etc. */
+const CLAIM_STOPWORDS = new Set([
+  "the","a","an","and","or","but","of","to","in","on","at","for","with",
+  "by","from","is","are","was","were","be","been","being","has","have",
+  "had","do","does","did","not","no","this","that","these","those","it",
+  "its","as","about","into","than","then","so","such","can","could",
+  "would","should","will","shall","if","when","while","because","their",
+  "his","her","they","he","she","we","you","i","my","your","our","them",
+  "there","here","just","also","which","who","what","how","did","doesn",
+  "didn","isn","wasn","aren","won","don","any","all","some","been",
+  "hasn","haven","hadn","wouldn","shouldn","couldn","mustn","needn",
+  "shan","weren","let","get","got","one","two","many","much","more",
+  "most","been","being"
+]);
+
+/* Splits a claim into meaningful search terms -- lowercase, strip
+   punctuation, drop stopwords and very short words. */
+function extractClaimKeywords(claim) {
+  return claim
+    .toLowerCase()
+    .replace(/[^\w\s]/g, " ")
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !CLAIM_STOPWORDS.has(w));
+}
+
+/* Counts how many of the claim's keywords appear anywhere in an
+   entry. This is deliberately a relevance signal, not a truth
+   determination -- more matched terms means the entry is more likely
+   to be topically related to the claim, nothing stronger than that. */
+function claimMatchCount(entry, keywords) {
+  const haystack = JSON.stringify(entry).toLowerCase();
+  let count = 0;
+  keywords.forEach(k => { if (haystack.includes(k)) count++; });
+  return count;
+}
+
 function matchesTerm(haystack, term, useRegex) {
   if (!term) return true;
   if (useRegex) {
@@ -1093,6 +1212,125 @@ document.getElementById("filter").addEventListener("change", (e) => {
 document.getElementById("global-search").addEventListener("input", renderDispatch);
 document.getElementById("global-regex").addEventListener("change", renderDispatch);
 document.getElementById("global-oneliner").addEventListener("change", renderDispatch);
+
+/* Claim Check: takes a free-text claim, extracts meaningful keywords,
+   and surfaces database entries sharing the most keywords -- ranked
+   by match count, never by any truth/falsehood judgment. Highlights
+   whichever keywords actually matched in each result so the person
+   can see exactly why something surfaced, same transparency standard
+   as everywhere else on this site. */
+function renderClaimCheck() {
+  const claimText = document.getElementById("claim-input").value.trim();
+  const container = document.getElementById("entries");
+  const countEl = document.getElementById("count");
+
+  if (!claimText) {
+    container.innerHTML = "";
+    countEl.textContent = "";
+    return;
+  }
+
+  const keywords = extractClaimKeywords(claimText);
+
+  if (keywords.length === 0) {
+    container.innerHTML = '<div class="empty-state">Couldn\u2019t find any distinctive terms in that claim to search on \u2014 try being more specific.</div>';
+    countEl.textContent = "";
+    return;
+  }
+
+  let allMatches = [];
+  Object.keys(TRACKERS).forEach(key => {
+    const cfg = TRACKERS[key];
+    cfg.data.forEach(entry => {
+      const count = claimMatchCount(entry, keywords);
+      if (count > 0) allMatches.push({ entry, cfg, sourceLabel: cfg.label, matchCount: count });
+    });
+  });
+
+  allMatches.sort((a, b) => b.matchCount - a.matchCount);
+
+  const RENDER_CAP = 50;
+  const overCap = allMatches.length > RENDER_CAP;
+  const toRender = allMatches.slice(0, RENDER_CAP);
+
+  countEl.textContent = (overCap ? toRender.length + " shown of " + allMatches.length : allMatches.length) +
+    " entr" + (allMatches.length === 1 ? "y" : "ies") + " share terms with this claim \u2014 review sources below";
+
+  if (allMatches.length === 0) {
+    container.innerHTML = '<div class="empty-state">No entries in any database share meaningful terms with this claim. That doesn\u2019t confirm or refute it \u2014 it may simply not be covered here.</div>';
+    return;
+  }
+
+  container.innerHTML = "";
+  const list = document.createElement("div");
+  list.className = "oneliner-list";
+
+  toRender.forEach(m => {
+    const row = document.createElement("div");
+    row.className = "oneliner-row";
+    // Highlight every matched keyword, not just one term
+    let lineText = oneLinerFor(m.entry, m.cfg);
+    let escaped = escapeHtml(lineText);
+    keywords.forEach(k => {
+      const re = new RegExp("(" + escapeRegExp(k) + ")", "gi");
+      escaped = escaped.replace(re, "<mark class=\"hl\">$1</mark>");
+    });
+    row.innerHTML =
+      '<span class="oneliner-caret">\u25b8</span>' +
+      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' + escaped + '</span>';
+
+    const detail = document.createElement("div");
+    detail.className = "oneliner-detail";
+    detail.innerHTML = buildDetailHtml(m.entry, m.cfg);
+
+    row.addEventListener("click", () => {
+      row.classList.toggle("open");
+      detail.style.display = row.classList.contains("open") ? "block" : "none";
+    });
+
+    list.appendChild(row);
+    list.appendChild(detail);
+  });
+
+  container.appendChild(list);
+}
+
+/* Mode toggle between Search and Check a Claim -- swaps which input
+   box is visible and which render path is active. */
+let currentMode = "search";
+
+function setMode(mode) {
+  currentMode = mode;
+  const searchBtn = document.getElementById("mode-search-btn");
+  const claimBtn = document.getElementById("mode-claim-btn");
+  const searchBox = document.getElementById("search-mode-box");
+  const claimBox = document.getElementById("claim-mode-box");
+
+  if (mode === "search") {
+    searchBtn.classList.add("active");
+    claimBtn.classList.remove("active");
+    searchBox.style.display = "";
+    claimBox.style.display = "none";
+    renderDispatch();
+  } else {
+    searchBtn.classList.remove("active");
+    claimBtn.classList.add("active");
+    searchBox.style.display = "none";
+    claimBox.style.display = "";
+    document.getElementById("tabs").style.display = "none";
+    document.getElementById("tab-controls").style.display = "none";
+    document.getElementById("browse-instead").style.display = "none";
+    document.getElementById("regex-error").textContent = "";
+    renderClaimCheck();
+  }
+}
+
+document.getElementById("mode-search-btn").addEventListener("click", () => setMode("search"));
+document.getElementById("mode-claim-btn").addEventListener("click", () => setMode("claim"));
+document.getElementById("claim-check-btn").addEventListener("click", renderClaimCheck);
+document.getElementById("claim-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) renderClaimCheck();
+});
 
 /* Loads the three published JSON files. Uses Promise.allSettled
    (not Promise.all) so that a failure on one file -- missing,
