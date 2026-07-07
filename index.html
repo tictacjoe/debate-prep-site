@@ -990,7 +990,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel) {
   } else if (cfg.kind === "tracker") {
     metaHtml += '<span>' + (entry.date || "") + '</span>';
   } else {
-    metaHtml += '<span>' + (entry.status_category || "") + '</span><span>updated ' + (entry.last_updated || "") + '</span>';
+    metaHtml += '<span>' + (entry.offense_category || "") + '</span><span>' + (entry.status_category || "") + '</span><span>updated ' + (entry.last_updated || "") + '</span>';
   }
 
   div.innerHTML =
