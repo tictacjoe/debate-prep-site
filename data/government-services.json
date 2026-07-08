@@ -724,5 +724,83 @@
         "url": "https://www.ncdhhs.gov/news/press-releases/2025/11/08/ncdhhs-pauses-full-snap-payments-after-court-decision-remains-ready-process-benefits-when-authorized"
       }
     ]
+  },
+  {
+    "id": "ssa-staffing-service-collapse-trump2",
+    "title": "Social Security Administration Lost 8,000+ Staff — Lowest Headcount Since 1967 — Then Stopped Publishing Its Own Service Metrics",
+    "institution": "Social Security Administration (SSA)",
+    "domain": "staff_office_cuts",
+    "status": "Ongoing (staffing losses not reversed; some but not all withheld metrics later restored)",
+    "date_of_action": "2025-03 (initial cuts and phone-service changes) through 2026-04 (ongoing, per Center on Budget and Policy Priorities' most recent tracking)",
+    "what_changed": "Since January 2025, the Trump administration drove out more than 8,000 SSA employees -- the agency's largest one-year staffing reduction on record, leaving SSA with fewer employees than at any point since 1967, even as it now serves roughly 52 million more beneficiaries than it did then (nearly 75 million total). More than 40 states and D.C. saw staffing cuts greater than 10% between January 2025 and April 2026. In April 2025, SSA briefly eliminated most phone-based benefit applications entirely (reversed after public backlash), while permanently requiring in-person visits or multi-factor online authentication for direct-deposit changes -- a change CBPP notes the agency's own fraud data does not support, since direct-deposit fraud is rare and rarely phone-initiated. As wait times climbed (86 minutes average by April 2025, a 25% increase over the prior year), SSA responded largely by reassigning field-office staff to phone duty rather than hiring -- pulling employees away from processing claims and creating new backlogs elsewhere. In June 2025, amid worsening press coverage, SSA stopped publicly releasing several of its own regular service-performance metrics, including call wait times and appointment-scheduling delays; some measures were later restored, but key ones (hold-time data, appointment-wait data, backlog counts) remain unreported as of CBPP's most recent tracking. By early 2026, disability-appeal backlogs had grown by 73,000+ cases in just over a year, and fewer than 850 of SSA's roughly 50,000 remaining employees had less than two years of federal service -- the agency hired fewer than 100 new employees in all of 2025, the lowest annual hiring total on record.",
+    "primary_proponent": {
+      "name": "Frank Bisignano",
+      "role": "Commissioner of Social Security",
+      "note": "Publicly stated the agency is 'working faster and better than ever' and told Congress during a hearing that 'increased staffing is not the long-term solution' to service problems, while also acknowledging 'I do agree we must perform significantly better.' Sen. Tammy Baldwin (D-WI) and colleagues formally investigated Bisignano's staff-reassignment practices in March 2026, writing that his responses to Congress 'failed to provide details on the number of employees reassigned or clarify the length of their reassignments.'"
+    },
+    "estimated_impact": {
+      "summary": "This entry has an unusually well-documented secondary pattern worth noting on its own: the agency's decision to stop publishing its own service-quality data specifically after that data generated negative press is a distinct, separately citable transparency-reduction action, not just a byproduct of the staffing cuts themselves. An internal SSA employee survey (Dec. 2025/Jan. 2026) found 65% of staff reported declining service quality and 70% reported declining service speed -- an unusual case where internal staff self-reporting corroborates external advocacy-group findings rather than contradicting them.",
+      "figures": [
+        {
+          "metric": "SSA staff lost since January 2025",
+          "value": "8,000+ (largest one-year reduction on record)",
+          "source": "Office of Personnel Management data, cited by CBPP and multiple outlets"
+        },
+        {
+          "metric": "Current SSA staffing level relative to history",
+          "value": "lowest since 1967, despite serving ~52 million more beneficiaries",
+          "source": "CBPP, citing OPM data"
+        },
+        {
+          "metric": "Average phone wait time, April 2025",
+          "value": "86 minutes (a 25% increase over 2024)",
+          "source": "SSA's own performance data, cited by CBPP"
+        },
+        {
+          "metric": "Disability appeal backlog growth, Jan. 2025-Feb. 2026",
+          "value": "73,000+ additional pending cases",
+          "source": "CBPP"
+        },
+        {
+          "metric": "New employees hired in all of 2025",
+          "value": "fewer than 100 (lowest on record, <2% of a typical year's hiring)",
+          "source": "CBPP"
+        },
+        {
+          "metric": "Field-office representatives per beneficiary, post-cuts",
+          "value": "~1 per 4,000 (a 12% worse ratio than before the cuts)",
+          "source": "Sen. Tammy Baldwin's official investigation letter"
+        }
+      ],
+      "caveat": "SSA leadership disputes the characterization that more staffing is the answer, and Commissioner Bisignano has publicly staked out a contrary position (efficiency over headcount) -- this is a genuinely disputed policy question, not just a factual one, and should be presented with his stated rationale alongside the outside critique. However, the decision to stop publishing key service metrics specifically after bad press is a separately verifiable action, not itself a matter of policy disagreement -- CBPP's and NPR's sourcing on that point is direct and specific."
+    },
+    "confidence_note": "Very strong sourcing: CBPP is a well-regarded, frequently-cited nonpartisan policy institute with detailed, footnoted figures drawn substantially from the agency's own data (OPM staffing records, SSA's own performance metrics) rather than estimates. NPR's on-the-ground reporting from field-office employees corroborates the top-line figures with direct testimony. Sen. Baldwin's official congressional investigation adds a formal oversight dimension. The metrics-suppression angle is corroborated by multiple independent sources (CBPP, Nash Disability Law, 401k Specialist) describing the same June 2025 timing and the same specific withheld metrics.",
+    "last_verified": "2026-07-08",
+    "sources": [
+      {
+        "name": "Center on Budget and Policy Priorities — Trump Administration Personnel Policies Harming Social Security Customer Service, Risk Lasting Damage",
+        "url": "https://www.cbpp.org/research/social-security/trump-administration-personnel-policies-harming-social-security-customer"
+      },
+      {
+        "name": "Center on Budget and Policy Priorities — New Data Show Social Security Staff Cuts Harm Service Delivery in Every State",
+        "url": "https://www.cbpp.org/blog/new-data-show-social-security-staff-cuts-harm-service-delivery-in-every-state"
+      },
+      {
+        "name": "Center for American Progress — The Social Security Administration Is Bleeding Staff",
+        "url": "https://www.americanprogress.org/article/the-social-security-administration-is-bleeding-staff/"
+      },
+      {
+        "name": "Sen. Tammy Baldwin — Baldwin, Senators Investigate Social Security Agency's Customer Service Chaos & Disruption of Services",
+        "url": "https://www.baldwin.senate.gov/news/press-releases/baldwin-senators-investigate-social-security-agencys-customer-service-chaos-and-disruption-of-services"
+      },
+      {
+        "name": "NPR — Efforts to shrink Social Security's phone wait times are putting a strain elsewhere",
+        "url": "https://www.npr.org/2025/07/22/nx-s1-5475151/social-security-phone-wait-staffing-crunch"
+      },
+      {
+        "name": "Center on Budget and Policy Priorities — Abruptly Eliminating Social Security Phone Services Threatens Access to Benefits",
+        "url": "https://www.cbpp.org/research/social-security/abruptly-eliminating-social-security-phone-services-threatens-access-to"
+      }
+    ]
   }
 ]
