@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A sourced record of corporate deregulation, cabinet-level legal exposure, and daily reporting. Type a claim and see exactly what's documented — every entry sourced, nothing asserted without a citation.">
+<meta name="description" content="A sourced record of corporate deregulation, cabinet-level legal exposure, government services redirected, and daily reporting. Type a claim and see exactly what's documented — every entry sourced, nothing asserted without a citation.">
 <title>Claim Check — know the claim, show the receipts</title>
 <style>
   :root {
@@ -472,7 +472,7 @@
 <header class="masthead">
   <h1>Claim Check</h1>
   <p class="tagline">Know the claim. Show the receipts.</p>
-  <p class="subhead">A sourced record of corporate deregulation, cabinet-level legal exposure, and daily reporting. Type a claim and see exactly what's documented — every entry sourced, nothing asserted without a citation.</p>
+  <p class="subhead">A sourced record of corporate deregulation, cabinet-level legal exposure, government services redirected, and daily reporting. Type a claim and see exactly what's documented — every entry sourced, nothing asserted without a citation.</p>
   <div class="mode-toggle">
     <button id="mode-search-btn" class="mode-btn active">Search</button>
     <button id="mode-claim-btn" class="mode-btn">Check a Claim</button>
@@ -641,6 +641,35 @@ function govservicesDomainLabel(domain) {
     data_collection_halted: "Data Collection Halted"
   };
   return map[domain] || domain;
+}
+
+/* Extracts the first YYYY-MM or YYYY-MM-DD substring from a date
+   string and returns a sortable integer (YYYYMMDD, or YYYYMM01 if no
+   day given). Needed because Government Services Redirected entries
+   often have compound date_of_action strings like "2025-03 (initial
+   cuts) through 2026-04 (ongoing)" -- native Date.parse returns NaN
+   on the whole string in that case, so this pulls out just the
+   leading date pattern instead. Returns 0 if no date pattern is found
+   at all (e.g. "Structural decline since 2013" with no YYYY-MM),
+   which sorts such entries as oldest -- a reasonable default for
+   entries describing a chronic condition rather than a datable event. */
+function extractFirstDate(str) {
+  if (!str) return 0;
+  const isoMatch = String(str).match(/(\d{4})-(\d{2})(?:-(\d{2}))?/);
+  if (isoMatch) {
+    const year = parseInt(isoMatch[1], 10);
+    const month = parseInt(isoMatch[2], 10);
+    const day = isoMatch[3] ? parseInt(isoMatch[3], 10) : 1;
+    return year * 10000 + month * 100 + day;
+  }
+  // Fallback: a bare 4-digit year with no month/day precision -- e.g.
+  // "Staff departures throughout 2025" or "Structural decline since
+  // 2013" have no ISO date pattern at all, but a bare year is still
+  // far more useful for ordering than falling back to 0 for every
+  // such entry (which would incorrectly group them all as "oldest").
+  const yearMatch = String(str).match(/\b(19|20)\d{2}\b/);
+  if (yearMatch) return parseInt(yearMatch[0], 10) * 10000 + 101;
+  return 0;
 }
 
 function truncate(str, n) {
@@ -1145,8 +1174,19 @@ function renderEntries() {
   // Prioritization lives inside the browse tabs themselves -- every
   // tab's entries are sorted by the same impact heuristic used
   // elsewhere, whether or not a search/filter is active. No separate
-  // "top priorities" section needed.
-  filtered.sort((a, b) => impactScore(b, cfg) - impactScore(a, cfg));
+  // "top priorities" section needed. Government Services Redirected
+  // is the exception -- sorted reverse-chronologically by date of
+  // action instead, since this tracker updates frequently and recency
+  // is the more useful default ordering for it. date_of_action here
+  // is often a compound string ("2025-03 (initial cuts) through
+  // 2026-04 (ongoing)") that native Date.parse cannot handle at all
+  // (returns NaN on the whole string) -- extractFirstDate() pulls out
+  // just the first YYYY-MM or YYYY-MM-DD substring instead.
+  if (cfg.kind === "govservices") {
+    filtered.sort((a, b) => extractFirstDate(b.date_of_action) - extractFirstDate(a.date_of_action));
+  } else {
+    filtered.sort((a, b) => impactScore(b, cfg) - impactScore(a, cfg));
+  }
 
   // Safety valve: even a successful search can still match thousands
   // of entries (e.g. a common word against 12,000+ News entries) --
