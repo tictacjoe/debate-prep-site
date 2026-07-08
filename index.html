@@ -555,6 +555,17 @@ const TRACKERS = {
     filterLabel: "category",
     statusField: null,
     kind: "tracker",
+  },
+  govservices: {
+    label: "Government Services Redirected",
+    data: [],
+    titleField: "title",
+    idField: "id",
+    dateField: "date_of_action",
+    filterField: "domain",
+    filterLabel: "domain",
+    statusField: "status",
+    kind: "govservices",
   }
 };
 
@@ -611,9 +622,25 @@ function stampLabel(entry, cfg) {
 function domainColor(domain) {
   const map = {
     environmental: "#4B6B4F", labor: "#3E5C76", financial: "#8B6F3E",
-    consumer_safety: "#7A4B3E", "cross-cutting": "#5C5A52"
+    consumer_safety: "#7A4B3E", "cross-cutting": "#5C5A52",
+    research_suppression: "#6B4B7A", funding_redirection: "#8B6F3E",
+    staff_office_cuts: "#3E5C76", data_collection_halted: "#7A4B3E"
   };
   return map[domain] || "#5C5A52";
+}
+
+/* govservices domain values are snake_case in the data
+   (research_suppression, funding_redirection, staff_office_cuts,
+   data_collection_halted) -- this converts them to a readable label
+   for the filter dropdown and card meta line. */
+function govservicesDomainLabel(domain) {
+  const map = {
+    research_suppression: "Research Suppression",
+    funding_redirection: "Funding Redirection",
+    staff_office_cuts: "Staff/Office Cuts",
+    data_collection_halted: "Data Collection Halted"
+  };
+  return map[domain] || domain;
 }
 
 function truncate(str, n) {
@@ -626,10 +653,23 @@ function truncate(str, n) {
    quantified impact figures that come in wildly different units. */
 function extractLargestNumber(str) {
   if (!str) return 0;
-  const matches = String(str).match(/[\d,]+\.?\d*/g);
-  if (!matches) return 0;
-  const nums = matches.map(m => parseFloat(m.replace(/,/g, ""))).filter(n => !isNaN(n));
-  return nums.length ? Math.max(...nums) : 0;
+  const text = String(str);
+  // Match a number optionally followed by a magnitude word (million/
+  // billion/trillion) so "$495 million" is correctly read as
+  // 495,000,000 rather than just 495 -- without this, a figure
+  // written in word-suffix form could lose a "largest figure"
+  // comparison to a smaller number written out in full digits.
+  const re = /([\d,]+\.?\d*)\s*(million|billion|trillion)?/gi;
+  const multiplier = { million: 1e6, billion: 1e9, trillion: 1e12 };
+  let maxVal = 0;
+  let match;
+  while ((match = re.exec(text)) !== null) {
+    const raw = parseFloat(match[1].replace(/,/g, ""));
+    if (isNaN(raw)) continue;
+    const mult = match[2] ? multiplier[match[2].toLowerCase()] : 1;
+    maxVal = Math.max(maxVal, raw * mult);
+  }
+  return maxVal;
 }
 
 /* Impact scoring is inherently a heuristic, not an objective measure
@@ -673,6 +713,14 @@ function impactScore(entry, cfg) {
     const d = entry.date ? Date.parse(entry.date) : 0;
     return d ? d / (1000 * 60 * 60 * 24 * 365.25) : 0; // roughly "years since epoch"
   }
+  if (cfg.kind === "govservices") {
+    const figs = entry.estimated_impact?.figures || [];
+    let maxNum = 0;
+    figs.forEach(f => { maxNum = Math.max(maxNum, extractLargestNumber(f.value)); });
+    const magnitudeScore = maxNum > 0 ? Math.log10(maxNum + 1) : 0;
+    const hasFiguresBonus = figs.length > 0 ? 2 : 0;
+    return Math.round((magnitudeScore + hasFiguresBonus) * 10) / 10;
+  }
   return 0;
 }
 
@@ -692,6 +740,12 @@ function impactScoreLabel(entry, cfg) {
   }
   if (cfg.kind === "tracker") {
     return "dated " + (entry.date || "unknown");
+  }
+  if (cfg.kind === "govservices") {
+    const figs = entry.estimated_impact?.figures || [];
+    if (!figs.length) return "no quantified figures";
+    const top = figs.reduce((a, b) => extractLargestNumber(b.value) > extractLargestNumber(a.value) ? b : a);
+    return "largest figure: " + top.value;
   }
   return "";
 }
@@ -823,7 +877,7 @@ function classifyStatus(raw) {
     [/impeachment articles/, "Impeachment Articles Filed"],
     [/dismissed by a federal judge|prosecution dismissed/, "Case Dismissed"],
     [/probable cause.*contempt|criminal contempt/, "Contempt Finding"],
-    [/ruled against|ruled on the merits|court has blocked|court has ruled|ordered reversal|has ruled\b/, "Court Ruling Issued — Adverse"],
+    [/ruled against|ruled on the merits|court has blocked|court has ruled|ordered reversal|has ruled\b/, "Court Ruled Against the Agency"],
     [/\bgao\b/, "GAO Investigation / Finding"],
     [/inspector general|found by ig\b/, "Inspector General Finding"],
     [/foia lawsuit|foia litigation/, "FOIA Litigation Ongoing"],
@@ -897,6 +951,15 @@ function oneLinerFor(entry, cfg) {
   }
   if (cfg.kind === "tracker") {
     return (entry.date || "") + " " + truncate(entry.what_happened, 150);
+  }
+  if (cfg.kind === "govservices") {
+    const figs = entry.estimated_impact?.figures || [];
+    let line = (entry.institution || "") + " \u2014 " + (entry.title || "");
+    if (figs.length) {
+      const top = figs.reduce((a, b) => extractLargestNumber(b.value) > extractLargestNumber(a.value) ? b : a);
+      line += " (" + top.metric + ": " + top.value + ")";
+    }
+    return line;
   }
   return JSON.stringify(entry).slice(0, 150);
 }
@@ -975,6 +1038,16 @@ function buildDetailHtml(entry, cfg) {
       '<div class="field-label">Why it matters</div><div class="field-value">' + (entry.why_it_matters || "") + '</div>' +
       (entry.source_name ? '<div class="field-label">Source</div><ul class="exhibit-list"><li><a href="' + entry.source_url + '" target="_blank" rel="noopener">' + entry.source_name + '</a></li></ul>' : '<div class="field-label">Source</div><div class="field-value" style="color:var(--ink-faint);font-style:italic;">not cited in original post</div>');
   }
+  if (cfg.kind === "govservices") {
+    return '<div class="field-label">Institution</div><div class="field-value">' + (entry.institution || "") + '</div>' +
+      '<div class="field-label">What changed</div><div class="field-value">' + (entry.what_changed || "") + '</div>' +
+      '<div class="field-label">Primary proponent</div><div class="field-value"><strong>' + (entry.primary_proponent?.name || "") + '</strong> — ' + (entry.primary_proponent?.role || "") + (entry.primary_proponent?.note ? '<br><em>' + entry.primary_proponent.note + '</em>' : '') + '</div>' +
+      '<div class="field-label">Estimated impact</div><div class="field-value">' + (entry.estimated_impact?.summary || "") + '</div>' +
+      (entry.estimated_impact?.figures?.length ? '<ul class="exhibit-list">' + entry.estimated_impact.figures.map(f => '<li>' + f.metric + ': <strong>' + f.value + '</strong> (' + f.source + ')</li>').join("") + '</ul>' : '') +
+      (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + entry.estimated_impact.caveat + '</div>' : '') +
+      '<div class="field-label">Confidence note</div><div class="confidence-box">' + (entry.confidence_note || "") + '</div>' +
+      '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + s.url + '" target="_blank" rel="noopener">' + s.name + '</a></li>').join("") + '</ul>';
+  }
   // prosecution (default)
   return '<div class="field-label">Violation Type</div><div class="field-value">' + (entry.offense_category || "") + '</div>' +
     '<div class="field-label">Status Stage</div><div class="field-value">' + (entry.status_category || "") + '</div>' +
@@ -1000,6 +1073,9 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel) {
                '<span>' + (entry.short_summary || truncate(entry.what_changed || "", 100)) + '</span>';
   } else if (cfg.kind === "tracker") {
     metaHtml += '<span>' + (entry.date || "") + '</span>';
+  } else if (cfg.kind === "govservices") {
+    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + govservicesDomainLabel(entry.domain) + '</span>' +
+               '<span>' + (entry.institution || "") + '</span><span>' + (entry.date_of_action || "") + '</span>';
   } else {
     metaHtml += '<span>' + (entry.offense_category || "") + '</span><span>' + (entry.status_category || "") + '</span><span>updated ' + (entry.last_updated || "") + '</span>';
   }
@@ -1054,7 +1130,7 @@ function renderFilterOptions(cfg) {
     values = [...new Set(cfg.data.map(e => e[cfg.filterField]).filter(Boolean))].sort();
   }
   sel.innerHTML = '<option value="">all ' + pluralize(cfg.filterLabel) + '</option>' +
-    values.map(v => '<option value="' + v + '">' + v + '</option>').join("");
+    values.map(v => '<option value="' + v + '">' + (cfg.kind === "govservices" ? govservicesDomainLabel(v) : v) + '</option>').join("");
   sel.value = filterValue;
 }
 
@@ -1353,10 +1429,11 @@ document.getElementById("claim-input").addEventListener("keydown", (e) => {
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
 
-  const [prosecutionResult, deregulationResult, trackerResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
   ]);
 
   const loadErrors = [];
@@ -1384,6 +1461,12 @@ async function loadAllData() {
     TRACKERS.tracker.data = flattened;
   } else {
     loadErrors.push("tracker.json (" + trackerResult.reason.message + ")");
+  }
+
+  if (govservicesResult.status === "fulfilled") {
+    TRACKERS.govservices.data = govservicesResult.value;
+  } else {
+    loadErrors.push("government-services.json (" + govservicesResult.reason.message + ")");
   }
 
   renderDispatch();

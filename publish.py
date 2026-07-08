@@ -15,11 +15,13 @@ Directory assumptions (override with flags if yours differ):
   Working repo:  ~/gjoe/debate-prep/
     prosecution/cabinet-level/*.json
     deregulation/entries/*.json
+    government-services/entries/*.json
     tracker/output/posts.json
 
   Site repo:     ~/gjoe/debate-prep-site/
     data/prosecution.json
     data/deregulation.json
+    data/government-services.json
     data/tracker.json
     publish_exclude.txt   <- entry IDs to exclude, one per line, '#' for comments
 
@@ -144,6 +146,19 @@ def main():
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
         print(f"  WARNING: {deregulation_src} not found, skipping")
+    print()
+
+    # --- government services (redirected) ---
+    print("=== government-services ===")
+    govservices_src = working / "government-services" / "entries"
+    if govservices_src.exists():
+        included, excl_count = publish_json_entries(
+            govservices_src, site / "data" / "government-services.json",
+            excluded_ids, dry_run=args.dry_run
+        )
+        print(f"  {len(included)} entries published, {excl_count} excluded")
+    else:
+        print(f"  WARNING: {govservices_src} not found, skipping")
     print()
 
     # --- tracker ---
