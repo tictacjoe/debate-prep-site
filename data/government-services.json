@@ -407,6 +407,89 @@
     ]
   },
   {
+    "id": "irs-workforce-collapse-trump2",
+    "title": "IRS Lost 27% of Its Workforce and a Third of Its Auditors — Independent Watchdogs Project $600B in Lost Revenue",
+    "institution": "Internal Revenue Service (IRS)",
+    "domain": "staff_office_cuts",
+    "status": "Ongoing (2026 filing season completed under reduced staff; further cuts proposed for FY2027)",
+    "date_of_action": "2025-02 (initial probationary firings) through 2026-04 (most recent GAO/TIGTA reporting)",
+    "what_changed": "Beginning February 2025, the IRS workforce was cut by approximately 27%, falling from roughly 102,000 employees in January 2025 to about 74,000 by December 2025 -- a reduction of nearly 28,000 people, primarily via probationary-employee terminations (~7,300), deferred-resignation buyouts (~4,700), and further attrition. The cuts were not evenly distributed: Taxpayer Services (which processes returns, answers phones, and handles correspondence) lost about 21-22% of its staff; the agency's IT function lost 27%; and revenue agents -- the specialists who conduct complex audits of high-income individuals, partnerships, and large corporations -- lost roughly 3,600 people, about 31% of the entire auditing workforce. Congress separately cut the IRS enforcement budget by 8% for FY2026 (the lowest inflation-adjusted level since 1988) and cut $1.1 billion (12%) from the IRS's base budget overall, rescinding most of the remaining Inflation Reduction Act funding that had been allocated to rebuild the agency; the base budget is now about 40% below its 2010 level after inflation. The IRS responded by lowering its own phone-service target from 85% to 70% of calls answered, and an independent analysis by the Center for Taxpayer Rights found call wait times on the main line increased more than 70% between February 2025 and February 2026. A March 2026 GAO audit found the IRS's staffing reductions 'were not targeted or strategic' and that the agency still lacks an updated strategic workforce plan. Notably, IRS Commissioner Frank Bisignano simultaneously serves as the Senate-confirmed Commissioner of the Social Security Administration -- see the related SSA entry in this tracker -- splitting his attention across both agencies during this period.",
+    "primary_proponent": {
+      "name": "Frank Bisignano",
+      "role": "IRS Chief Executive Officer / Commissioner (concurrently SSA Commissioner)",
+      "note": "Publicly defended the cuts before the Senate Finance Committee, stating the agency can achieve 'less people and better results,' and that the IRS cut phone-center 'idle time' by nearly 50%. Committee Democrats, led by Ranking Member Ron Wyden, disputed this characterization directly in the same hearing. Bisignano told senators he treats running both SSA and IRS as managing 'two large organizations,' sometimes working 14-hour days across both."
+    },
+    "estimated_impact": {
+      "summary": "The Yale Budget Lab modeled the specific 2025 staffing reductions (broken down by IRS operating function, using the agency's own budget-activity categories) and projected the cuts will reduce federal revenue collection by almost $600 billion over the 2026-2035 window -- a striking figure since the IRS collects 96% of all federal revenue, meaning even modest enforcement-capacity losses compound into large fiscal effects. The National Taxpayer Advocate (an independent office within the IRS that reports directly to Congress) has been notably even-handed in its assessments -- praising the 2025 filing season as one of the most successful in recent memory, while explicitly warning that the more severe 2026 season risks are now 'markedly different' given the compounding effect of workforce loss, budget cuts, and simultaneous major tax-law changes from the 2025 reconciliation bill.",
+      "figures": [
+        {
+          "metric": "IRS workforce reduction, Jan-Dec 2025",
+          "value": "27% (from ~102,000 to ~74,000)",
+          "source": "National Taxpayer Advocate's 2025 Annual Report to Congress"
+        },
+        {
+          "metric": "Revenue agents (auditors) lost",
+          "value": "~3,600 (31% of the entire auditing workforce)",
+          "source": "The Budget Lab at Yale, citing IRS/NTA data"
+        },
+        {
+          "metric": "Projected federal revenue loss from 2025 staffing cuts, 2026-2035",
+          "value": "~$600,000,000,000",
+          "source": "The Budget Lab at Yale economic model"
+        },
+        {
+          "metric": "IRS base budget cut, FY2026 appropriations",
+          "value": "$1.1 billion (12%, the largest-ever single cut to IRS base funding)",
+          "source": "Center on Budget and Policy Priorities"
+        },
+        {
+          "metric": "IRS base budget relative to 2010 level (inflation-adjusted)",
+          "value": "40% below",
+          "source": "Center on Budget and Policy Priorities"
+        },
+        {
+          "metric": "Phone-line wait time increase, Feb 2025-Feb 2026",
+          "value": ">70%",
+          "source": "Center for Taxpayer Rights independent analysis (Nina Olson, former National Taxpayer Advocate)"
+        },
+        {
+          "metric": "IRS's own phone-service target, lowered",
+          "value": "from 85% to 70% of calls answered",
+          "source": "Federal News Network, citing Senate Finance Committee testimony"
+        }
+      ],
+      "caveat": "This is a case with real, substantive dispute about outcomes, not just framing: Bisignano's testimony that filing-season results held up despite the cuts is corroborated by the IRS's own throughput data for 2026 (134M+ returns received, 90%+ refunds within 21 days) -- the disagreement is more about longer-term enforcement/audit capacity and phone-service quality than about whether the basic return-processing pipeline broke down, which by the government's own numbers it did not. The $600B revenue projection is a modeled estimate from an academic institution (Yale Budget Lab), not a government-produced figure, and should be cited as such."
+    },
+    "confidence_note": "Exceptionally strong sourcing: the core staffing figures come from the National Taxpayer Advocate (a statutorily independent watchdog office within the IRS itself that reports directly to Congress) and TIGTA (Treasury's independent Inspector General), both nonpartisan government oversight bodies, not advocacy groups. GAO's audit finding that the cuts were 'not targeted or strategic' is a formal government audit conclusion. The Yale Budget Lab revenue projection is a reputable academic model but should be clearly labeled as a projection, not a realized fact.",
+    "last_verified": "2026-07-08",
+    "sources": [
+      {
+        "name": "IRS — National Taxpayer Advocate Delivers Annual Report to Congress",
+        "url": "https://www.irs.gov/newsroom/national-taxpayer-advocate-delivers-annual-report-to-congress-finds-taxpayer-service-was-strong-in-2025-but-foresees-challenges-for-taxpayers-who-encounter-problems-in-2026"
+      },
+      {
+        "name": "The Budget Lab at Yale — A Weakened IRS Has Substantial Consequences",
+        "url": "https://budgetlab.yale.edu/research/weakened-irs-has-substantial-consequences"
+      },
+      {
+        "name": "Center on Budget and Policy Priorities — Three Strikes Against Filers This Tax Season",
+        "url": "https://www.cbpp.org/research/federal-tax/three-strikes-against-filers-this-tax-season-irs-cuts-no-direct-file-skewed"
+      },
+      {
+        "name": "FedScoop — IRS cuts leave filing season operations, modernization work 'in flux' (GAO audit)",
+        "url": "https://fedscoop.com/irs-cuts-filing-season-modernization-gao-report/"
+      },
+      {
+        "name": "Federal News Network — 'Less people and better results:' IRS CEO says filing season goals met after 27% staffing cut",
+        "url": "https://federalnewsnetwork.com/management/2026/04/less-people-and-better-results-irs-ceo-says-filing-season-goals-met-after-27-staffing-cut/"
+      },
+      {
+        "name": "PBS News — IRS faces challenges in 2026 tax season due to jobs cuts and new laws",
+        "url": "https://www.pbs.org/newshour/nation/irs-faces-challenges-in-2026-tax-season-due-to-jobs-cuts-and-new-laws"
+      }
+    ]
+  },
+  {
     "id": "liheap-staff-elimination-funding-delay-trump2",
     "title": "LIHEAP Heating Assistance Program Staff Eliminated, Funding Delayed for Millions",
     "institution": "Low Income Home Energy Assistance Program (LIHEAP), Administration for Children and Families, HHS",
@@ -800,6 +883,144 @@
       {
         "name": "Center on Budget and Policy Priorities — Abruptly Eliminating Social Security Phone Services Threatens Access to Benefits",
         "url": "https://www.cbpp.org/research/social-security/abruptly-eliminating-social-security-phone-services-threatens-access-to"
+      }
+    ]
+  },
+  {
+    "id": "state-department-reorganization-trump2",
+    "title": "Rubio Eliminated 132+ State Department Offices and Cut 1,300+ Positions, Including Human Rights and War-Crimes Functions",
+    "institution": "U.S. Department of State",
+    "domain": "staff_office_cuts",
+    "status": "Largely complete (first-stage cuts executed following Supreme Court ruling clearing the way; further changes ongoing)",
+    "date_of_action": "2025-04-22 (reorganization announced) through 2025-07-11 (first mass layoffs executed)",
+    "what_changed": "Secretary of State Marco Rubio announced a sweeping State Department reorganization in April 2025, describing the existing structure as 'bloated bureaucracy that stifles innovation.' The plan consolidated 734 bureaus and offices down to 602, and specifically eliminated 132 domestic offices, including the entire Undersecretary of State for Civilian Security, Democracy, and Human Rights position, the Office of Global Criminal Justice (which supports international war-crimes prosecutions), the Bureau of Conflict and Stabilization Operations, and the Office of Global Women's Issues. Refugee, religious-freedom, and human-trafficking offices were downgraded and folded under a general foreign-assistance coordination office rather than retained as standalone bureaus. In July 2025, following a Supreme Court ruling that cleared the way for the dismissals despite ongoing legal challenges, the department executed layoffs affecting more than 1,300 employees (1,107 civil servants and 246 foreign service officers with domestic assignments); affected foreign service officers were placed on 120 days of administrative leave before formal termination, civil servants on a 60-day separation period. The reorganization is explicitly stated to be 'highly complementary' to the concurrent dismantling of USAID, whose remaining functions were folded into State with reduced independence.",
+    "primary_proponent": {
+      "name": "Marco Rubio",
+      "role": "Secretary of State",
+      "note": "Personally announced and defended the reorganization, telling department staff in an internal email 'we cannot win the battle for the 21st century with bloated bureaucracy,' and telling reporters in Kuala Lumpur 'it's not a consequence of trying to get rid of people... some of these are positions that are being eliminated, not people' -- a framing directly disputed by the American Foreign Service Association and former officials who note the eliminated positions were held by actual staff facing termination, not merely vacant lines being removed."
+    },
+    "estimated_impact": {
+      "summary": "Former Trump-administration official Thomas Shannon (Undersecretary of State in the first Trump term) called the cuts 'an act of vandalism' against the department's institutional knowledge, warning specifically about the loss of staff with critical language and cultural expertise built over years, which cannot be quickly replaced. The American Academy of Diplomacy, representing former ambassadors across administrations of both parties, joined this criticism. Senate Foreign Relations Committee Ranking Member Jeanne Shaheen (D-NH) warned that 'when America retreats... China and Russia fill the void' -- a specifically geopolitical rather than purely administrative concern given the offices eliminated (human rights, war crimes accountability, conflict stabilization) are functions adversary states do not maintain equivalents of.",
+      "figures": [
+        {
+          "metric": "Offices/bureaus eliminated or consolidated",
+          "value": "132 domestic offices; 734 total bureaus/offices reduced to 602",
+          "source": "AP-obtained fact sheet, cited by NBC News and PBS"
+        },
+        {
+          "metric": "Positions cut in the July 2025 layoff wave",
+          "value": "1,300+ (1,107 civil servants, 246 foreign service officers)",
+          "source": "Newsweek, citing an internal State Department notice obtained by AP"
+        },
+        {
+          "metric": "Initial planned domestic workforce reduction",
+          "value": "~15% (~700 positions in the first announced phase)",
+          "source": "NPR, PBS, CNN — consistent figure across outlets at time of initial announcement"
+        },
+        {
+          "metric": "Separately proposed State Department budget cut (OMB, preliminary)",
+          "value": "~50%, including eliminating U.S. funding for the UN and NATO headquarters",
+          "source": "AP, cited by NBC News -- reported as a preliminary proposal, not enacted"
+        }
+      ],
+      "caveat": "Some of the more drastic changes reported in leaked draft proposals before the official April 22 announcement did not materialize in the final plan -- offices for Africa affairs, migration/refugee issues, and democracy efforts survived, at least as named bureaus on the org chart, contrary to earlier leaked drafts. The State Department's own spokesperson explicitly stated 'DOGE was not in charge of this' reorganization, distinguishing it from the more centralized DOGE-driven cuts at other agencies covered elsewhere in this tracker -- worth noting since it suggests a more department-specific policy choice by Rubio rather than a directive imposed externally."
+    },
+    "confidence_note": "Strong, consistent multi-outlet sourcing (AP's obtained internal documents, corroborated independently by NBC, NPR, CNN, PBS, and Newsweek) with specific office names and headcounts rather than vague characterizations. Rubio's own quotes and the department's own internal notices are the primary sourcing for what changed; outside criticism (Shannon, American Academy of Diplomacy, Shaheen) is clearly attributed as external assessment rather than blended with the factual record of what changed.",
+    "last_verified": "2026-07-08",
+    "sources": [
+      {
+        "name": "NPR — State Department undergoes deep cuts in sweeping overhaul",
+        "url": "https://www.npr.org/2025/07/11/nx-s1-5464673/state-department-rubio-job-cuts"
+      },
+      {
+        "name": "NBC News — Marco Rubio announces a massive overhaul of the State Department",
+        "url": "https://www.nbcnews.com/politics/trump-administration/marco-rubio-unveils-massive-overhaul-state-department-reduction-staff-rcna202458"
+      },
+      {
+        "name": "CNN — Rubio unveils first stage of major State Department overhaul",
+        "url": "https://www.cnn.com/2025/04/22/politics/rubio-state-department-cuts/index.html"
+      },
+      {
+        "name": "PBS News — State Department unveils massive overhaul of agency, 15 percent staff reduction",
+        "url": "https://www.pbs.org/newshour/politics/state-department-unveils-massive-overhaul-of-agency-15-percent-staff-reduction"
+      },
+      {
+        "name": "Newsweek — Trump Admin to Cut 1,300 Jobs in State Department Reorganization",
+        "url": "https://www.newsweek.com/state-department-layoffs-trump-rubio-reorganization-2025-2097778"
+      }
+    ]
+  },
+  {
+    "id": "va-healthcare-staffing-shortage-trump2",
+    "title": "VA Inspector General Found Severe Staffing Shortages at Every One of 139 Medical Centers — VA Disputes the Metric",
+    "institution": "Veterans Health Administration (VHA), Department of Veterans Affairs",
+    "domain": "staff_office_cuts",
+    "status": "Disputed (OIG report and VA's own rebuttal both on the record; genuine methodological disagreement, not just political spin)",
+    "date_of_action": "2025-03 through 2025-08 (OIG survey period and report release); planned workforce reduction ongoing through Sept. 2025",
+    "what_changed": "The VA's own Office of Inspector General surveyed all 139 Veterans Health Administration medical facilities (as it has annually for over a decade) and found 4,434 'severe occupational staffing shortages' in fiscal year 2025 -- a 50% increase from 2,959 the prior year, and the highest number of distinct occupations affected (43) since 2018. Every single one of the 139 facilities reported at least one severe shortage. 94% of facilities reported severe shortages for medical officers (doctors); 79% for nurses; psychology was the single most frequently cited clinical shortage (57% of facilities). This survey was conducted shortly after reporting that the VA initially planned to cut 80,000 of its roughly 484,000 jobs via DOGE-driven workforce reduction, later scaled back to a target of approximately 30,000 positions (mostly administrative, via attrition) by the end of FY2025. Separately, ProPublica's review of internal VA hiring records found that nearly 4 in 10 doctors offered VA jobs from January-March 2025 turned them down -- four times the decline rate from the same period in 2024 -- and that VHA lost twice as many nurses as it hired between January and June 2025.",
+    "primary_proponent": {
+      "name": "Department of Government Efficiency (DOGE) / VA leadership",
+      "role": "Directed the initial 80,000-position reduction target, later revised to ~30,000",
+      "note": "VA press secretary Pete Kasperowicz directly and specifically disputed the OIG's findings, not merely dismissing them: he stated the department-wide vacancy rates for doctors and nurses are 14% and 10% respectively, which he characterizes as lower than most private health systems and lower than VA's own rates at points during the Biden administration (which he cited as 19% and 20%). This is a genuine methodological dispute -- the OIG's 'severe occupational shortage' metric measures how difficult a role is to recruit/retain, which the report itself notes 'does not necessarily indicate a vacant position,' while VA's rebuttal cites actual vacancy rates, a different and arguably more concrete measure. Both figures can be true simultaneously without either side lying."
+    },
+    "estimated_impact": {
+      "summary": "A retired 27-year VA physician, Michael Siebers, told PBS Wisconsin that shortages at his former hospital had become severe enough that surgeons were cleaning operating rooms themselves, delaying surgeries -- a specific, named, on-record firsthand account distinct from the aggregate OIG statistics. Senate VA Committee Ranking Member Richard Blumenthal and House VA Committee Ranking Member Mark Takano both said the report confirms worsening conditions. Sen. Mark Warner similarly criticized the administration's policies as making veteran care harder to deliver.",
+      "figures": [
+        {
+          "metric": "Total severe occupational staffing shortages, FY2025 (VA facilities)",
+          "value": "4,434 (up 50% from 2,959 in FY2024)",
+          "source": "VA Office of Inspector General report, August 2025"
+        },
+        {
+          "metric": "Facilities reporting severe medical-officer (doctor) shortages",
+          "value": "94% of 139 facilities",
+          "source": "VA OIG report"
+        },
+        {
+          "metric": "Facilities reporting severe nursing shortages",
+          "value": "79% of 139 facilities",
+          "source": "VA OIG report"
+        },
+        {
+          "metric": "Doctors offered VA jobs who declined, Jan-Mar 2025 (vs. same period 2024)",
+          "value": "~40% declined, 4x the 2024 rate",
+          "source": "ProPublica review of internal VA hiring records"
+        },
+        {
+          "metric": "VA's own cited department-wide vacancy rates (doctors/nurses) -- the administration's counter-figure",
+          "value": "14% / 10%, described by VA as better than Biden-era rates of 19%/20%",
+          "source": "VA press secretary Pete Kasperowicz, official statement"
+        },
+        {
+          "metric": "Planned workforce reduction (revised target)",
+          "value": "~30,000 of ~484,000 positions by end of FY2025, mostly administrative",
+          "source": "Federal News Network, citing VA officials"
+        }
+      ],
+      "caveat": "This entry should be presented as a genuine, substantive dispute rather than a one-sided finding -- the VA's rebuttal is specific and cites real, checkable numbers (vacancy rates), not just a generic denial. The OIG report itself states plainly that a 'severe shortage' designation does not necessarily correspond to an actual vacant position, and that it did not independently verify facility-level survey responses. Both the shortage-count increase and the comparatively low vacancy-rate figures can be simultaneously accurate, since they measure different things (recruitment/retention difficulty vs. currently-unfilled positions)."
+    },
+    "confidence_note": "Strong, well-corroborated sourcing on the base facts (Federal News Network, Newsweek, CBS News, MDedge, Nurse.org, and regional outlets like WPR all report the same OIG figures consistently), and unusually good sourcing on the administration's counter-argument as well, since VA's spokesperson gave detailed, specific, on-record statements to multiple outlets rather than a vague denial. The ProPublica hiring-decline data is a valuable independent data point not dependent on either the OIG or VA's framing.",
+    "last_verified": "2026-07-08",
+    "sources": [
+      {
+        "name": "Federal News Network — VA's severe health care staffing shortages are on the rise, watchdog finds",
+        "url": "https://federalnewsnetwork.com/workforce/2025/08/vas-severe-health-care-staffing-shortages-are-on-the-rise-watchdog-finds/"
+      },
+      {
+        "name": "CBS News — Staffing shortages at VA health systems are on the rise, watchdog finds",
+        "url": "https://www.cbsnews.com/news/staffing-shortages-veterans-affairs-watchdog/"
+      },
+      {
+        "name": "Newsweek — Map shows VA medical centers hit worst by 'severe' staffing shortage",
+        "url": "https://www.newsweek.com/va-medical-centers-severe-staffing-shortage-map-2114853"
+      },
+      {
+        "name": "WPR — Report: Wisconsin VA hospitals face severe staffing shortages",
+        "url": "https://www.wpr.org/news/report-wisconsin-va-hospitals-face-severe-staffing-shortages"
+      },
+      {
+        "name": "MDedge — VHA Facilities Report Severe Staffing Shortages",
+        "url": "https://www.mdedge.com/fedprac/article/272754/health-policy/vha-facilities-report-severe-staffing-shortages"
       }
     ]
   }
