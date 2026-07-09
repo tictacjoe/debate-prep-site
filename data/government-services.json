@@ -681,6 +681,79 @@
     ]
   },
   {
+    "id": "nsf-grant-terminations-peer-review-trump2",
+    "title": "DOGE Terminated 1,752 NSF Research Grants Using a Senator's Keyword List, Then NSF Formally Weakened Its Own Peer Review Standards",
+    "institution": "National Science Foundation (NSF)",
+    "domain": "research_suppression",
+    "status": "Largely complete (terminations executed; peer-review rule changes formally in effect since Dec. 15, 2025)",
+    "date_of_action": "2025-04-14 (DOGE arrives at NSF) through 2025-12-15 (formal peer-review process change takes effect)",
+    "what_changed": "On April 14, 2025, three DOGE personnel arrived at NSF headquarters and were given direct access to the agency's internal grant management systems -- an unusual level of access for political appointees into a agency's live award-processing systems, which one NSF program officer told Nature 'raises the hairs on the back of our neck.' DOGE ordered NSF's grants division to pull back all proposals that had already cleared full peer review and internal approval but were awaiting final signoff, instructing career program officers to perform undefined 'mitigation work' to bring the proposals into compliance with Trump executive orders restricting research related to diversity, equity, and inclusion or climate change. NSF ultimately terminated 1,752 active grants worth $1.4 billion. The screening process relied substantially on a list of roughly 3,400 grants compiled by Sen. Ted Cruz's office, which Cruz characterized as funding 'neo-Marxist class warfare propaganda'; independent analysis by the Grant Watch project found the terminated grants' titles and abstracts most frequently contained the words 'Black,' 'climate,' 'student,' 'justice,' 'identity,' and 'teacher' -- and that NSF's STEM Education directorate alone lost 839 grants worth $888 million, nearly half of all dollars terminated agency-wide despite being a small fraction of NSF's total budget. NSF Director Sethuraman Panchanathan resigned during this period. Separately, effective December 15, 2025, NSF formally revised its own peer review standards (PAPPG 24-1 Supplement 1): the minimum number of required external reviews per proposal dropped from three to two, one of which may now be an NSF staff member rather than an outside expert; panel discussions became optional rather than required; and panel summary write-ups were capped at three to five sentences, down from what had often run several paragraphs. NSF attributed the peer-review changes to a proposal backlog and workforce reductions, not to the DOGE-driven terminations directly.",
+    "primary_proponent": {
+      "name": "DOGE personnel Luke Farritor and Zachary Terrell",
+      "role": "DOGE staff embedded at NSF with direct grant-system access",
+      "note": "Then-NSF Director Sethuraman Panchanathan wrote in an internal priorities update that efforts to broaden research participation 'should not preference some groups at the expense of others' -- the stated policy rationale for the review -- before resigning shortly afterward. Sen. Ted Cruz is the named source of the keyword-flagged grant list that substantially shaped which proposals were targeted, though NSF and the White House have not published an official list or criteria of their own, leaving outside researchers (Grant Watch) to reconstruct the pattern independently from grant titles and abstracts."
+    },
+    "estimated_impact": {
+      "summary": "Congress separately and explicitly rejected a much larger cut: the FY2026 appropriations bill (signed January 23, 2026) funded NSF at $8.75 billion, refusing the White House's request to cut the agency to $3.9 billion (roughly 55%), which NSF's own internal projections said would have dropped grant funding rates to approximately 7%. The Senate Commerce Committee described the enacted funding level as preventing 'an existential threat to U.S. science funding.' This creates a notable split: Congress protected NSF's overall budget, while DOGE's targeted, keyword-driven terminations and the subsequent peer-review rule changes altered the agency's internal operations and standards in ways that did not require, and were not subject to, the same congressional appropriations fight.",
+      "figures": [
+        {
+          "metric": "Total grants terminated by DOGE",
+          "value": "1,752, worth $1,400,000,000",
+          "source": "FundingLandscape's analysis of NSF/Grant Watch data, February 2026"
+        },
+        {
+          "metric": "STEM Education directorate grants terminated",
+          "value": "839 grants, worth $888,000,000 (nearly half of all terminated dollars)",
+          "source": "FundingLandscape; corroborated by The Hechinger Report's earlier count of ~40% of a smaller initial batch"
+        },
+        {
+          "metric": "Grants referenced from Sen. Cruz's flagged list",
+          "value": "~3,400 grants identified",
+          "source": "The Hechinger Report, citing Cruz's own public characterization"
+        },
+        {
+          "metric": "Minimum external peer reviews required per proposal (before/after Dec. 2025 rule change)",
+          "value": "3 -> 2 (one may now be internal NSF staff)",
+          "source": "NSF's own PAPPG 24-1 Supplement 1 (NSF 26-200), effective Dec. 15, 2025"
+        },
+        {
+          "metric": "NSF FY2026 enacted budget vs. the White House's proposed cut",
+          "value": "$8.75B enacted vs. $3.9B proposed (~55% cut rejected by Congress)",
+          "source": "FundingLandscape, citing the FY2026 Commerce-Justice-Science appropriations bill and CRS report R48783"
+        }
+      ],
+      "caveat": "NSF has not published an official rationale or list for the specific 1,752 terminated grants, so the word-frequency pattern ('Black,' 'climate,' 'justice,' etc.) comes from independent researchers (Grant Watch) reconstructing the pattern from public grant abstracts, not from an NSF-published criteria document -- a real transparency gap worth naming directly rather than treating the independent analysis as equivalent to an official record. NSF's own stated reason for the December 2025 peer-review changes (backlog and workforce reductions) is a genuine alternative explanation distinct from the DOGE terminations, and should be presented as the agency's own account rather than dismissed."
+    },
+    "confidence_note": "Strong sourcing across specialist science-policy outlets with direct agency access (Nature, Science/AAAS, Scientific American, C&EN) plus mainstream coverage (Washington Post) and a detailed later quantitative analysis (FundingLandscape, cross-referenced against Grant Watch's independently compiled dataset). The DOGE personnel names and their system-access level are corroborated by internal NSF staff speaking to Nature under granted anonymity -- a meaningful sourcing strength since it reflects direct agency insider accounts, not just outside inference.",
+    "last_verified": "2026-07-08",
+    "sources": [
+      {
+        "name": "Nature — Trump team freezes new NSF awards — and could soon axe hundreds of grants",
+        "url": "https://www.nature.com/articles/d41586-025-01263-0"
+      },
+      {
+        "name": "Science/AAAS — NSF halts grant awards while staff do second review",
+        "url": "https://www.science.org/content/article/nsf-halts-grant-awards-while-staff-do-second-review"
+      },
+      {
+        "name": "Scientific American — Trump Administration's Science Cuts Come for NSF Funding",
+        "url": "https://www.scientificamerican.com/article/trump-administrations-science-cuts-come-for-nsf-funding/"
+      },
+      {
+        "name": "The Hechinger Report — Education research takes another hit in latest DOGE attack",
+        "url": "https://hechingerreport.org/proof-points-nsf-ed-research-pummeled/"
+      },
+      {
+        "name": "FundingLandscape — NSF Grants in 2026: $8.75 Billion Appropriated, 1,752 Grants Terminated by DOGE, and a New Merit Review Process",
+        "url": "https://fundinglandscape.com/answers/nsf-grants-guide-2026"
+      },
+      {
+        "name": "The Washington Post — National Science Foundation in turmoil amid DOGE cuts, leadership change",
+        "url": "https://www.washingtonpost.com/science/2025/05/01/science-funding-nsf-cuts/"
+      }
+    ]
+  },
+  {
     "id": "nws-staffing-losses-trump2",
     "title": "National Weather Service Lost ~600 Staff, Including a Vacant Position Tied to the Texas Flood Warnings",
     "institution": "National Weather Service (NWS), National Oceanic and Atmospheric Administration (NOAA), Department of Commerce",
@@ -947,6 +1020,84 @@
       {
         "name": "Newsweek — Trump Admin to Cut 1,300 Jobs in State Department Reorganization",
         "url": "https://www.newsweek.com/state-department-layoffs-trump-rubio-reorganization-2025-2097778"
+      }
+    ]
+  },
+  {
+    "id": "usaid-dismantlement-trump2",
+    "title": "USAID Dismantled and Absorbed Into the State Department, Despite Being a Congressionally-Independent Agency",
+    "institution": "U.S. Agency for International Development (USAID)",
+    "domain": "staff_office_cuts",
+    "status": "Operationally dissolved (July 1, 2025) but legally unresolved -- USAID was made an independent agency by Congress in 1998 and can only be formally abolished by an act of Congress, which has not occurred",
+    "date_of_action": "2025-01-24 (foreign aid freeze ordered) through 2025-07-01 (official dissolution and merger into State Department)",
+    "what_changed": "On his first days in office, Trump ordered a near-total freeze on foreign aid, and within weeks the administration placed most USAID employees on administrative leave. By March 10, 2025, Secretary of State Rubio announced 83% of USAID's programs (roughly 5,200 contracts) had been terminated following an internal review; on March 28 he formally notified Congress that USAID would be dissolved and its remaining functions absorbed into the State Department. USAID officially ceased independent operations on July 1, 2025, after 63 years. Staffing was reduced from over 10,000 employees to fewer than 300. USAID's own Inspector General issued a report warning the spending pause and staff furloughs limited the agency's ability to ensure funds didn't reach terrorist-linked recipients, and separately warned that $489 million in humanitarian food aid risked spoiling due to the furloughs; the White House Office of Presidential Personnel fired that Inspector General less than 30 minutes after the report's publication -- despite a federal law requiring 30 days' advance notice to Congress before removing an inspector general. A significant, largely unresolved legal question underlies the entire action: USAID was reorganized by Congress as an independent agency in 1998 specifically to give it statutory protection, and per that same statute can only be formally abolished by an act of Congress -- which has not happened. USAID therefore legally still exists even though it has been operationally dissolved.",
+    "primary_proponent": {
+      "name": "Marco Rubio",
+      "role": "Secretary of State",
+      "note": "Personally announced the program terminations, the dissolution notice to Congress, and USAID's final closure, writing on Substack: 'As of July 1st, USAID will officially cease to implement foreign assistance... This era of government-sanctioned inefficiency has officially come to an end.' Rubio told a congressional hearing in May 2025 that 'no one has died because of USAID [cuts]' -- a claim directly contradicted by subsequent peer-reviewed research (see below) and by on-the-ground reporting, including one documented case of a child in Nigeria who died after the USAID-funded clinic he depended on for urgent care was closed. This action is closely related to, but categorically distinct from, the separately-tracked State Department reorganization entry in this database -- USAID's elimination is the dismantling of an entire congressionally-independent agency, not an internal State Department restructuring."
+    },
+    "estimated_impact": {
+      "summary": "A peer-reviewed study published in The Lancet (one of the world's most established medical journals) estimated USAID funding prevented more than 91 million deaths globally between 2001 and 2021, including a 65% reduction in HIV/AIDS mortality and 51% reduction in malaria mortality in the countries it funded. The same study projected that, absent a reversal, the 2025 cuts could contribute to more than 14 million additional preventable deaths by 2030, nearly a third of them children under 5 -- a scale the study's authors explicitly compared to 'a global pandemic or a major armed conflict,' while noting this crisis would stem from 'a conscious and avoidable policy choice.' A follow-up Lancet study one year later, incorporating a full year of real data rather than projections, estimated a somewhat lower but still severe 9.4 million-death figure by 2030 if funding trends continue -- researchers who reviewed the modeling told CNN the precise numbers should be treated with some caution but that the overall conclusion (large-scale, avoidable death) is likely correct. Domestically, the closure eliminated tens of thousands of jobs across USAID staff and its contractor/NGO ecosystem -- one contractor, EnCompass, lost over 400 jobs in under a month.",
+      "figures": [
+        {
+          "metric": "Deaths prevented by USAID funding, 2001-2021 (Lancet study)",
+          "value": "91,000,000+ (range 86-98 million)",
+          "source": "The Lancet, peer-reviewed study, June 2025"
+        },
+        {
+          "metric": "Projected additional preventable deaths by 2030 if cuts continue (initial 2025 Lancet estimate)",
+          "value": "14,000,000+",
+          "source": "The Lancet, June 2025"
+        },
+        {
+          "metric": "Revised projection one year later, using a full year of real data",
+          "value": "9,400,000+ by 2030",
+          "source": "The Lancet, follow-up study, February 2026"
+        },
+        {
+          "metric": "USAID programs/contracts terminated by March 2025",
+          "value": "83% (~5,200 contracts)",
+          "source": "Secretary of State Rubio's own March 10, 2025 announcement"
+        },
+        {
+          "metric": "USAID staff reduction",
+          "value": "from 10,000+ to fewer than 300",
+          "source": "Wikipedia, citing White House/USAID staffing announcements, corroborated across multiple news sources"
+        },
+        {
+          "metric": "Humanitarian food aid at risk of spoiling due to furloughs",
+          "value": "$489,000,000",
+          "source": "USAID's own Inspector General report"
+        }
+      ],
+      "caveat": "The State Department disputes the Lancet methodology directly and sharply -- a senior official called it a 'failed journal' and said such studies reflect 'outdated thinking.' This is a genuinely disputed empirical question about mortality modeling, not merely a political disagreement, and modelers themselves (including ones unaffiliated with the study) caution the precise death-toll numbers carry real uncertainty even while endorsing the general conclusion. Separately, the administration's own stated justification (that USAID had significant oversight and accountability failures) has some independent support -- USAID itself failed to conduct legally-required financial reviews for over 70% of the international organizations receiving its funding in 2023, per the agency's own inspector general -- though fact-checkers found most of the administration's specific waste examples cited publicly were false or highly misleading."
+    },
+    "confidence_note": "Exceptionally strong sourcing across the full political spectrum of outlets (NPR, CNN, ABC News, Newsweek) plus a peer-reviewed medical journal (The Lancet) with two independent studies a year apart, plus USAID's own Inspector General's report before that office was itself eliminated. The legal status question (independent agency status under the 1998 statute) is a matter of public record, not interpretation. Rubio's 'no one has died' claim and the mortality studies represent a genuine, sourced factual conflict -- present both sides with their actual sourcing rather than treating either claim as simply settled.",
+    "last_verified": "2026-07-08",
+    "sources": [
+      {
+        "name": "NPR — USAID officially shuts down and merges remaining operations with State Department",
+        "url": "https://www.npr.org/2025/07/01/nx-s1-5451372/usaid-officially-shuts-down-and-merges-remaining-operations-with-state-department"
+      },
+      {
+        "name": "CNN — Rubio hails end of USAID as study says its elimination could contribute to 14 million deaths in next 5 years",
+        "url": "https://www.cnn.com/2025/07/01/politics/us-aid-elimination-study-14-million-deaths"
+      },
+      {
+        "name": "CNN — One year on from dismantling of USAID, study projects that global aid cuts could lead to 9.4 million deaths by 2030",
+        "url": "https://www.cnn.com/2026/02/04/world/lancet-usaid-global-aid-cuts-intl"
+      },
+      {
+        "name": "Capital & Main — A Year After USAID's Termination: The Impact Has Been 'Devastating'",
+        "url": "https://capitalandmain.com/a-year-after-usaids-termination-the-impact-has-been-devastating"
+      },
+      {
+        "name": "Wikipedia — United States Agency for International Development (citing IG report, statutory independence, staffing figures)",
+        "url": "https://en.wikipedia.org/wiki/United_States_Agency_for_International_Development"
+      },
+      {
+        "name": "Newsweek — The Fallout From the Dismantling of USAID Continues",
+        "url": "https://www.newsweek.com/fallout-dismantling-usaid-10832387"
       }
     ]
   },
