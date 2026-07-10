@@ -549,6 +549,70 @@
     ]
   },
   {
+    "id": "eeoc-eeo1-data-rescission-trump2",
+    "title": "EEOC Moves to End 60 Years of Mandatory Workplace Demographic Data Collection",
+    "institution": "Equal Employment Opportunity Commission",
+    "domain": "data_collection_halted",
+    "status": "Ongoing (OMB's regulatory review concluded June 9, 2026; the proposal still requires Federal Register publication and a public comment period before any final rule takes effect)",
+    "date_of_action": "Early 2025 (removal of Democratic commissioners clears the path) through 2026-06-09 (OMB review of the rescission proposal concludes); final rule still pending as of the last-verified date",
+    "what_changed": "Early in his second term, President Trump removed the EEOC's Democratic commissioners, eliminating what would have been a blocking minority against a reorientation of the agency's civil rights enforcement priorities under Chair Andrea Lucas. On May 14, 2026, the EEOC submitted a proposed rule to the White House's Office of Information and Regulatory Affairs (OIRA) titled 'Rescission of EEO-1, EEO-2, EEO-3, EEO-4, EEO-5, and Reporting Requirement Under Title VII, the ADA, GINA, and the PWFA.' The proposal would eliminate the mandatory annual and biennial workforce demographic data collections that have applied since 1966 to private employers with 100 or more employees, unions, state and local governments, and public school systems, covering employee race, ethnicity, and sex data across job categories. OIRA concluded its review on June 9, 2026, clearing the way for the proposal to be published in the Federal Register for public comment. As of the last-verified date, the EEOC had not opened its EEO-1 filing portal for 2025 data, leaving employers uncertain whether any further demographic data collection will occur before a final rule is issued. The move follows the EEOC's 2025 decision to rescind the option for employers to report non-binary employees on the form, and a separate, still-pending EEOC proposal to rescind a 1979 regulation permitting voluntary affirmative action plans.",
+    "primary_proponent": {
+      "name": "Andrea Lucas",
+      "role": "Chair, Equal Employment Opportunity Commission",
+      "note": "Publicly warned employers against using EEO-1 demographic data, argued such data has been misused to justify practices she describes as discriminatory against white men and, per NPR reporting, posted a December 2025 video encouraging white men to file discrimination complaints directly with her office; she is the named official driving the rescission proposal."
+    },
+    "estimated_impact": {
+      "summary": "The federal government's primary tool for identifying systemic race-, ethnicity-, and sex-based disparities in private-sector employment, in continuous use since 1966 and cited in discrimination settlements worth billions of dollars, is on track for elimination with no comparable federal data source proposed to replace it.",
+      "figures": [
+        {
+          "metric": "Years of continuous mandatory data collection targeted for rescission",
+          "value": "60 years (since 1966)",
+          "source": "NPR, 'Trump's EEOC plans to scrap discrimination-fighting tools,' June 2026"
+        },
+        {
+          "metric": "Distinct data collections targeted",
+          "value": "5 (EEO-1 through EEO-5, covering private employers, unions, state/local governments, and public schools)",
+          "source": "EEOC's own proposed rule title, as reported by Morgan Lewis and Saul Ewing legal alerts"
+        },
+        {
+          "metric": "Employers currently subject to the requirement",
+          "value": "Private employers with 100+ employees; certain federal contractors with 50+ employees",
+          "source": "Morgan Lewis and Saul Ewing legal alerts, May 2026"
+        },
+        {
+          "metric": "State-level backstop already enacted in anticipation of federal rescission",
+          "value": "Colorado's HB 26-1207 requires the same EEO-1 demographic reporting at the state level beginning July 1, 2027, regardless of the federal rule's fate",
+          "source": "Mondaq legal summary, June 2026"
+        }
+      ],
+      "caveat": "The EEOC's stated rationale is that the reporting requirements 'impose significant financial and administrative burdens on the nation's employers' and that demographic data has been misused by some companies to justify race- or sex-conscious practices Chair Lucas considers potentially discriminatory. Critics, including former EEOC General Counsel Karla Gilbride and the advocacy group Equal Rights Advocates, argue the data has been essential to identifying systemic discrimination, citing the decades-long Bass Pro Shops hiring-discrimination case as an example, and that its loss would force investigators to rely on far more laborious subpoena processes going forward, saying 'we cannot change what we cannot measure.' This remains a proposed rule, not a final one: it must still be published in the Federal Register, undergo a public comment period, and be finalized by the EEOC, a process expected to take several more months from the last-verified date."
+    },
+    "confidence_note": "Very strong. Every procedural date and the proposed rule's exact title are independently corroborated across Morgan Lewis, Saul Ewing, Bloomberg Law, HR Dive, and HR Daily Advisor legal alerts, and NPR's June 2026 reporting includes on-record quotes from both Chair Lucas and former EEOC officials representing both sides of the dispute.",
+    "last_verified": "2026-07-09",
+    "sources": [
+      {
+        "name": "NPR, 'Trump's EEOC plans to scrap discrimination-fighting tools'",
+        "url": "https://www.npr.org/2026/06/01/nx-s1-5827069/trump-eeoc-discrimination-dei-data"
+      },
+      {
+        "name": "Morgan Lewis, 'EEOC Proposes Rescinding Employer Data Reporting Requirements'",
+        "url": "https://www.morganlewis.com/pubs/2026/05/eeoc-proposes-rescinding-employer-data-reporting-requirements"
+      },
+      {
+        "name": "HR Daily Advisor, 'OMB Approves EEO-1 Rescission'",
+        "url": "https://hrdailyadvisor.hci.org/2026/07/09/omb-approves-eeo-1-rescission"
+      },
+      {
+        "name": "Saul Ewing LLP, 'EEOC Proposes Eliminating Longstanding EEO-1 Reports and Related Data Collection Requirements'",
+        "url": "https://www.saul.com/insights/blog/eeo-1-reports-and-related-data-collection"
+      },
+      {
+        "name": "Press Democrat (AP), 'Ex-EEOC commissioner fired by Trump drops lawsuit after SCOTUS ruling'",
+        "url": "https://www.pressdemocrat.com/2026/07/06/eeoc-fired-commissioner/"
+      }
+    ]
+  },
+  {
     "id": "epa-ord-elimination-trump2",
     "title": "EPA Eliminated Its Scientific Research Office, Placing the Successor Directly Under the Administrator's Political Control",
     "institution": "Office of Research and Development (ORD), Environmental Protection Agency",
@@ -1639,6 +1703,70 @@
     ]
   },
   {
+    "id": "noaa-climate-research-defunding-trump2",
+    "title": "NOAA Climate Research Zeroed Out in FY2026 Budget Proposal, Princeton Partnership Defunded",
+    "institution": "National Oceanic and Atmospheric Administration",
+    "domain": "research_suppression",
+    "status": "Partially implemented (the Princeton funding cut took effect; the broader FY2026 budget eliminating NOAA's climate research office was rejected by key congressional spending panels, though the administration has proceeded with related contract terminations regardless)",
+    "date_of_action": "2025-04-08 (Princeton funding cut announced) through the FY2026 budget cycle (proposal released July 2025; Congress had not enacted it as of the last-verified date)",
+    "what_changed": "On April 8, 2025, Commerce Secretary Howard Lutnick announced the termination of nearly $4 million in NOAA cooperative research funding to Princeton University, effective June 30, 2025, covering three programs including the Cooperative Institute for Modeling the Earth System, which supports Princeton's partnership with NOAA's Geophysical Fluid Dynamics Laboratory (GFDL), widely regarded as producing some of the world's most advanced climate modeling. The Commerce Department's official announcement stated the program 'promotes exaggerated and implausible climate threats, contributing to a phenomenon known as climate anxiety.' In July 2025, NOAA's proposed FY2026 budget was reported to contain a literal line reading 'Total, Climate Research: $0,' along with the proposed elimination of the entire Office of Oceanic and Atmospheric Research (OAR), NOAA's research arm, and defunding of all of OAR's climate and weather cooperative institutes nationwide, including CIRES at the University of Colorado Boulder, which houses the National Snow and Ice Data Center. The overall proposal called for cutting NOAA's budget by more than 25% and its ~13,000-person workforce by roughly 17%, along with a 44% reduction in planned investment in next-generation geostationary weather satellites. Congressional spending panels rejected the FY2026 budget request as proposed, but the administration proceeded with some of the changes administratively regardless, including terminating contracts for planned satellite instruments in August 2025 as what agency officials described to staff as a 'down payment' on the broader proposed cuts.",
+    "primary_proponent": {
+      "name": "Howard Lutnick",
+      "role": "Secretary of Commerce (NOAA's parent department)",
+      "note": "Personally announced and was quoted defending the Princeton funding termination, and oversees the Commerce Department's NOAA budget proposals implementing the broader climate-research defunding."
+    },
+    "estimated_impact": {
+      "summary": "A federal agency responsible for the data and modeling underlying weather forecasting, hurricane prediction, and climate research had its dedicated climate research funding line proposed at zero and lost a 57-year research partnership with one of the world's leading climate modeling laboratories.",
+      "figures": [
+        {
+          "metric": "NOAA-Princeton cooperative research funding terminated",
+          "value": "~$4 million across three programs, effective June 30, 2025",
+          "source": "U.S. Department of Commerce official press release, April 8, 2025"
+        },
+        {
+          "metric": "FY2026 NOAA budget proposal, climate research line item",
+          "value": "$0",
+          "source": "NOAA FY2026 budget document, as reported by Eos (American Geophysical Union publication), July 2025"
+        },
+        {
+          "metric": "Proposed overall NOAA budget cut / workforce reduction",
+          "value": ">25% budget cut (some reporting cites ~30%) and ~17% of ~13,000-person workforce eliminated",
+          "source": "NPR and Colorado Public Radio, reporting on the leaked/released FY2026 budget document, April-July 2025"
+        },
+        {
+          "metric": "Proposed cut to geostationary weather satellite investment",
+          "value": "44% reduction from current levels",
+          "source": "NPR, April 11, 2025"
+        }
+      ],
+      "caveat": "The administration's stated rationale, per the Commerce Department's own announcement, is that the affected Princeton research 'fosters fear rather than rational, balanced discussion' and that eliminating it will 'streamline and reduce the cost and size of the Federal Government.' Critics, including former NOAA research director Craig McLean, argue the cuts amount to dismantling the scientific basis for hurricane and severe-weather forecasting, and ProPublica reporting noted that Secretary Lutnick's former firm, Cantor Fitzgerald, had itself described climate change in prior public materials as 'the defining issue of our time' and warned it would be 'disastrous and life threatening' if unchecked, a contrast critics cite as evidence the funding decision reflects political priorities rather than a reassessment of the science. It is also important to note the FY2026 budget eliminating NOAA's climate research entirely is a proposal, not enacted law: congressional appropriators in both parties have been reported as skeptical of the scale of the cuts and have not approved the request as written, even though the administration has moved ahead with some individual actions, such as satellite contract terminations, independent of congressional approval."
+    },
+    "confidence_note": "Very strong for the Princeton funding termination, sourced directly to the Commerce Department's own press release with named, quoted officials. Strong for the FY2026 budget proposal and OAR elimination plan, independently corroborated across NPR, Colorado Public Radio, Eos, Science/AAAS, PBS NewsHour, and ProPublica, with the important caveat clearly noted that this remains a budget proposal Congress has not enacted as of the last-verified date.",
+    "last_verified": "2026-07-09",
+    "sources": [
+      {
+        "name": "U.S. Department of Commerce, 'Ending Cooperative Agreements' Funding to Princeton University'",
+        "url": "https://www.commerce.gov/news/press-releases/2025/04/ending-cooperative-agreements-funding-princeton-university"
+      },
+      {
+        "name": "Eos, 'Proposed NOAA Budget Calls for $0 for Climate Research'",
+        "url": "https://eos.org/research-and-developments/proposed-noaa-budget-calls-for-0-for-climate-research"
+      },
+      {
+        "name": "NPR, 'Major budget cuts proposed for the National Oceanic and Atmospheric Administration'",
+        "url": "https://www.npr.org/2025/04/11/nx-s1-5361366/major-budget-cuts-proposed-for-the-national-oceanic-and-atmospheric-administration"
+      },
+      {
+        "name": "Science/AAAS, 'Trump administration pushes ahead with NOAA climate and weather cuts'",
+        "url": "https://www.science.org/content/article/trump-administration-pushes-ahead-noaa-climate-and-weather-cuts"
+      },
+      {
+        "name": "ProPublica, 'White House Proposal Could Gut Climate Modeling the World Depends On'",
+        "url": "https://www.propublica.org/article/trump-noaa-budget-cuts-climate-change-modeling-princeton-gfdl"
+      }
+    ]
+  },
+  {
     "id": "nsf-grant-terminations-peer-review-trump2",
     "title": "DOGE Terminated 1,752 NSF Research Grants Using a Senator's Keyword List, Then NSF Formally Weakened Its Own Peer Review Standards",
     "institution": "National Science Foundation (NSF)",
@@ -2334,6 +2462,65 @@
       {
         "name": "MDedge — VHA Facilities Report Severe Staffing Shortages",
         "url": "https://www.mdedge.com/fedprac/article/272754/health-policy/vha-facilities-report-severe-staffing-shortages"
+      }
+    ]
+  },
+  {
+    "id": "voa-usagm-dismantlement-trump2",
+    "title": "Voice of America Cut 85% After Court-Voided Leadership Effort to Dismantle Its Parent Agency",
+    "institution": "U.S. Agency for Global Media (Voice of America and affiliated networks)",
+    "domain": "staff_office_cuts",
+    "status": "Reversed in significant part by court order (March 2026), though appeals and full operational restoration remain in progress as of the last-verified date",
+    "date_of_action": "2025-03-15 (administrative leave begins) through 2026-03-23 (court-ordered reinstatement deadline); litigation ongoing",
+    "what_changed": "In March 2025, President Trump signed an executive order aimed at shutting down USAGM and its component networks (Voice of America, Radio Free Asia, Radio Free Europe/Radio Liberty, Middle East Broadcasting Network, and the Office of Cuba Broadcasting), after having fired all members of the International Broadcasting Advisory Board except the Secretary of State the previous week. On March 15, 2025, roughly 1,300 employees were placed on administrative leave, and broadcasting operations were suspended. Trump senior adviser Kari Lake, who was never Senate-confirmed to lead the agency, directed the effort. Litigation followed almost immediately; a district court granted a temporary restraining order on March 28, 2025, and further rulings required USAGM to maintain a 'statutory minimum' staffing level. Cuts continued despite ongoing litigation: on June 20, 2025, layoff notices went to 639 more employees, and by August 29, 2025, an additional reduction-in-force notice targeted roughly 532 full-time VOA employees, paring the broader agency to as few as 81 people at one point, with VOA itself reduced from broadcasting in 49 languages to just four (Persian, Mandarin, Dari, and Pashto). On March 7-8, 2026, U.S. District Judge Royce Lamberth ruled that all actions taken by Lake since March 2025, including the August 2025 reduction in force, were legally void because she lacked authority to serve as acting CEO. On March 18, 2026, the court vacated the underlying 'Statutory Minimum Memorandum' entirely and ordered that all employees placed on leave return to work by March 23, 2026. Congress separately passed bipartisan FY2026 appropriations including approximately $199.5 million for VOA, which Trump signed into law.",
+    "primary_proponent": {
+      "name": "Kari Lake",
+      "role": "Senior Adviser to the President; served as acting CEO of USAGM from July 31 to November 19, 2025, then as deputy CEO",
+      "note": "Directed the staff reductions and broadcasting suspension despite lacking Senate-confirmed authority to lead the agency, a defect a federal court later found rendered her actions, including the August 2025 mass layoff, legally void."
+    },
+    "estimated_impact": {
+      "summary": "The United States' largest and oldest government-funded international broadcaster was reduced by roughly 85% at its low point, going from 49 broadcast languages to four, before a federal court voided the entire effort as legally unauthorized and ordered mass reinstatement.",
+      "figures": [
+        {
+          "metric": "Peak staff reduction across USAGM",
+          "value": "From ~1,300 employees on leave in March 2025 to as few as 81 people by mid-2025, an 85%+ reduction",
+          "source": "Wikipedia compilation of contemporaneous reporting, citing Reuters/Yahoo News and USAGM statements"
+        },
+        {
+          "metric": "VOA broadcast languages",
+          "value": "Reduced from 49 languages to 4 (Persian, Mandarin, Dari, Pashto)",
+          "source": "Wikipedia, citing NPR and USAGM reporting"
+        },
+        {
+          "metric": "Employees ordered reinstated by court",
+          "value": "More than 1,000, by March 23, 2026",
+          "source": "AFGE and Democracy Forward litigation summaries of Judge Lamberth's March 2026 rulings"
+        }
+      ],
+      "caveat": "The administration's stated rationale, articulated by Kari Lake, was that VOA was 'rife with ideological bias and waste.' That framing gained some support in 2026 reporting: The New York Times found VOA had run stories under Lake's leadership that appeared to violate the law mandating unbiased coverage, including a January 2026 Chinese-language article that uncritically praised Trump. Critics, including press freedom groups Reporters Sans Frontieres and Reporters Without Borders (both formal plaintiffs in the litigation), argue the shutdown itself, not editorial complaints about individual stories, was the primary harm, warning that the loss of VOA's international reach benefited authoritarian governments that restrict independent press access in their countries. Notably, this is a partial-reversal story: a federal court ultimately ruled the entire leadership and staffing effort legally void due to Lake's lack of confirmed authority, and Congress passed bipartisan funding preserving VOA's budget, even as full operational restoration remains a work in progress with hundreds of contractor positions likely permanently lost."
+    },
+    "confidence_note": "Very strong. Anchored in multiple federal court rulings cited by name, date, and docket outcome (Judge Royce Lamberth's March 2025 TRO, March 2026 summary judgment, and March 2026 reinstatement order), corroborated independently by NPR, AFGE's litigation summary, Democracy Forward's case tracker, and a detailed Poynter investigation into the human impact one year after the initial cuts.",
+    "last_verified": "2026-07-09",
+    "sources": [
+      {
+        "name": "NPR, 'Voice of America to cut nearly all staff under Trump official's plan'",
+        "url": "https://www.npr.org/2025/06/06/nx-s1-5424581/voa-job-cuts-kari-lake"
+      },
+      {
+        "name": "AFGE, 'Judge Invalidates Trump Administration's Attempts to Dismantle Voice of America'",
+        "url": "https://www.afge.org/article/judge-invalidates-trump-administrations-attempts-to-dismantle-voice-of-america"
+      },
+      {
+        "name": "Democracy Forward, 'Stopping the Trump Administration's Unlawful Attempts to Dismantle Voice of America'",
+        "url": "https://democracyforward.org/work/legal/stopping-the-trump-administrations-unlawful-attempts-to-dismantle-voice-of-america/"
+      },
+      {
+        "name": "Poynter, 'A year after Trump administration cuts, Voice of America and its sister outlets are mostly shadows of their former selves'",
+        "url": "https://www.poynter.org/business-work/2026/voa-usagm-cuts-layoffs-funding-lawsuits-trump-press-freedom/"
+      },
+      {
+        "name": "Wikipedia, 'Voice of America' (compiling contemporaneous news coverage of staffing timeline)",
+        "url": "https://en.wikipedia.org/wiki/Voice_of_America"
       }
     ]
   }
