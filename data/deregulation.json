@@ -275,6 +275,73 @@
     "short_summary": "Exempted regional banks under $250B in assets from strict post-2008 oversight."
   },
   {
+    "id": "dol-overtime-threshold-rescission-trump2",
+    "rule_name": "Overtime Salary Threshold Expansion Rescission",
+    "administration": "Trump II",
+    "agency": "Department of Labor (Wage and Hour Division)",
+    "domain": "labor / wage and hour",
+    "status": "Complete (effective May 15, 2026)",
+    "date_of_action": "2026-05-14 (announced) / 2026-05-15 (effective)",
+    "original_rule_summary": "In April 2024, the Biden administration's DOL finalized a rule raising the Fair Labor Standards Act white-collar overtime exemption salary threshold in two phases: to $844/week ($43,888/year) effective July 1, 2024, and to $1,128/week ($58,656/year) effective January 1, 2025, with automatic updates every three years thereafter. The highly-compensated-employee exemption threshold was set to rise to $151,164/year. The rule was projected to make roughly 4.3 million additional salaried workers newly eligible for overtime pay.",
+    "what_changed": "Two federal judges in the Eastern District of Texas struck down the 2024 rule before its second scheduled increase took effect, vacating it on the grounds that DOL had over-weighted salary level relative to job duties in defining the exemption. The Trump DOL declined to continue defending the rule on appeal and withdrew the government's appeals; the Fifth Circuit dismissed the case on May 5, 2026 without ruling on the merits. On May 14, 2026, DOL published a technical amendment in the Federal Register formally rescinding the 2024 rule from the Code of Federal Regulations, effective May 15, 2026, and reinstating the salary thresholds set during Trump's first term in 2019: $684/week ($35,568/year) for the standard exemption and $107,432/year for highly compensated employees. In practice this formalized what had already been happening since the district court rulings, since DOL's Wage and Hour Division had been enforcing the 2019 thresholds since the 2024 rule was vacated.",
+    "primary_proponent": {
+      "name": "Andrew Rogers",
+      "role": "Administrator, DOL Wage and Hour Division",
+      "note": "Signed and publicly announced the technical amendment, framing it as ensuring the exemption's 'duties, salary basis, and salary level requirements' are 'clearly framed' -- i.e., restoring duties-based analysis over the salary-level test the 2024 rule relied on more heavily."
+    },
+    "corporate_beneficiaries": "Employers across all sectors who would otherwise have had to reclassify salaried employees between roughly $35,568 and $58,656/year as overtime-eligible, or raise their salaries above the new threshold to preserve exempt status -- disproportionately affecting labor-intensive, lower-margin industries such as retail, hospitality, and food service where many managerial-title but modestly-paid positions cluster in that salary band.",
+    "estimated_health_impact": {
+      "summary": "Not a health-impact rule; the relevant harm is economic -- lost overtime eligibility and pay for millions of salaried workers who would have qualified for time-and-a-half compensation under the rescinded 2024 threshold.",
+      "figures": [
+        {
+          "metric": "Workers projected to gain overtime eligibility under the rescinded 2024 rule",
+          "value": "approximately 4.3 million",
+          "source": "Sen. Bernie Sanders' office fact sheet on the Restoring Overtime Pay Act of 2026, citing DOL's own 2024 rule projections"
+        },
+        {
+          "metric": "Current standard exemption salary threshold (restored 2019 level)",
+          "value": "$684/week ($35,568/year)",
+          "source": "DOL Wage and Hour Division news release, May 14, 2026"
+        },
+        {
+          "metric": "Threshold the 2024 rule would have set as of Jan 1, 2025",
+          "value": "$1,128/week ($58,656/year)",
+          "source": "DOL Wage and Hour Division news release, May 14, 2026; Ogletree legal alert"
+        },
+        {
+          "metric": "Share of full-time salaried workers currently eligible for overtime by salary alone",
+          "value": "about 8%, versus roughly 63% in 1975",
+          "source": "Sen. Whitehouse press release, citing DOL historical data"
+        }
+      ],
+      "caveat": "DOL's stated rationale, echoed by the Fifth Circuit's earlier reasoning on the 2019 rule, is that Congress intended the white-collar exemption to turn primarily on job duties rather than a compensation test, and that the 2024 rule's salary jump effectively substituted a bright-line pay threshold for that duties analysis -- a view two federal judges accepted when vacating the rule. Critics, including the bill's Senate sponsors, argue the rescission simply strips overtime protection from workers who would have newly qualified, and that the reinstated $684/week threshold has not been adjusted for inflation since 2019. Both sides agree the practical effect since late 2024 has been the same: employers have been operating under the 2019 thresholds since the district court rulings, so this technical amendment formalizes an already-realized status quo rather than changing day-to-day practice by itself."
+    },
+    "confidence_note": "High confidence throughout. The rescission, its effective date, and both salary threshold figures are drawn directly from DOL's own May 14, 2026 news release and corroborated by multiple independent legal-alert summaries (Foley Hoag, Ogletree, Stein Adler Dabah & Zelkowitz). The 4.3-million-worker figure originates from DOL's own 2024 rule impact projections, cited secondhand via a Senate office fact sheet; treated as a solid but administration-sourced estimate rather than an independently audited figure.",
+    "last_verified": "2026-07-10",
+    "sources": [
+      {
+        "name": "U.S. Department of Labor -- Technical amendment news release, May 14, 2026",
+        "url": "https://www.dol.gov/newsroom/releases/whd/whd20260514"
+      },
+      {
+        "name": "Foley Hoag LLP -- DOL Reverses Biden-Era Overtime Rule: What Employers Need to Know",
+        "url": "https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2026/may/dol-reverses-biden-era-overtime-rule-what-employers-need-to-know/"
+      },
+      {
+        "name": "Ogletree Deakins -- Trump Administration Rescinds 2024 DOL White Collar Overtime Expansion",
+        "url": "https://ogletree.com/insights-resources/blog-posts/trump-administration-rescinds-2024-dol-white-collar-overtime-expansion/"
+      },
+      {
+        "name": "Sen. Sheldon Whitehouse press release -- Whitehouse & Reed Seek to Reverse Trump Denial of OT Pay",
+        "url": "https://www.whitehouse.senate.gov/news/release/whitehouse-reed-seek-to-reverse-trump-denial-of-ot-pay-for-more-middle-class-workers-including-salaried-employees/"
+      },
+      {
+        "name": "Sen. Bernie Sanders' office -- Restoring Overtime Pay Act of 2026 Fact Sheet",
+        "url": "https://www.sanders.senate.gov/wp-content/uploads/Restoring-Overtime-Pay-Act-of-2026-Fact-Sheet.pdf"
+      }
+    ]
+  },
+  {
     "id": "endangerment-finding-rescission-trump2",
     "rule_name": "2009 Endangerment Finding rescission",
     "administration": "Trump II (2025-present)",
@@ -366,6 +433,77 @@
       }
     ],
     "short_summary": "Agencies must repeal 10 existing rules for every 1 new rule they issue."
+  },
+  {
+    "id": "epa-rmp-chemical-safety-rollback-trump2",
+    "rule_name": "Risk Management Program 'Common Sense Approach' Rollback",
+    "administration": "Trump II",
+    "agency": "EPA (Office of Land and Emergency Management)",
+    "domain": "environmental / chemical facility safety",
+    "status": "Proposed (comment period closed May 11, 2026; EPA has stated intent to finalize in late 2026)",
+    "date_of_action": "2026-02-24 (proposed rule published) -- final action pending",
+    "original_rule_summary": "The 2024 Safer Communities by Chemical Accident Prevention (SCCAP) rule, finalized under the Biden EPA, strengthened Risk Management Program (RMP) requirements under Clean Air Act Section 112(r) for roughly 11,700-11,900 facilities handling extremely hazardous substances. Key provisions included mandatory Safer Technology and Alternatives Analyses (STAA) with implementation requirements for high-accident-rate sectors (chemical manufacturing, petroleum/coal products), third-party compliance audits, expanded public disclosure of chemical hazard information, natural-hazard and power-loss risk assessment requirements, worker protections including anonymous hazard reporting and stop-work authority, and enhanced community/emergency-responder notification systems.",
+    "what_changed": "On February 24, 2026, EPA published a proposed rule, the 'Common Sense Approach to Chemical Accident Prevention,' that would rescind or substantially scale back most of the 2024 SCCAP requirements. Key rollbacks: eliminating STAA requirements for existing facilities in the two highest-risk sectors (chemical manufacturing and petroleum/coal products, NAICS 324/325), limiting STAA to newly built processes only; rescinding most third-party audit requirements (with a narrower option requiring audits only for facilities with 2+ accidents in 5 years); eliminating the requirement to share chemical hazard information directly with the public on request, relying instead on EPA's more limited online Data Tool; and rescinding several worker-protection provisions including anonymous reporting, stop-work authority, and mandatory workers' rights training. EPA frames the changes as realigning RMP with OSHA's existing Process Safety Management standard and removing 'duplicative' requirements. The proposal followed a March 2025 EPA announcement that it would reconsider the SCCAP rule, itself prompted by Executive Orders 14148 and 14154 directing agencies to rescind Biden-era regulatory actions. The public comment period closed May 11, 2026; as of this writing the rule remains a proposal, with EPA's own regulatory agenda indicating a target of finalizing it in late 2026.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "EPA Administrator",
+      "note": "Announced on March 12, 2025 that EPA would reconsider the 2024 SCCAP rule; EPA under his leadership published the Common Sense Approach proposed rule in February 2026 and held the required public hearing in March 2026."
+    },
+    "corporate_beneficiaries": "Roughly 11,700-11,900 RMP-regulated facilities nationwide, concentrated in chemical manufacturing and petroleum/coal products refining -- sectors represented in commenting by the American Chemistry Council, American Fuel & Petrochemical Manufacturers, American Petroleum Institute, and the U.S. Chamber of Commerce, all of which had petitioned against the 2024 rule before this rollback was proposed.",
+    "estimated_health_impact": {
+      "summary": "EPA's own 2024 SCCAP rulemaking found accidental releases from RMP facilities cost society more than $540 million annually and cited a real-world case (the 2019 TPC Group explosion in Port Neches, TX) where the STAA and safeguard requirements being rolled back likely would have mitigated or prevented the accident. EPA's own estimated population near RMP facilities is disproportionately exposed to accident risk.",
+      "figures": [
+        {
+          "metric": "People living within 3 miles of an RMP-regulated facility (per EPA's 2024 rulemaking)",
+          "value": "approximately 131 million, including about 20 million who identify as Black or African American and 32 million who identify as Hispanic or Latino",
+          "source": "EPA news release, 'EPA finalizes stronger safety standards to protect at-risk communities from chemical accidents,' 2024"
+        },
+        {
+          "metric": "Annual societal cost of RMP-facility accidental releases (EPA's 2024 estimate)",
+          "value": "more than $540 million/year",
+          "source": "EPA 2024 SCCAP rule news release"
+        },
+        {
+          "metric": "EPA's own projected annualized cost savings from the 2026 rollback if finalized",
+          "value": "$234.7-241.9 million/year, depending on discount rate",
+          "source": "EPA Fact Sheet, Common Sense Approach to Chemical Accident Prevention Proposed Rule"
+        },
+        {
+          "metric": "RMP-reportable accidents, 2014 vs. 2023 (EPA's cited justification for the rollback)",
+          "value": "declined from 147 to 81",
+          "source": "Holland & Knight legal alert, citing EPA's proposed-rule preamble"
+        }
+      ],
+      "caveat": "EPA's stated rationale is that RMP-reportable accidents already declined substantially (147 to 81, 2014-2023) before the 2024 SCCAP requirements took effect, which the agency argues shows the prior, less stringent framework was already working, and that realigning with OSHA's existing PSM standard removes genuine duplication rather than protection. Public health, labor, and environmental groups (Union of Concerned Scientists, various labor unions who testified at the March 2026 hearing) dispute that the accident-decline trend justifies removing forward-looking safeguards like natural-hazard assessment, given the increasing frequency of hurricanes and extreme weather cited as a specific risk factor. This entry describes a proposed, not yet finalized, rule -- EPA has stated an intent to finalize in late 2026, and the specific provisions could still change before then."
+    },
+    "confidence_note": "High confidence on the rule's content, timeline, and both sides' stated rationale, sourced to EPA's own Federal Register notice and fact sheet plus multiple independent law-firm summaries (Holland & Knight, Holland & Hart, DLA Piper, Beveridge & Diamond, Haynes Boone) that are consistent with each other on the substantive changes. The cost-savings and accident-decline figures are EPA's own; the population and past-cost figures are EPA's own from the prior (2024) rulemaking it is now rolling back, which is a useful internal-consistency data point. Because this is a proposed rather than final rule, `status` and the specific provisions should be rechecked before EPA's expected late-2026 final action.",
+    "last_verified": "2026-07-10",
+    "sources": [
+      {
+        "name": "Federal Register -- Accidental Release Prevention Requirements: Risk Management Programs Under the Clean Air Act; Common Sense Approach to Chemical Accident Prevention (proposed rule)",
+        "url": "https://www.federalregister.gov/documents/2026/02/24/2026-03633/accidental-release-prevention-requirements-risk-management-programs-under-the-clean-air-act-common"
+      },
+      {
+        "name": "US EPA -- Fact Sheet: Common Sense Approach to Chemical Accident Prevention Proposed Rule",
+        "url": "https://www.epa.gov/rmp/fact-sheet-common-sense-approach-chemical-accident-prevention-risk-management-program-proposed"
+      },
+      {
+        "name": "US EPA -- EPA finalizes stronger safety standards to protect at-risk communities from chemical accidents (2024 SCCAP news release)",
+        "url": "https://www.epa.gov/newsreleases/epa-finalizes-stronger-safety-standards-protect-risk-communities-chemical-accidents"
+      },
+      {
+        "name": "Holland & Knight -- EPA's Proposed Rule Signals Rollback of Chemical Safety Requirements as Key Questions Remain",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/03/epas-proposed-rule-signals-rollback-of-chemical-safety-requirements"
+      },
+      {
+        "name": "Manko, Gold, Katcher & Fox -- Risk Management Program Rule: What Changed and What's Ahead in 2026",
+        "url": "https://www.mankogold.com/publications-RMP-SCCAP-STAA-Chemical-Accident-Prevention.html"
+      },
+      {
+        "name": "UCS Blog -- EPA, 'Common Sense' is Protecting Communities and Workers from Chemical Disasters (critical perspective, includes public hearing testimony)",
+        "url": "https://blog.ucs.org/dminovi/epa-common-sense-is-protecting-communities-and-workers-from-chemical-disasters/"
+      }
+    ]
   },
   {
     "id": "fcc-net-neutrality-repeal-trump1",
