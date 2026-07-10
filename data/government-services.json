@@ -483,6 +483,79 @@
     ]
   },
   {
+    "id": "doe-oced-dismantlement-trump2",
+    "title": "DOE Dismantles Office of Clean Energy Demonstrations, Cancels $3.7B+ in Awarded Projects",
+    "institution": "Department of Energy (Office of Clean Energy Demonstrations)",
+    "domain": "funding_redirection",
+    "status": "Complete (office wound down; zero FY2026 funding provided by Congress)",
+    "date_of_action": "2025-05-30 (first project terminations announced) through 2026 appropriations (OCED zeroed out)",
+    "what_changed": "The Office of Clean Energy Demonstrations (OCED) was created in 2021 to manage roughly $27 billion in funding for large-scale clean energy demonstration projects -- hydrogen hubs, direct air capture hubs, long-duration energy storage, and industrial decarbonization -- and had committed over $18 billion to about 100 projects by November 2025. On May 30, 2025, Energy Secretary Chris Wright announced the termination of 24 OCED projects worth more than $3.7 billion in financial assistance, citing lack of economic viability and misalignment with administration priorities. Internal documents reviewed by Latitude Media showed a broader target list of nearly $24 billion in awards for cancellation across six DOE offices. Staffing followed funding: OCED's roughly 250-person staff was cut to a planned temporary staff of 35, a reduction of about 86%. In November 2025, DOE removed OCED entirely from its organizational chart, folding remaining functions into the newly created Office of Critical Minerals and Energy Innovation alongside similarly eliminated offices (Energy Efficiency and Renewable Energy, Grid Deployment Office, Office of Fossil Energy and Carbon Management). Congress's FY2026 appropriations bill, passed in early 2026, formalized the outcome by providing zero new funding to OCED and directing DOE to report quarterly on the redistribution of the office's remaining obligated and unobligated funds.",
+    "primary_proponent": {
+      "name": "Chris Wright",
+      "role": "Secretary of Energy",
+      "note": "Personally announced the May 30, 2025 termination of the 24 OCED projects and oversaw the November 2025 reorganization that removed OCED from DOE's organizational structure entirely."
+    },
+    "estimated_impact": {
+      "summary": "An $18-billion-plus federal clean energy demonstration portfolio lost the office that managed it, with over $3.7 billion in already-awarded projects formally cancelled and total targeted cancellations across DOE clean energy offices approaching $24 billion.",
+      "figures": [
+        {
+          "metric": "OCED projects terminated in the initial May 2025 action",
+          "value": "24 projects, $3.7 billion in financial assistance",
+          "source": "DOE Secretary Chris Wright announcement, reported by Holland & Knight"
+        },
+        {
+          "metric": "OCED staff reduction",
+          "value": "from more than 250 employees to a planned 35 (about 86% cut)",
+          "source": "Latitude Media, citing internal DOE documents"
+        },
+        {
+          "metric": "Total awards targeted for cancellation across six DOE offices (OCED, MESC, GDO, EERE, Fossil Energy, ARPA-E)",
+          "value": "nearly $24 billion",
+          "source": "Latitude Media, citing two internal DOE lists"
+        },
+        {
+          "metric": "FY2026 congressional appropriation for OCED",
+          "value": "$0 (office formally zeroed out, previously authorized in statute)",
+          "source": "Holland & Knight, summarizing the FY2026 Energy and Water appropriations bill"
+        },
+        {
+          "metric": "Total DOE loan/conditional-commitment restructuring or elimination (broader loan portfolio, related but distinct from OCED grants)",
+          "value": "$83.6 billion",
+          "source": "pv magazine USA, reporting DOE's January 2026 announcement"
+        }
+      ],
+      "caveat": "DOE's stated rationale, per Secretary Wright, was that the terminated projects lacked economic viability and did not align with the administration's energy priorities, which the department has reoriented toward nuclear, fossil fuels, and critical minerals over renewable and demonstration-stage decarbonization technologies -- a shift DOE frames as 'restoring commonsense to energy policy' and lowering costs. Critics, including the nonprofit Clean Tomorrow and various clean-energy industry voices, argue the cancellations forfeit federal investments specifically designed to de-risk early-stage technology for private capital, citing lost private co-investment (for example, more than $14 billion in private capital tied to the $6 billion Industrial Demonstrations Program alone) and pointing to Project 2025's explicit call to shut OCED down as evidence the outcome was predetermined rather than a case-by-case economic viability review. Some project cancellations and workforce reductions elsewhere in DOE's energy programs (e.g., power marketing administrations) were later partially reversed when operational risks became apparent, suggesting the cuts were not uniformly implemented without pushback internally."
+    },
+    "confidence_note": "High confidence on the dollar figures, staffing cut, and organizational elimination, which are corroborated across multiple independent trade outlets (Latitude Media, pv magazine USA, Holland & Knight, Politico's E&E News) citing DOE's own announcements and budget documents. The $24 billion cross-office target-list figure is sourced to internal documents obtained by one outlet (Latitude Media) rather than a public DOE statement, and is presented as a reported figure rather than an officially confirmed total.",
+    "last_verified": "2026-07-10",
+    "sources": [
+      {
+        "name": "Latitude Media -- The Department of Energy is reorganizing",
+        "url": "https://www.latitudemedia.com/news/the-department-of-energy-is-reorganizing/"
+      },
+      {
+        "name": "Latitude Media -- The end of DOE as we know it",
+        "url": "https://www.latitudemedia.com/news/the-end-of-doe-as-we-know-it/"
+      },
+      {
+        "name": "Holland & Knight -- Congress Passes Fiscal Year 2026 Energy Funding Bill",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/01/congress-passes-fiscal-year-2026-energy-funding-bill"
+      },
+      {
+        "name": "Holland & Knight -- Full FY 2026 Budget Reorients DOE Around Nuclear and Hard Infrastructure",
+        "url": "https://www.hklaw.com/en/insights/publications/2025/06/full-fy-2026-budget-reorients-doe-around-nuclear"
+      },
+      {
+        "name": "pv magazine USA -- Department of Energy removes renewable energy, climate offices",
+        "url": "https://pv-magazine-usa.com/2025/11/24/department-of-energy-removes-renewable-energy-climate-offices/"
+      },
+      {
+        "name": "POLITICO E&E News -- Wright overhauls DOE, reflecting shift in US energy priorities",
+        "url": "https://www.eenews.net/articles/wright-overhauls-doe-reflecting-shift-in-us-energy-priorities/"
+      }
+    ]
+  },
+  {
     "id": "doj-civil-rights-division-exodus-trump2",
     "title": "DOJ Civil Rights Division Lost 70% of Its Attorneys — Voting Section Down From 30 to 3",
     "institution": "Civil Rights Division, U.S. Department of Justice",
@@ -1965,6 +2038,74 @@
       {
         "name": "LitNet, 'Resources Related to the National Endowment for the Arts Funding' (timeline compilation)",
         "url": "https://litnet.org/resources-related-to-the-nea-guidelines-for-fy26/"
+      }
+    ]
+  },
+  {
+    "id": "ned-funding-impoundment-trump2",
+    "title": "National Endowment for Democracy Funding Withheld, Partially Restored Only After Court Order",
+    "institution": "National Endowment for Democracy (funded via State Department appropriation)",
+    "domain": "funding_redirection",
+    "status": "Ongoing (FY2025 funds released under court order; FY2026 funding and DOJ appeal still contested)",
+    "date_of_action": "2025-01-22 (funding access first denied) through ongoing litigation as of 2026",
+    "what_changed": "Since January 22, 2025, the executive branch withheld the National Endowment for Democracy's (NED) access to congressionally appropriated funding, according to NED's federal lawsuit. NED, a nonprofit created by the 1983 National Endowment for Democracy Act, is statutorily directed to receive annual grants through the State Department; it distributes roughly 83% of its funds directly to democracy, free-press, and anti-corruption groups in more than 90 countries. NED sued in March 2025, alleging the withholding of nearly $240 million violated the Administrative Procedure Act, the NED Act, and constitutional separation-of-powers and appropriations provisions. The funding halt forced NED to furlough 75% of its staff and, per the lawsuit, created a 'devastating' cash flow crisis affecting 226 approved grants, 124 board-recommended grants, and 53 'core institute' projects. On August 11, 2025, U.S. District Judge Dabney Friedrich -- a Trump appointee -- granted a preliminary injunction, finding the administration had likely violated the NED Act by conditioning fund disbursement on alignment with 'Administration priorities,' calling that rationale 'not plausible' given repeated delays and shifting justifications. Following the ruling, DOJ released the roughly $95 million that remained withheld from NED's FY2025 appropriation. The administration appealed to the D.C. Circuit on October 9, 2025 (case ongoing as of this writing), and separately proposed eliminating NED's funding entirely in its FY2026 budget request, citing (among other claims) an allegation -- which NED's own fact sheet disputes as false -- that NED funded a Ukrainian group accused of doxing U.S. journalists. As of early 2026 court filings, the parties remained in disputes over whether and when NED's FY2026 appropriation would be obligated and disbursed.",
+    "primary_proponent": {
+      "name": "Russell Vought",
+      "role": "Director, Office of Management and Budget",
+      "note": "Named as a defendant in NED's lawsuit; OMB was identified in court filings as the office directing that NED's funding be held for 'review for alignment' with administration priorities, the practice the district court found unlawful."
+    },
+    "estimated_impact": {
+      "summary": "A congressionally mandated, four-decade-old democracy-promotion grantmaker had roughly $240 million in appropriated funding withheld outside the normal appropriations process, forcing mass staff furloughs and program suspensions, with only partial and litigation-dependent restoration to date.",
+      "figures": [
+        {
+          "metric": "Total FY2025 funding initially withheld",
+          "value": "nearly $240 million (per NED's complaint); court findings centered on roughly $95 million of that remaining withheld by August 2025",
+          "source": "NPR, Newsweek, court filings summarized by the Civil Rights Litigation Clearinghouse"
+        },
+        {
+          "metric": "NED staff furloughed during the funding halt",
+          "value": "75% of staff",
+          "source": "NPR, citing NED officials"
+        },
+        {
+          "metric": "Grants affected by the funding halt",
+          "value": "226 approved grants, 124 board-recommended grants, 53 core-institute projects",
+          "source": "Judge Friedrich's August 11, 2025 opinion, quoted by Newsweek"
+        },
+        {
+          "metric": "Funding released after the March 2025 partial payment and the August 2025 injunction, combined",
+          "value": "approximately $97 million (March) plus approximately $95 million (August) of the disputed FY2025 total",
+          "source": "Civil Rights Litigation Clearinghouse case summary; Newsweek"
+        }
+      ],
+      "caveat": "The administration's FY2026 budget request proposes eliminating NED funding outright, citing claims that NED has funded organizations engaged in activities against administration officials and allies; NED's own published fact sheet directly disputes the specific claim cited (regarding a Ukrainian firm called Molfar), stating it has never been a NED grantee. Separately, the administration and allied think tanks (e.g., the Center for Renewing America) have longstanding, previously stated ideological objections to NED's mission, characterizing it as a 'partisan political weapon' -- a position predating this specific funding dispute. The court's ruling was narrowly about the legality of withholding already-appropriated funds outside statutory process, not a ruling on whether Congress should fund NED going forward, which remains a live and separate political question in the FY2026 appropriations process. This entry is included partly for balance: it is a case where a court, including a Trump-appointed judge, ordered relief and the administration partially complied -- though the underlying funding fight continues on appeal and into FY2026."
+    },
+    "confidence_note": "High confidence on the litigation timeline, dollar figures, and judicial findings, which are corroborated across NPR, Newsweek, the Washington Times, and the independent Civil Rights Litigation Clearinghouse case docket summary (itself drawing on PACER filings). The FY2026 status is current only as of the most recent available joint status report (referenced in court docket entries through early-to-mid 2026); this should be rechecked periodically given the case remains active on appeal.",
+    "last_verified": "2026-07-10",
+    "sources": [
+      {
+        "name": "NPR -- National Endowment for Democracy sues Trump administration",
+        "url": "https://www.npr.org/2025/03/06/nx-s1-5320021/national-endowment-democracy-sues-trump-administration-withheld-funds"
+      },
+      {
+        "name": "Newsweek -- Trump-Appointed Judge Deals Legal Blow To The White House",
+        "url": "https://www.newsweek.com/trump-appointed-judge-ruling-national-endowment-democracy-2112048"
+      },
+      {
+        "name": "Newsweek -- DOJ Reacts After Major Legal Blow by Trump-Appointed Judge",
+        "url": "https://www.newsweek.com/doj-reacts-after-major-legal-blow-trump-appointed-judge-2113376"
+      },
+      {
+        "name": "Civil Rights Litigation Clearinghouse -- National Endowment for Democracy v. United States of America, 1:25-cv-00648 (D.D.C.)",
+        "url": "https://clearinghouse.net/case/46198/"
+      },
+      {
+        "name": "CourtListener -- National Endowment for Democracy v. United States of America docket",
+        "url": "https://www.courtlistener.com/docket/69708462/national-endowment-for-democracy-v-united-states-of-america/"
+      },
+      {
+        "name": "National Endowment for Democracy -- Fact-Sheet: NED and the 2026 Discretionary Budget Request",
+        "url": "https://www.ned.org/fact-sheet-ned-and-the-2026-discretionary-budget-request/"
       }
     ]
   },
