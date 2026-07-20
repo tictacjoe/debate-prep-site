@@ -998,8 +998,8 @@
       ],
       "caveat": "As of this entry, both actions are proposed, not finalized -- comment period closed July 20, 2026. EPA states explicitly it is not accepting comment on the underlying health-risk science, only on the legal/procedural basis for rescission -- worth noting this framing choice in debate, since it forecloses public health argument at the comment stage."
     },
-    "confidence_note": "Strong, EPA's-own-numbers framing available (the ~100 million people figure comes from EPA's own 2024 rule justification, not an outside estimate). Note carefully that this is still proposed, not finalized, and litigation is expected regardless of outcome per legal analysts. [Rechecked 2026-07-06: no material change -- comment period closes July 20, 2026 (as previously noted, confirming those forward-looking dates were accurate, not an error); public hearing held July 7, 2026; EPA states intent to finalize both rules before end of 2026.] Re-verified 2026-07-18: no material change -- comment period closes July 20, 2026 (2 days from this update) as previously noted, not yet finalized.",
-    "last_verified": "2026-07-18",
+    "confidence_note": "Strong, EPA's-own-numbers framing available (the ~100 million people figure comes from EPA's own 2024 rule justification, not an outside estimate). Note carefully that this is still proposed, not finalized, and litigation is expected regardless of outcome per legal analysts. [Rechecked 2026-07-06: no material change -- comment period closes July 20, 2026 (as previously noted, confirming those forward-looking dates were accurate, not an error); public hearing held July 7, 2026; EPA states intent to finalize both rules before end of 2026.] Re-verified 2026-07-18: no material change -- comment period closes July 20, 2026 (2 days from this update) as previously noted, not yet finalized. Re-verified 2026-07-20: comment period closed today as scheduled -- more than 15,000 public comments submitted on the rescission rule, EPA has stated intent to finalize both rules before end of 2026 but no final rule issued yet. Environmental Working Group publicly opposed the rescission (\"condemning millions of Americans to drink contaminated water for years to come\"). Litigation from environmental/public-health groups is expected if finalized, likely invoking the Safe Drinking Water Act's anti-backsliding provision; industry litigation is expected if the rescission is NOT finalized. Neither rule has changed in substance since the May 2026 proposal.",
+    "last_verified": "2026-07-20",
     "sources": [
       {
         "name": "US EPA — Proposed PFOA and PFOS Compliance Extension Rule",
@@ -1016,6 +1016,10 @@
       {
         "name": "Harvard EELP — PFAS in Drinking Water tracker",
         "url": "https://eelp.law.harvard.edu/tracker/pfas-in-drinking-water/"
+      },
+      {
+        "name": "Environmental Working Group -- statement opposing PFAS rescission rule",
+        "url": "https://www.western-water.com/2026/07/11/epa-rolls-back-some-pfas-rules-as-congress-pushes-new-ones/"
       }
     ],
     "short_summary": "Proposed dropping enforceable limits on 4 of 6 regulated 'forever chemicals.'"
