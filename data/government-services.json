@@ -2872,9 +2872,9 @@
     "title": "Peace Corps Headquarters Staff Cut by Roughly 40%",
     "institution": "Peace Corps",
     "domain": "staff_office_cuts",
-    "status": "Ongoing (governmentwide RIF moratorium expired Feb. 13, 2026; agency proceeding toward a 575-FTE headquarters target)",
+    "status": "Largely complete -- Peace Corps' own FY2027 budget justification confirms realized cuts by end of calendar year 2025 (not just a target), while the 21-member congressional request for a force-analysis justification, sent Feb. 19, 2026, remained unanswered in public reporting as of this update",
     "date_of_action": "2025-03 to present",
-    "what_changed": "Beginning in March 2025, DOGE staff directed Peace Corps supervisors to compile lists of personnel and programs to cut, following the earlier governmentwide 'Fork in the Road' deferred resignation offer. By May 2025, roughly 250 employees took a second deferred-resignation push after being told they faced termination if they declined. In September 2025, the Peace Corps Union received formal notice of intent to involuntarily separate 26 bargaining-unit and 11 non-bargaining-unit employees, part of a plan to bring headquarters down to 575 full-time-equivalent staff. That RIF notice period was tolled during the Oct. 1-Nov. 12, 2025 government shutdown and then again by a continuing-resolution moratorium on RIFs through Jan. 30, 2026. The governmentwide RIF moratorium expired Feb. 13, 2026, clearing the way for the cuts to proceed. Recruitment and placement staff have been hit especially hard, with reporting describing a roughly two-thirds reduction in the office responsible for outreach, application review, and volunteer placement across more than 60 countries. The cuts are paired with an agency goal to more than double the number of active volunteers, from about 3,000 to 8,000 by 2030.",
+    "what_changed": "Beginning in March 2025, DOGE staff directed Peace Corps supervisors to compile lists of personnel and programs to cut, following the earlier governmentwide 'Fork in the Road' deferred resignation offer. By May 2025, roughly 250 employees took a second deferred-resignation push after being told they faced termination if they declined. In September 2025, the Peace Corps Union received formal notice of intent to involuntarily separate 26 bargaining-unit and 11 non-bargaining-unit employees, part of a plan to bring headquarters down to 575 full-time-equivalent staff. That RIF notice period was tolled during the Oct. 1-Nov. 12, 2025 government shutdown and then again by a continuing-resolution moratorium on RIFs through Jan. 30, 2026. The governmentwide RIF moratorium expired Feb. 13, 2026, clearing the way for the cuts to proceed. Recruitment and placement staff have been hit especially hard, with reporting describing a roughly two-thirds reduction in the office responsible for outreach, application review, and volunteer placement across more than 60 countries. The cuts are paired with an agency goal to more than double the number of active volunteers, from about 3,000 to 8,000 by 2030. Peace Corps' own FY2027 Congressional Budget Justification, submitted in 2026, confirms the cuts as realized rather than merely planned: the agency reports operating with at least 375 fewer U.S. Direct Hire and expert staff (approximately a 40% reduction) and at least 275 fewer Host Country National Personal Services Contractors (approximately a 16% reduction) by the end of calendar year 2025 -- the agency's own subsequent budget filing, not just the September 2025 RIF notice or the lawmakers' letter, now confirms the reduction actually took effect. No public response to the 21-member congressional letter's request for a force-analysis justification was identified as of this update, roughly five months after it was sent.",
     "primary_proponent": {
       "name": "Richard E. Swarttz",
       "role": "Acting Director, Peace Corps (Chief of Staff since Sept. 2025; led the Trump-Vance Agency Review Team for Peace Corps during the presidential transition)",
@@ -2902,12 +2902,22 @@
           "metric": "Volunteer Recruitment and Selection office staffing",
           "value": "Reported ~two-thirds reduction",
           "source": "Government Executive/Peace Corps Worldwide reporting on internal DOGE-driven restructuring plan, July 2025"
+        },
+        {
+          "metric": "U.S. Direct Hire and expert staff reduction, confirmed by end of CY2025",
+          "value": "at least 375 fewer (~40%)",
+          "source": "Peace Corps FY2027 Congressional Budget Justification (agency's own filing)"
+        },
+        {
+          "metric": "Host Country National Personal Services Contractors reduction, confirmed by end of CY2025",
+          "value": "at least 275 fewer (~16%)",
+          "source": "Peace Corps FY2027 Congressional Budget Justification"
         }
       ],
-      "caveat": "Two different figures describe different things and are not contradictory: the ~40% cut (953 to 575) is the lawmakers' cumulative headquarters headcount reduction since January 2025, while the 937-to-878 figure is a single fiscal year's budgeted FTE change from the FY2026 OMB technical supplement, a narrower accounting measure. The agency disputes the framing that cuts are proceeding without adequate review: Peace Corps officials told Government Executive in February 2026 that they had already completed a review of the agency's operational structure before moving forward, and the agency has publicly committed to using expanded AI-assisted screening and predictive analytics to help recruiters do more with fewer staff. Peace Corps also states it has no plans to close additional country posts specifically due to staffing (as distinct from a small number of posts closed for unrelated security reasons, e.g. Mozambique in 2025). Whether the RIF fully proceeded after the Feb. 13, 2026 moratorium expiration, or whether Congress's Feb. 19 request for a pause was granted, is not yet confirmed in public reporting as of this entry's last-verified date."
+      "caveat": "Two different figures describe different things and are not contradictory: the ~40% cut (953 to 575) is the lawmakers' cumulative headquarters headcount reduction since January 2025, while the 937-to-878 figure is a single fiscal year's budgeted FTE change from the FY2026 OMB technical supplement, a narrower accounting measure. The agency disputes the framing that cuts are proceeding without adequate review: Peace Corps officials told Government Executive in February 2026 that they had already completed a review of the agency's operational structure before moving forward, and the agency has publicly committed to using expanded AI-assisted screening and predictive analytics to help recruiters do more with fewer staff. Peace Corps also states it has no plans to close additional country posts specifically due to staffing (as distinct from a small number of posts closed for unrelated security reasons, e.g. Mozambique in 2025). Update, 2026-07-20: the RIF's completion is now confirmed via the agency's own FY2027 budget justification (see updated figures below); Congress's Feb. 19 force-analysis request does not appear to have been granted or formally answered as of this update."
     },
-    "confidence_note": "Strong. Anchored in a formal, signed 21-member congressional letter (10 senators, 11 House members plus a delegate) citing specific employee figures the agency itself provided to the Peace Corps Union, corroborated independently by Government Executive, The Hill, and the FY2026 OMB budget technical supplement. The primary remaining uncertainty is the RIF's final implementation status after Feb. 13, 2026, since no public reporting as of the last-verified date confirms completion.",
-    "last_verified": "2026-07-09",
+    "confidence_note": "Strong. Anchored in a formal, signed 21-member congressional letter (10 senators, 11 House members plus a delegate) citing specific employee figures the agency itself provided to the Peace Corps Union, corroborated independently by Government Executive, The Hill, and the FY2026 OMB budget technical supplement. The primary remaining uncertainty is the RIF's final implementation status after Feb. 13, 2026, since no public reporting as of the last-verified date confirms completion. Re-verified 2026-07-20: this entry's previously open question -- whether the RIF actually completed after the Feb. 13, 2026 moratorium expiration -- is now resolved by the agency's own subsequent FY2027 budget submission, which reports the reduction as an accomplished fact (~40% USDH/expert staff cut) rather than a pending target. This is a stronger source than the earlier congressional-letter figures, since it's the agency confirming its own realized headcount after the fact, not lawmakers citing a plan.",
+    "last_verified": "2026-07-20",
     "sources": [
       {
         "name": "Sen. Tim Kaine press release, 21-member letter to Peace Corps Acting Director",
@@ -2928,6 +2938,10 @@
       {
         "name": "Peace Corps Worldwide, 'Federal Workforce Update: Peace Corps Faces Significant Cuts'",
         "url": "https://peacecorpsworldwide.substack.com/p/federal-workforce-update-peace-corps"
+      },
+      {
+        "name": "Peace Corps FY2027 Congressional Budget Justification",
+        "url": "https://files.peacecorps.gov/documents/Peace_Corps_FY_2027_CBJ.pdf"
       }
     ]
   },
