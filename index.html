@@ -132,6 +132,40 @@
   }
   .mode-btn:hover:not(.active) { background: var(--rule-strong); }
 
+  /* ================= NAV ACTIONS (floating) ================= */
+  .nav-actions {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 100;
+  }
+  .nav-action-btn {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: var(--paper-card);
+    color: var(--ink-soft);
+    border: 1px solid var(--rule-strong);
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .nav-action-btn:hover { background: var(--brass); color: var(--paper-card); border-color: var(--brass); }
+
+  @media (max-width: 600px) {
+    .nav-actions { right: 0.75rem; bottom: 0.75rem; }
+    .nav-action-btn { padding: 0.45rem 0.7rem; font-size: 0.68rem; }
+  }
+
   /* ================= CLAIM CHECK MODE ================= */
   .claim-mode-box {
     max-width: 700px;
@@ -493,6 +527,10 @@
   <div class="regex-error" id="regex-error"></div>
 </header>
 
+<div class="nav-actions">
+  <button id="back-to-top-btn" class="nav-action-btn" type="button" title="Scroll to the top of the page">↑ Back to Top</button>
+  <button id="start-over-btn" class="nav-action-btn" type="button" title="Clear search/filters and return to the default view">↻ Start Over</button>
+</div>
 
 <p class="browse-instead" id="browse-instead">— or browse by database —</p>
 
@@ -1455,6 +1493,28 @@ document.getElementById("mode-claim-btn").addEventListener("click", () => setMod
 document.getElementById("claim-check-btn").addEventListener("click", renderClaimCheck);
 document.getElementById("claim-input").addEventListener("keydown", (e) => {
   if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) renderClaimCheck();
+});
+
+/* Floating nav actions: Back to Top just scrolls; Start Over resets
+   every piece of search/filter/mode state to the fresh-load default
+   (activeTracker back to "deregulation", the actual initial value
+   above) so the page looks exactly like a first visit. */
+document.getElementById("back-to-top-btn").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+document.getElementById("start-over-btn").addEventListener("click", () => {
+  document.getElementById("global-search").value = "";
+  document.getElementById("global-regex").checked = false;
+  document.getElementById("global-oneliner").checked = false;
+  document.getElementById("claim-input").value = "";
+  document.getElementById("search").value = "";
+  document.getElementById("filter").value = "";
+  activeTracker = "deregulation";
+  searchTerm = "";
+  filterValue = "";
+  setMode("search");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 /* Loads the three published JSON files. Uses Promise.allSettled
