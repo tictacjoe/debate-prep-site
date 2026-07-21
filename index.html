@@ -1034,30 +1034,34 @@ function buildDetailHtml(entry, cfg) {
 /* Shared card builder used by both the per-tracker tabbed view and
    the cross-database global search view, so the two stay visually
    and behaviorally consistent rather than drifting apart. */
-function buildEntryCard(entry, cfg, docketLabel, sourceLabel) {
+function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
   const div = document.createElement("div");
   div.className = "entry";
   const rawTitle = entry[cfg.titleField] || "Untitled";
   const title = cfg.kind === "tracker" ? truncate(rawTitle, 110) : rawTitle;
+  // Highlights the active search term in the free-text fields most
+  // likely to contain it (title, summary, category labels) -- dates
+  // and domain tags are left alone since they're never what matched.
+  const hl = (text) => highlightMatches(text || "", term, useRegex);
 
   let metaHtml = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
   if (cfg.kind === "deregulation") {
     metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + entry.domain + '</span>' +
-               '<span>' + (entry.agency || "") + '</span><span>' + (entry.date_of_action || "") + '</span>' +
-               '<span>' + (entry.short_summary || truncate(entry.what_changed || "", 100)) + '</span>';
+               '<span>' + hl(entry.agency) + '</span><span>' + (entry.date_of_action || "") + '</span>' +
+               '<span>' + hl(entry.short_summary || truncate(entry.what_changed || "", 100)) + '</span>';
   } else if (cfg.kind === "tracker") {
     metaHtml += '<span>' + (entry.date || "") + '</span>';
   } else if (cfg.kind === "govservices") {
     metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + govservicesDomainLabel(entry.domain) + '</span>' +
-               '<span>' + (entry.institution || "") + '</span><span>' + (entry.date_of_action || "") + '</span>';
+               '<span>' + hl(entry.institution) + '</span><span>' + (entry.date_of_action || "") + '</span>';
   } else {
-    metaHtml += '<span>' + (entry.offense_category || "") + '</span><span>' + (entry.status_category || "") + '</span><span>updated ' + (entry.last_updated || "") + '</span>';
+    metaHtml += '<span>' + hl(entry.offense_category) + '</span><span>' + hl(entry.status_category) + '</span><span>updated ' + (entry.last_updated || "") + '</span>';
   }
 
   div.innerHTML =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
-        '<p class="entry-title">' + title + '</p>' +
+        '<p class="entry-title">' + hl(title) + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>' +
@@ -1154,7 +1158,7 @@ function renderEntries() {
 
   container.innerHTML = "";
   toRender.forEach((entry, i) => {
-    container.appendChild(buildEntryCard(entry, cfg, "NO. " + String(i + 1).padStart(2, "0"), null));
+    container.appendChild(buildEntryCard(entry, cfg, "NO. " + String(i + 1).padStart(2, "0"), null, searchTerm, false));
   });
 }
 
@@ -1268,7 +1272,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
 
   if (!useOneLiners) {
     toRender.forEach((m, i) => {
-      const card = buildEntryCard(m.entry, m.cfg, "NO. " + String(i + 1).padStart(2, "0"), m.sourceLabel);
+      const card = buildEntryCard(m.entry, m.cfg, "NO. " + String(i + 1).padStart(2, "0"), m.sourceLabel, term, useRegex);
       container.appendChild(card);
     });
     return;
