@@ -404,6 +404,10 @@
   }
   .field-label:first-child { margin-top: 1rem; }
   .field-value { font-size: 0.92rem; }
+  .field-summary {
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+  }
 
   .exhibit-list {
     list-style: none;
@@ -900,6 +904,12 @@ function escapeHtml(str) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 }
+
+/* summary-line:start */
+function summaryLineHtml(summary) {
+  return summary ? '<p class="field-summary">' + summary + '</p>' : '';
+}
+/* summary-line:end */
 
 function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
